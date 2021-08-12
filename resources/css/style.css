@@ -43,7 +43,7 @@ p {
 header {
     display: grid;
     grid-template: 50px / repeat(12, 1fr);
-    column-gap: .1rem;
+    column-gap: .25rem;
     align-items: center;
     max-width: 1920px;
     margin: auto;
@@ -84,7 +84,8 @@ main {
 
 .container {
     display: grid;
-    grid-template: repeat(15, 1fr) / repeat(12, 1fr);
+    grid-template: repeat(24, 1fr) / repeat(12, 1fr);
+    column-gap: .8rem;
     justify-content: center;
     align-items: center;
 }
@@ -102,13 +103,76 @@ main {
     margin: auto;
 }
 
+/* about me */
+
+.about-me {
+    grid-area: 10 / 2 / 12 / 7;
+    align-self: flex-start;
+}
+
+/* skills */
+
+.skills {
+    grid-area: 10 / 7 / 12 / 12;
+    align-self: flex-start;
+}
+
+.skills .icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.skills .icon {
+    margin-right: 2rem;
+}
+
+/* Projects */
+
+.projects {
+    grid-area: 12 / 2 / 20 / 12;
+}
+
+.projects .cards {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.projects .cards .card {
+    width: 30%;
+    min-width: 14rem;
+    height: 250px;
+    margin-right: 3%;
+}
+
+/* contact */
+
+
+.contact {
+    grid-area: 20 / 2 / 22 / 12;
+}
+
+/* footer */
+
+footer {
+    display: grid;
+    grid-template: 50px / repeat(12, 1fr);
+    margin: auto;
+    max-width: 1920px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.copyright {
+    grid-area: 1 / 10 / 2 / 12;
+}
+
+
 /* temp formatting */
 
 body * {
     border: blue 1px solid;
-}
-
-.about-me, .skills,
-.projects, .contact, footer {
-    display: none;
 }
