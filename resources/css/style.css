@@ -2,6 +2,7 @@
 
 html {
     font-size: 16px;
+    font-family: 'Cardo', serif;
 }
 
 
@@ -34,10 +35,6 @@ h6 {
     font-size: .813rem;
 }
 
-p {
-    font-family: 'Cardo', serif;
-}
-
 /* header */
 
 header {
@@ -47,6 +44,14 @@ header {
     align-items: center;
     max-width: 1920px;
     margin: auto;
+    background-color: #4F6367;
+    color: whitesmoke;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+}
+
+header a {
+    color: rgb(245, 245, 245);
 }
 
 .logo {
@@ -55,6 +60,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding-left: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
 }
 
 .logo img {
@@ -64,12 +71,17 @@ header {
 .nav {
     grid-area: 1 / 7 / 2 / 13;
     padding-right: 2.5rem;
+    font-size: 1.1rem;
 }
 
 .nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.nav ul li a:hover {
+    color: rgb(245, 245, 245, .5);
 }
 
 .hamburger {
@@ -168,6 +180,8 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-color: #4F6367;
+    color: whitesmoke;
 }
 
 .copyright {
@@ -178,5 +192,27 @@ footer {
 /* temp formatting */
 
 body * {
-    border: blue 1px solid;
+    /* border: blue 1px solid; */
 }
+
+
+/* 
+COLORS
+
+Light Blue
+#B8D8D8
+
+Medium Blue
+#7A9E9F
+
+Dark Blue
+#4F6367
+
+Light Green
+#EEF5DB
+
+Red
+#FE5F55
+
+
+*/
