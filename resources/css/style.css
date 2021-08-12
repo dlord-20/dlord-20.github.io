@@ -123,10 +123,11 @@ main {
     flex-wrap: wrap;
     justify-content: flex-start;
     row-gap: 1rem;
+    column-gap: 1.5rem;
 }
 
 .skills .icon {
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
 }
 
 /* Projects */
@@ -140,14 +141,14 @@ main {
     justify-content: flex-start;
     flex-wrap: wrap;
     row-gap: 2rem;
+    column-gap: 2rem;
     width: 100%;
 }
 
 .projects .cards .card {
-    width: 30%;
+    width: 31%;
     min-width: 14rem;
     height: 250px;
-    margin-right: 3%;
 }
 
 /* contact */
