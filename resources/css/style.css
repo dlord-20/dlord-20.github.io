@@ -174,7 +174,7 @@ main p {
 
 @media only screen and (max-width: 750px) {
     .container {
-        grid-template: repeat(13, 1fr) / repeat(12, 1fr);
+        grid-template: repeat(12, 1fr) / repeat(12, 1fr);
     }
 }
 
@@ -289,7 +289,9 @@ main p {
 
 @media only screen and (max-width: 750px) {
     .skills {
-        grid-area: 6 / 2 / 8 / 12;
+        grid-area: 5 / 2 / 7 / 12;
+        align-self: center;
+        /* padding: 3rem 0 6rem; */
     }
 }
 
@@ -360,12 +362,12 @@ main p {
 
 @media only screen and (max-width: 750px) {
     .bg-lb {
-        grid-area: 8 / 1 / 12 / 13;
+        grid-area: 7 / 1 / 11 / 13;
         padding: 2rem 0;
     }
 
     .projects {
-        grid-area: 8 / 2 / 12 / 12;
+        grid-area: 7 / 2 / 11 / 12;
     }
 
     .projects .cards {
@@ -414,7 +416,7 @@ main p {
 
 @media only screen and (max-width: 750px) {
  .contact {
-    grid-area: 12 / 2 / 13 / 12;
+    grid-area: 11 / 2 / 12 / 12;
  }
 }
 
