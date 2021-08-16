@@ -116,7 +116,21 @@ header a {
     display: none;
 }
 
-@media only screen and (max-width: 500px), (max-width: 500px) and (-webkit-device-pixel-ratio: 2) {
+@media only screen and (max-width: 750px) {
+
+    .logo {
+        grid-area: 1 / 1 / 2 / 6;
+    }
+
+    .nav .tablet {
+        display: none;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 580px), (max-width: 580px) and (-webkit-device-pixel-ratio: 2) {
 
     .logo {
         grid-area: 1 / 1 / 2 / 7;
@@ -130,6 +144,7 @@ header a {
         padding-top: .25rem;
         display: block;
         border-top: 3px white solid;
+        max-width: 40px;
     }
 
     .nav {
@@ -157,9 +172,16 @@ main p {
     align-items: center;
 }
 
-@media only screen and (max-width: 500px), (max-width: 500px) and (-webkit-device-pixel-ratio: 2) {
+@media only screen and (max-width: 750px) {
     .container {
-        grid-template: repeat(16, 1fr) / repeat(12, 1fr);
+        grid-template: repeat(13, 1fr) / repeat(12, 1fr);
+    }
+}
+
+
+@media only screen and (max-width: 580px), (max-width: 580px) and (-webkit-device-pixel-ratio: 2) {
+    .container {
+        grid-template:  175px 400px repeat(11, 1fr) / repeat(12, 1fr);
     }
 }
 
@@ -169,10 +191,19 @@ main p {
     grid-area: 2 / 2 / 4 / 6;
 }
 
-@media only screen and (max-width: 500px), (max-width: 500px) and (-webkit-device-pixel-ratio: 2) {
+@media only screen and (max-width: 750px) {
     .title {
         grid-area: 1 / 2 / 2 / 12;
         text-align: center;
+        align-self: flex-end;    
+        padding-top: 2rem;
+    }
+}
+
+
+@media only screen and (max-width: 580px), (max-width: 580px) and (-webkit-device-pixel-ratio: 2) {
+    .title {
+        padding: 0;
     }
 }
 
@@ -193,9 +224,16 @@ main p {
     box-shadow: 5px 5px 5px gray;
 }
 
-@media only screen and (max-width: 500px), (max-width: 500px) and (-webkit-device-pixel-ratio: 2) {
+
+@media only screen and (max-width: 750px) {
     .picture {
         grid-area: 2 / 1 / 4 / 13;
+    }
+}
+
+@media only screen and (max-width: 580px), (max-width: 580px) and (-webkit-device-pixel-ratio: 2) {
+    .picture {
+        grid-area: 2 / 1 / 3 / 13;
     }
 }
 
@@ -213,9 +251,16 @@ main p {
     margin: auto;
 }
 
-@media only screen and (max-width: 500px), (max-width: 500px) and (-webkit-device-pixel-ratio: 2) {
+@media only screen and (max-width: 750px) {
     .about-me {
         grid-area: 4 / 2 / 6 / 12;
+    }
+}
+
+
+@media only screen and (max-width: 580px), (max-width: 580px) and (-webkit-device-pixel-ratio: 2) {
+    .about-me {
+        grid-area: 3 / 2 / 5 / 12;
     }
 }
 
@@ -242,22 +287,28 @@ main p {
     max-width: 3.9rem;
 }
 
-@media only screen and (max-width: 500px), (max-width: 500px) and (-webkit-device-pixel-ratio: 2) {
+@media only screen and (max-width: 750px) {
     .skills {
         grid-area: 6 / 2 / 8 / 12;
     }
 }
 
+@media only screen and (max-width: 580px), (max-width: 580px) and (-webkit-device-pixel-ratio: 2) {
+    .skills {
+        grid-area: 5 / 2 / 7 / 12;
+    }
+}
+
 /* Projects */
 .bg-lb {
-    grid-area: 9 / 1 / 18 / 13;
+    grid-area: 9 / 1 / 16 / 13;
     background-color: #7A9E9F;
     width: 100%;
     height: 100%;
 }
 
 .projects {
-    grid-area: 9 / 2 / 18 / 12;
+    grid-area: 9 / 2 / 16 / 12;
 }
 
 .projects h2 {
@@ -295,14 +346,47 @@ main p {
     align-self: center;
 }
 
-@media only screen and (max-width: 500px), (max-width: 500px) and (-webkit-device-pixel-ratio: 2) {
+@media only screen and (max-width: 1200px) {
+
     .bg-lb {
-        grid-area: 8 / 1 / 15 / 13;
+        grid-area: 9 / 1 / 16 / 13;
+        padding: 2rem 0;
+    }
+
+    .projects .cards .card {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .bg-lb {
+        grid-area: 8 / 1 / 12 / 13;
         padding: 2rem 0;
     }
 
     .projects {
-        grid-area: 8 / 2 / 15 / 12;
+        grid-area: 8 / 2 / 12 / 12;
+    }
+
+    .projects .cards {
+        column-gap: 1rem;
+    }
+
+    .projects .cards .card {
+        width: 48%;
+        height: 300px;
+    }
+
+}
+
+@media only screen and (max-width: 580px), (max-width: 580px) and (-webkit-device-pixel-ratio: 2) {
+    .bg-lb {
+        grid-area: 7 / 1 / 12 / 13;
+        padding: 2rem 0;
+    }
+
+    .projects {
+        grid-area: 7 / 2 / 12 / 12;
     }
 
     .projects .cards .card {
@@ -311,22 +395,32 @@ main p {
         grid-template: 70px 130px 50px / repeat(1, 1fr);
     }
 
+    .projects .cards .desktop {
+        display: none;
+    }
+
 }
 
 /* contact */
 
 
 .contact {
-    grid-area: 18 / 2 / 20 / 12;
+    grid-area: 16 / 2 / 18 / 12;
 }
 
 .company {
     display: flex;
 }
 
-@media only screen and (max-width: 500px), (max-width: 500px) and (-webkit-device-pixel-ratio: 2) {
+@media only screen and (max-width: 750px) {
+ .contact {
+    grid-area: 12 / 2 / 13 / 12;
+ }
+}
+
+@media only screen and (max-width: 580px), (max-width: 580px) and (-webkit-device-pixel-ratio: 2) {
     .contact {
-        grid-area: 15 / 2 / 16 / 12;
+        grid-area: 12 / 2 / 13 / 12;
     }
 }
 
@@ -348,7 +442,7 @@ footer {
     grid-area: 1 / 10 / 2 / 12;
 }
 
-@media only screen and (max-width: 500px), (max-width: 500px) and (-webkit-device-pixel-ratio: 2) {
+@media only screen and (max-width: 580px), (max-width: 580px) and (-webkit-device-pixel-ratio: 2) {
     .copyright {
         grid-area: 1 / 8 / 2 / 12
     }
