@@ -281,7 +281,7 @@ main p {
 /* opacity for siblings and max-width is more for the one you are hovering on */
 .skills .icons *:hover {
     /* opacity: .85; */
-    max-width: 4.1rem !important;
+    /* max-width: 4.1rem !important; */
 
 }
 

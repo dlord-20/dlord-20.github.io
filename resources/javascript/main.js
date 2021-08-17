@@ -21,13 +21,37 @@ let getSiblings = function (e) {
     return siblings;
 };
 
-let siblings = getSiblings(document.getElementsByClassName('.icon3'));
-siblingText = siblings.map(e => e.style.opacity = .85);
-console.log(siblingText);
+let skillIcons = document.getElementsByClassName('icons');
 
-let highlight = function() {
-    siblings.map(e => e.style.opacity = .85);
-}
+skillIcons[0].addEventListener('mouseover', (event) => {
+    let target = event.target;
+    //Change sibling opacity
+    if(document.getElementById(target.id) === null) {
+        //Making sure we are not tarketing objects without ids
+    } else {
+        let parent = document.getElementById(target.id).parentNode;
 
-// document.getE.addEventListener('hover', highlight);
+        let currentSiblings = getSiblings(parent);
+        for(let i = 0; i < currentSiblings.length; i++) {
+            currentSiblings[i].style.opacity = '.8';
+        }
 
+        document.getElementById('skills-header').innerHTML = `Skills | ${target.id}`;
+    }
+});
+
+skillIcons[0].addEventListener('mouseout', (event) => {
+    let target = event.target;
+    //Reset sibling opacity
+    if(document.getElementById(target.id) === null) {
+        //Making sure we are not tarketing objects without ids
+    } else {
+        let parent = document.getElementById(target.id).parentNode;
+        let currentSiblings = getSiblings(parent);
+        for(let i = 0; i < currentSiblings.length; i++) {
+            currentSiblings[i].style.opacity = '';
+        }
+
+        document.getElementById('skills-header').innerHTML = `Skills`;
+    }
+});
