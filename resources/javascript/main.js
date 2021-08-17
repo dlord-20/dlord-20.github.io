@@ -23,6 +23,8 @@ let getSiblings = function (e) {
 
 let skillIcons = document.getElementsByClassName('icons');
 
+// const siblingOpacity
+
 skillIcons[0].addEventListener('mouseover', (event) => {
     let target = event.target;
     //Change sibling opacity
