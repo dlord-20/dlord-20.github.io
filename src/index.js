@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react';
+import ReactDOM from 'react-dom/client';
 import {
   BrowserRouter,
   Routes,
@@ -19,7 +19,7 @@ export default function App() {
         <Routes>
           
           <Route path="/" element={<Home/>}></Route>
-
+          <Route path="/test" element={<Home/>}></Route>
         </Routes>
       </Provider>
     </BrowserRouter>
