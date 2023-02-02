@@ -2,7 +2,7 @@
 export default function BottomNav() {
 
     return (
-        <div class="bottom-navigation">
+        <div className="bottom-navigation">
             <p>Bottom Navigation</p>
         </div>
     );
