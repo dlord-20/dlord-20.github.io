@@ -145,18 +145,18 @@ code {
   /* ----------------- Mobile Size - Overall Website Structure ----------------- */
   .container {
     width: 100%;
-    /* padding: 1rem; */
   }
 
-  
+  .navigation > :first-child {
+    margin-left: 1rem;
+  }
 
 
   /* ----------------- Mobile Size - Navigation ----------------- */
   /* Maybe move this to a module? -> Make things less cultered */
 
-  .navigation, .bottom-navigation {
+  .bottom-navigation {
     width: 100%;
-    /* padding: 1rem; */
   }
 
   .nav-desktop, .nav-button {
