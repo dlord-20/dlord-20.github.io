@@ -80,6 +80,7 @@ code {
   align-items: flex-start;  
   max-width: 90%;
   border: 3px solid var(--derek);
+  margin-top: .6rem;
 }
 
 .navigation > :first-child {
@@ -109,12 +110,12 @@ code {
 }
 
 .nav-item * {
-  margin: 0 !important;
-  padding: 0 !important;
+  margin: 0;
+  padding: 0;
 }
 
 .bottom-navigation {
-  width: 90%;
+  max-width: 90%;
   margin: auto;
 }
 
@@ -141,11 +142,39 @@ code {
 }
 
 /* ----------------- Mobile Size ----------------- */
+/* ----------------- Mobile Size ----------------- */
+/* ----------------- Mobile Size ----------------- */
 
-@media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 700px) {
+
+  /* ----------------- Mobile Size - Overall Website Structure ----------------- */
+  .container {
+    max-width: 100%;
+  }
+
+  
+
+
+  /* ----------------- Mobile Size - Navigation ----------------- */
+
+  .navigation, .bottom-navigation {
+    max-width: 100%;
+  }
 
   .nav-desktop, .nav-button {
     display: none;
+  }
+
+  .nav-item nav {
+    gap: 0;
+    align-items: center;
+  }
+
+  .nav-item nav a {
+    display: flex;
+    align-items: center;
+    padding-left: .5rem !important;
   }
 
   .nav-mobile {
@@ -167,38 +196,15 @@ code {
     align-items: flex-start;
 }
 
-/* .background-exit {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: black;
-    left: 0;
-    opacity: .2;
-    z-index: 1;
-} */
-
-
-
-
-/* Helper code for hamburger menu */
-/* --------------------------------------------------------- */
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
-
 
 .toggler{
 /* ALWAYS KEEPING THE TOGGLER OR THE CHECKBOX ON TOP OF EVERYTHING :  */
     z-index:4;
     height: 50px;
-    width: 50px;
+    width: 55px;
     position: absolute;
     top: 0;
-    right: 5%;
+    right: 0;
     cursor: pointer;
     opacity: 0;
 }
@@ -206,7 +212,7 @@ code {
 .hamburger{
     position: absolute;
     top: 0;
-    right: 3%;
+    right: 0;
     height: 30px;
     width: 35px;
     padding: 0.6rem;
@@ -286,6 +292,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
     width: 0%;
     height: 100vh;
     right: 0;
+    top: 0;
 
 /* APPLYING TRANSITION TO THE MENU :  */
 
@@ -301,6 +308,13 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
 /* STYLING THE LIST :  */
 
+.menu-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .menu >  div > nav {
     display: flex;
     flex-direction: column;
@@ -310,10 +324,6 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 /* HIDDEN INITIALLY  :  */
 
     visibility: hidden;
-}
-
-.menu > div > nav:first-child {
-    padding-top: 50px;
 }
 
 .menu > div > nav {
@@ -326,7 +336,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
     text-decoration: none;
     font-size: 1rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 1rem;
+    /* padding: 1rem; */
     margin-right: 2rem;
     width: 100%;
     text-align: left;
@@ -341,13 +351,24 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
     visibility: visible;
 }
 
+.toggler:checked ~ .menu > div > nav > a > div { 
+  /* padding: 1rem; */
+}
+
+
+.toggler:checked ~ .menu > div > nav > a { 
+  border-left: 4px solid gray;
+  width: 100%;
+  min-height: 3rem;
+}
+
+
 .toggler:checked ~ .menu > div > nav > a:hover{
     color: darkblue;
     text-decoration: underline;
     border-left: 4px solid darkblue;
     background: lightgrey;
 }
-
 
 
 /*  */

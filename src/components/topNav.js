@@ -30,14 +30,14 @@ export default function TopNav() {
             <div className="nav-item nav-desktop">
                 {getNav()}
             </div>
-            <div className="nav-item">
+            <div className="nav-item nav-button">
                 {getButton()}
             </div>
             <div className="nav-item nav-mobile">
                 <input type="checkbox" className="toggler"></input>
                 <div className="hamburger"><div></div></div>
                 <div className="menu">
-                    <div>
+                    <div className="menu-container">
                         {getNav()}
                         {getButton()}
                     </div>
