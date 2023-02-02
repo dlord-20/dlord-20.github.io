@@ -10,17 +10,20 @@ import { store } from './app/store';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import Home from './pages/home';
+import TopNav from './components/topNav';
+import BottomNav from './components/bottomNav';
 
 export default function App() {
 
   return (
     <BrowserRouter>
       <Provider store={store}>
+        <TopNav/>
         <Routes>
-          
           <Route path="/" element={<Home/>}></Route>
           <Route path="/test" element={<Home/>}></Route>
         </Routes>
+        <BottomNav/>
       </Provider>
     </BrowserRouter>
   );
