@@ -7,12 +7,10 @@ export default function MenuItem(props) {
     let link = props.item.link;
 
     return (
-        <li>
-            <Link to={link} >
-                <div className="menuItem">
-                    <p>{title}</p>
-                </div>
-            </Link>
-        </li>
+        <Link to={link} >
+            <div className="menu-item">
+                <p>{title}</p>
+            </div>
+        </Link>
     );
 }

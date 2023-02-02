@@ -3,40 +3,45 @@ import MenuItem from "./menuItem";
 
 export default function TopNav() {
 
-    const getMenu = () => {
+    const getNav = () => {
         return (
-            <ul>  
+            <nav>  
                 <MenuItem item={{title: 'Home', link: '/'}}/>
                 <MenuItem item={{title: 'Works', link: '/works'}}/>          
                 <MenuItem item={{title: 'Services', link: '/services'}}/>
                 <MenuItem item={{title: 'About', link: '/about'}}/>        
                 <MenuItem item={{title: 'Blog', link: '/blog'}}/>  
                 <MenuItem item={{title: 'Contact', link: '/contact'}}/>    
-            </ul>
+            </nav>
         )
     }
 
     const getButton = () => {
         return (
-            <Button />
+                <Button text="Let's Talk" type="a"/>
         )
     }
 
     return (
         <div className="navigation">
-            <div className="navItem">
+            <div className="nav-item">
                 <p>Logo Image</p>
             </div>
-            <div className="navItem navDesktop">
-                {getMenu()}
-
+            <div className="nav-item nav-desktop">
+                {getNav()}
             </div>
-            <div className="navItem navButton">
+            <div className="nav-item">
                 {getButton()}
             </div>
-            <div className="navItem navMobile">
-                {getMenu()}
-                {getButton()}
+            <div className="nav-item nav-mobile">
+                <input type="checkbox" className="toggler"></input>
+                <div className="hamburger"><div></div></div>
+                <div className="menu">
+                    <div>
+                        {getNav()}
+                        {getButton()}
+                    </div>
+                </div>
             </div>
         </div>
     );
