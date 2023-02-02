@@ -68,7 +68,8 @@ code {
 
 .container {
   margin: auto;
-  max-width: 90%;
+  width: 90%;
+  max-width: 1280px;
 }
 
 /* ----------------- Navigation ----------------- */
@@ -77,22 +78,11 @@ code {
   margin: auto;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;  
-  max-width: 90%;
-  border: 3px solid var(--derek);
-  margin-top: .6rem;
-}
-
-.navigation > :first-child {
-  margin-left: 20px;
-}
-
-.navigation > :nth-child(3) {
-  margin-right: 20px;
-}
-
-.nav-item {
-  border: 1px solid blue;
+  align-items: center;  
+  width: 90%;
+  max-width: 1280px;
+  /* border: 3px solid var(--derek); */
+  padding: 1rem 0;
 }
 
 .nav-item nav {
@@ -104,7 +94,7 @@ code {
 }
 
 .nav-item {
-  border: 1px solid pink;
+  /* border: 1px solid pink; */
   margin: 0;
   padding: 0;
 }
@@ -115,7 +105,8 @@ code {
 }
 
 .bottom-navigation {
-  max-width: 90%;
+  width: 90%;
+  max-width: 1280px;
   margin: auto;
 }
 
@@ -133,12 +124,15 @@ code {
 
 
 .button:hover {
-  background-color: green;
+  /* background-color: green; */
   cursor: pointer;
 }
 
 .button-a {
-  background-color: lightgray;
+  /* background-color: lightgray; */
+  font-weight: 900;
+  padding: 1rem 2rem;
+  border: 1px solid green;
 }
 
 /* ----------------- Mobile Size ----------------- */
@@ -150,16 +144,19 @@ code {
 
   /* ----------------- Mobile Size - Overall Website Structure ----------------- */
   .container {
-    max-width: 100%;
+    width: 100%;
+    /* padding: 1rem; */
   }
 
   
 
 
   /* ----------------- Mobile Size - Navigation ----------------- */
+  /* Maybe move this to a module? -> Make things less cultered */
 
   .navigation, .bottom-navigation {
-    max-width: 100%;
+    width: 100%;
+    /* padding: 1rem; */
   }
 
   .nav-desktop, .nav-button {
