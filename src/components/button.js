@@ -1,13 +1,14 @@
+import { Link } from 'react-router-dom';
 
 export default function Button() {
 
-    const handleButtonClick = () => {
-        return <p>Hello world</p>
-    }
 
     return (
-        <div className="button">
-            {handleButtonClick()}
-        </div>
+        <Link to={`/test`} >
+            <div className="button">
+                <p>Testing 123</p>
+            </div>
+        </Link>
+
     );
 }
