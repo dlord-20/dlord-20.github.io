@@ -18,10 +18,15 @@ code {
     monospace;
 }
 
+/* ----------------- Overall Website Structures ----------------- */
+
+
 .container {
   margin: auto;
   max-width: 90%;
 }
+
+/* ----------------- Navigation ----------------- */
 
 .navigation {
   margin: auto;
@@ -52,6 +57,8 @@ code {
 .navItem li {
   border: 1px solid pink;
 }
+
+/* ----------------- Buttons ----------------- */
 
 .button {
   position: relative;
