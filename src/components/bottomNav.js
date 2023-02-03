@@ -3,7 +3,9 @@ export default function BottomNav() {
 
     return (
         <div className="bottom-navigation">
-            <p>Bottom Navigation</p>
+            <div className="inner-container">
+                <p>Bottom Navigation</p>
+            </div>
         </div>
     );
 }

@@ -7,7 +7,9 @@ export default function Home() {
             <Helmet>
                 <title>Home Title</title>
             </Helmet>
-            <p>Home Page</p>
+            <div className="inner-container">
+                <p>Home Page</p>
+            </div>
         </div>
     );
 }

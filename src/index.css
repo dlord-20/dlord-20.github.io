@@ -72,6 +72,10 @@ code {
   max-width: 1280px;
 }
 
+.inner-container {
+  padding: 1rem;
+}
+
 /* ----------------- Navigation ----------------- */
 
 .navigation {
@@ -148,14 +152,14 @@ code {
   }
 
   .navigation > :first-child {
-    margin-left: 1rem;
+    padding-left: 1rem;
   }
 
 
   /* ----------------- Mobile Size - Navigation ----------------- */
   /* Maybe move this to a module? -> Make things less cultered */
 
-  .bottom-navigation {
+  .bottom-navigation, .navigation {
     width: 100%;
   }
 
