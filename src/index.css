@@ -73,7 +73,7 @@ code {
 }
 
 .inner-container {
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
 /* ----------------- Navigation ----------------- */
@@ -149,6 +149,10 @@ code {
   /* ----------------- Mobile Size - Overall Website Structure ----------------- */
   .container {
     width: 100%;
+  }
+
+  .inner-container {
+    padding: 1rem;
   }
 
   .navigation > :first-child {
