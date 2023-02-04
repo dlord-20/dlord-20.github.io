@@ -1,20 +1,9 @@
 import Button from "./button";
+import Menu from "./menu";
 import MenuItem from "./menuItem";
 
 export default function TopNav() {
 
-    const getNav = () => {
-        return (
-            <nav>  
-                <MenuItem item={{title: 'Home', link: '/'}}/>
-                <MenuItem item={{title: 'Works', link: '/works'}}/>          
-                <MenuItem item={{title: 'Services', link: '/services'}}/>
-                <MenuItem item={{title: 'About', link: '/about'}}/>        
-                <MenuItem item={{title: 'Blog', link: '/blog'}}/>  
-                <MenuItem item={{title: 'Contact', link: '/contact'}}/>    
-            </nav>
-        )
-    }
 
     const getButton = () => {
         return (
@@ -28,7 +17,7 @@ export default function TopNav() {
                 <p>Logo Image</p>
             </div>
             <div className="nav-item nav-desktop">
-                {getNav()}
+                <Menu/>
             </div>
             <div className="nav-item nav-button">
                 {getButton()}
@@ -38,7 +27,7 @@ export default function TopNav() {
                 <div className="hamburger"><div></div></div>
                 <div className="menu">
                     <div className="menu-container">
-                        {getNav()}
+                        <Menu/>
                         {getButton()}
                     </div>
                 </div>

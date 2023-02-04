@@ -8,7 +8,8 @@ export default function Home() {
                 <title>Home Title</title>
             </Helmet>
             <div className="inner-container">
-                <p>Home Page</p>
+                <h1>Derek Lord</h1>
+                <p>Auto generated text for description</p>
             </div>
         </div>
     );

@@ -76,6 +76,36 @@ code {
   /* padding: 1rem; */
 }
 
+/* ----------------- Fonts ----------------- */
+
+h1 {
+  font-family: "source-sans-pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3rem;
+  text-transform: uppercase;
+  /* 
+  FOR HEADERS
+  italic and normal
+  font-weight of 400 or 700
+  */
+}
+
+p {
+  font-family: "quasimoda", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1rem;
+  /*
+  FOR PARAGRAPHS OR SUBHEADINGS
+  italic and normal
+  quasimoda
+  300, 400, 500, 600, 700, 800
+  quasimode-2
+  100, 900
+  */
+}
+
 /* ----------------- Navigation ----------------- */
 
 .navigation {
@@ -117,6 +147,28 @@ code {
 .nav-mobile {
   display: none;
 }
+
+/* ----------------- Bottom Nav ----------------- */
+
+.bottom-nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.bottom-nav .left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right-column nav * {
+  padding: .1rem;
+}
+
+.right-column nav *:hover {
+  padding-left: .2rem;
+}
+
 
 /* ----------------- Buttons ----------------- */
 
