@@ -72,10 +72,6 @@ code {
   max-width: 1280px;
 }
 
-.inner-container {
-  /* padding: 1rem; */
-}
-
 /* ----------------- Fonts ----------------- */
 
 h1 {
@@ -406,10 +402,6 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
     transition: visibility 0.4s ease;
     transition-delay: 0.1s;
     visibility: visible;
-}
-
-.toggler:checked ~ .menu > div > nav > a > div { 
-  /* padding: 1rem; */
 }
 
 
