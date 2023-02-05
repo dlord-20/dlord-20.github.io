@@ -8,20 +8,25 @@ export default function Home() {
             <Helmet>
                 <title>Home Title</title>
             </Helmet>
-            <div className="column-one background-img-1">
+            <div className="column-one background-img-1 full-width">
                 <h1>Derek Lord</h1>
                 <p>Auto generated text for description</p>
             </div>
             <div className="column-two-even">
                 <div>
+                    <h1>Two Even</h1>
+                    <h2>Two Even</h2>
                     <h3>Two Even</h3>
+                    <h4>Two Even</h4>
+                    <h5>Two Even</h5>
+                    <h6>Two Even</h6>
                 </div>
                 <div>
-                    <h2>Get it</h2>
-                    <img src="#" alt="Text here"/>
+                    <img src="#" alt="This will be a graph showing my skills/experience"/>
                 </div>
                 <div>
-                    <p>Auto generated text here</p>
+                    <h4>Skills</h4>
+                    <p>Auto generated short description of my skills</p>
                 </div>
                 <div>
 

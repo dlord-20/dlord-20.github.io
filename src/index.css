@@ -96,6 +96,7 @@ code {
   grid-column-start: 1;
   grid-column-end: 6;
   border: 1px solid purple;
+  justify-self: center;
 }
 
 .column-two-even div:last-child, 
@@ -109,6 +110,7 @@ code {
   grid-column-start: 1;
   grid-column-end: 6;
   border: 1px solid blue;
+  justify-self: center;
 }
 
 .column-two-left-third {
@@ -135,16 +137,13 @@ code {
   grid-template-columns: repeat(4, 1fr);
 }
 
-p {
-  border: 1px solid red;
-}
 
 /* ----------------- Background Images ----------------- */
 .background-img-1 {
   background-image: url("./images/renato-pozzi-G4oGYy_ZcsQ-unsplash.jpg");
   background-color: white;
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   max-width: 100%;
   max-height: 100%;
   height: 250px;
@@ -155,25 +154,73 @@ p {
   justify-self: center;
 }
 
+.background-img-1 p {
+  justify-self: center;
+}
+
+/* ----------------- Break out of container (Full-Width) ----------------- */
+
+.full-width {
+  left: 50%;
+  margin-left: -50vw;
+	margin-right: -50vw;
+	max-width: 100vw;
+	position: relative;
+	right: 50%;
+	width: 100vw;
+}
+
 /* ----------------- Fonts ----------------- */
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "source-sans-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 3rem;
   text-transform: uppercase;
-  /* 
+    /* 
   FOR HEADERS
   italic and normal
   font-weight of 400 or 700
   */
 }
 
+h1, h3, h5 {
+  font-weight: 400;
+}
+
+h2, h4, h6 {
+  font-weight: 700;
+}
+
+h5, h6 {
+  font-style: italic;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
 p {
   font-family: "quasimoda", sans-serif;
   font-weight: 300;
-  font-style: normal;
   font-size: 1rem;
   /*
   FOR PARAGRAPHS OR SUBHEADINGS
@@ -183,6 +230,10 @@ p {
   quasimode-2
   100, 900
   */
+}
+
+a {
+  text-decoration: none;
 }
 
 /* ----------------- Navigation ----------------- */
@@ -217,14 +268,21 @@ p {
   padding: 0;
 }
 
-.bottom-navigation {
-  width: 90%;
-  max-width: 1280px;
-  margin: auto;
-}
-
 .nav-mobile {
   display: none;
+}
+
+.nav-bottom {
+  display: flex;
+  align-items: flex-end;
+}
+
+.nav-bottom-menu nav * {
+  padding: .2rem 0;
+}
+
+.nav-bottom-menu nav *:hover {
+  padding-left: .1rem;
 }
 
 
@@ -272,6 +330,7 @@ p {
   {
     padding: 1rem;
     grid-template-columns: 1fr;
+    
   }
 
   .column-two-even div, 
@@ -297,7 +356,7 @@ p {
   /* ----------------- Mobile Size - Navigation ----------------- */
   /* Maybe move this to a module? -> Make things less cultered */
 
-  .bottom-navigation, .navigation {
+  .navigation {
     width: 100%;
   }
 
@@ -313,7 +372,7 @@ p {
   .nav-item nav a {
     display: flex;
     align-items: center;
-    padding-left: .5rem !important;
+    padding-left: .5rem;
   }
 
   .nav-mobile {

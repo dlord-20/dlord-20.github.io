@@ -6,11 +6,10 @@ export default function BottomNav() {
         <div className="container">
             <div className="column-two-even">
                 <div></div>
-                <div>
-                    <p>Bottom Nav</p>
+                <div className="nav-bottom">
                     <p>Copyright &copy; 2023 Derek Lord. All Rights Reserved.</p>
                 </div>
-                <div>
+                <div className="nav-bottom-menu">
                     <Menu />
                 </div>
                 <div></div>
