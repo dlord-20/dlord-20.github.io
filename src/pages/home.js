@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet";
+import Button from "../components/button";
 
 export default function Home() {
 
@@ -12,35 +13,112 @@ export default function Home() {
                 <p>Auto generated text for description</p>
             </div>
             <div className="column-two-even">
-                <p>column 1 - two even</p>
-                <p>column 2</p>
+                <div>
+                    <h3>Two Even</h3>
+                </div>
+                <div>
+                    <h2>Get it</h2>
+                    <img src="#" alt="Text here"/>
+                </div>
+                <div>
+                    <p>Auto generated text here</p>
+                </div>
+                <div>
+                    
+                </div>
             </div>
             <div className="column-two-left-third">
-                <p>column 1 - left third</p>
-                <p>column 2</p>
+                <div>
+                    <h3>Two Left Third</h3>
+                </div>
+                <div>
+                    <p>column 1</p>
+                </div>
+                <div>
+                    <p>column 2</p>
+                </div>
+                <div>
+                    <Button text="Happy" type="b"/>
+                </div>
             </div>
             <div className="column-two-left-forth">
-                <p>column 1 - left forth</p>
-                <p>column 2</p>
+                <div>
+                    <h3>Two Left Forth</h3>
+                </div>
+                <div>
+                    <p>column 1</p>
+                </div>
+                <div>
+                    <p>column 2</p>
+                </div>
+                <div>
+                    <p>Bottom title</p>
+                </div>
             </div>
             <div className="column-two-right-third">
-                <p>column 1 - right third</p>
-                <p>column 2</p>
+                <div>
+                    <h3>Two Right Third</h3>
+                </div>
+                <div>
+                    <p>column 1</p>
+                </div>
+                <div>
+                    <p>column 2</p>
+                </div>
+                <div>
+                    <p>Bottom title</p>
+                </div>
             </div>
             <div className="column-two-right-forth">
-                <p>column 1 - right forth</p>
-                <p>column 2</p>
+                <div>
+                    <h3>Two Right Forth</h3>
+                </div>
+                <div>
+                    <p>column 1</p>
+                </div>
+                <div>
+                    <p>column 2</p>
+                </div>
+                <div>
+                    <p>Bottom title</p>
+                </div>
             </div>
             <div className="column-three-even">
-                <p>column 1 - three even</p>
-                <p>column 2</p>
-                <p>column 3</p>
+                <div>
+                    <h3>Three</h3>
+                </div>
+                <div>
+                    <p>column 1</p>
+                </div>
+                <div>
+                    <p>column 2</p>
+                </div>
+                <div>
+                    <p>column 3</p>
+                </div>
+                <div>
+                    <p>Bottom title</p>
+                </div>
             </div>
             <div className="column-four-even">
-                <p>column 1 - four even</p>
-                <p>column 2</p>
-                <p>column 3</p>
-                <p>column 4</p>
+                <div>
+                    <h3>Forth Even</h3>
+                </div>
+                <div>
+                    <p>column 1</p>
+                </div>
+                <div>
+                    <p>column 2</p>
+                </div>
+                <div>
+                    <p>column 3</p>
+                </div>
+                <div>
+                    <p>column 4</p>
+                </div>
+                <div>
+                    <p>Bottom title</p>
+                </div>
             </div>
         </div>
     );

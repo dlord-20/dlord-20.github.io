@@ -78,10 +78,37 @@ code {
 .column-one, .column-two-even, .column-two-left-third, .column-two-left-forth, .column-two-right-third, .column-two-right-forth, .column-three-even, .column-four-even {
   display: grid;
   border: 1px solid green;
+  padding: 2rem 0;
 }
 
 .column-two-even {
   grid-template-columns: repeat(2, 1fr);
+}
+
+.column-two-even div:first-child, 
+.column-two-left-third div:first-child,
+.column-two-left-forth div:first-child,
+.column-three-even div:first-child,
+.column-two-right-third div:first-child,
+.column-two-right-forth div:first-child,
+.column-four-even div:first-child 
+{
+  grid-column-start: 1;
+  grid-column-end: 6;
+  border: 1px solid purple;
+}
+
+.column-two-even div:last-child, 
+.column-two-left-third div:last-child,
+.column-two-left-forth div:last-child,
+.column-three-even div:last-child,
+.column-two-right-third div:last-child,
+.column-two-right-forth div:last-child,
+.column-four-even div:last-child 
+{
+  grid-column-start: 1;
+  grid-column-end: 6;
+  border: 1px solid blue;
 }
 
 .column-two-left-third {
@@ -218,9 +245,32 @@ p {
     width: 100%;
   }
 
-  .column-one, .column-two-even, .column-two-left-third, .column-two-left-forth, .column-two-right-third, .column-two-right-forth, .column-three-even, .column-four-even {
+  .column-one, 
+  .column-two-even, 
+  .column-two-left-third, 
+  .column-two-left-forth, 
+  .column-two-right-third, 
+  .column-two-right-forth, 
+  .column-three-even, 
+  .column-four-even 
+  {
     padding: 1rem;
     grid-template-columns: 1fr;
+  }
+
+  .column-two-even div, 
+  .column-two-left-third div, 
+  .column-two-left-forth div, 
+  .column-two-right-third div, 
+  .column-two-right-forth div, 
+  .column-three-even div, 
+  .column-four-even div 
+  {
+    grid-column: span 3;
+  }
+
+  .column-two-even div:nth-child(2) {
+    grid-row: 3;
   }
 
   .navigation > :first-child {
