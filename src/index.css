@@ -70,6 +70,26 @@ code {
   margin: auto;
   width: 90%;
   max-width: 1280px;
+  display: grid;
+}
+
+/* ----------------- Grid ----------------- */
+
+.column-one, .column-two-even, .column-two-left, .column-two-right {
+  display: grid;
+  border: 1px solid green;
+}
+
+.column-two-even {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.column-two-left {
+  grid-template-columns: 3fr 2fr;
+}
+
+.column-two-right {
+  grid-template-columns: 2fr 3fr;
 }
 
 /* ----------------- Fonts ----------------- */
@@ -144,27 +164,6 @@ p {
   display: none;
 }
 
-/* ----------------- Bottom Nav ----------------- */
-
-.bottom-nav {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.bottom-nav .left-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.right-column nav * {
-  padding: .1rem;
-}
-
-.right-column nav *:hover {
-  padding-left: .2rem;
-}
-
 
 /* ----------------- Buttons ----------------- */
 
@@ -199,7 +198,7 @@ p {
     width: 100%;
   }
 
-  .inner-container {
+  .column-one, .column-two-even, .column-two-left, .column-two-right {
     padding: 1rem;
   }
 

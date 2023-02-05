@@ -1,9 +1,7 @@
 import Button from "./button";
 import Menu from "./menu";
-import MenuItem from "./menuItem";
 
 export default function TopNav() {
-
 
     const getButton = () => {
         return (
