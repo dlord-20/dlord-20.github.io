@@ -8,7 +8,7 @@ export default function Home() {
             <Helmet>
                 <title>Home Title</title>
             </Helmet>
-            <div className="column-one">
+            <div className="column-one background-img-1">
                 <h1>Derek Lord</h1>
                 <p>Auto generated text for description</p>
             </div>
@@ -24,7 +24,7 @@ export default function Home() {
                     <p>Auto generated text here</p>
                 </div>
                 <div>
-                    
+
                 </div>
             </div>
             <div className="column-two-left-third">
