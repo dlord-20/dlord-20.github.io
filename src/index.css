@@ -361,11 +361,12 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 .menu{
     position: fixed;
     z-index: 2;
-    background: gray;
+    background: white;
     width: 0%;
     height: 100vh;
     right: 0;
     top: 0;
+    border-left: 1px solid gray;
 
 /* APPLYING TRANSITION TO THE MENU :  */
 
@@ -426,7 +427,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
 
 .toggler:checked ~ .menu > div > nav > a { 
-  border-left: 4px solid gray;
+  border-left: 4px solid white;
   width: 100%;
   min-height: 3rem;
 }
@@ -434,8 +435,8 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
 .toggler:checked ~ .menu > div > nav > a:hover{
     color: darkblue;
-    text-decoration: underline;
-    border-left: 4px solid darkblue;
+    /* text-decoration: underline; */
+    border-left: 4px solid gray;
     background: lightgrey;
 }
 
