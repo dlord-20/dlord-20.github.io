@@ -14,6 +14,7 @@ export default function TopNav() {
             <div className="nav-item">
                 <p>Logo Image</p>
             </div>
+            {/* <div className="nav-bg"></div> */}
             <div className="nav-item nav-desktop">
                 <Menu/>
             </div>

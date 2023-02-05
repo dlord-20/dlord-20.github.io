@@ -57,6 +57,10 @@ code {
     monospace;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /* ----------------- Global Values ----------------- */
 
 :root {
@@ -77,7 +81,7 @@ code {
 
 .column-one, .column-two-even, .column-two-left-third, .column-two-left-forth, .column-two-right-third, .column-two-right-forth, .column-three-even, .column-four-even {
   display: grid;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   padding: 2rem 0;
 }
 
@@ -95,7 +99,7 @@ code {
 {
   grid-column-start: 1;
   grid-column-end: 6;
-  border: 1px solid purple;
+  /* border: 1px solid purple; */
   justify-self: center;
 }
 
@@ -109,7 +113,7 @@ code {
 {
   grid-column-start: 1;
   grid-column-end: 6;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   justify-self: center;
 }
 
@@ -239,7 +243,9 @@ a {
 /* ----------------- Navigation ----------------- */
 
 .navigation {
-  margin: auto;
+  /* margin: auto; */
+  position: absolute;
+  z-index: 5;
   display: flex;
   justify-content: space-between;
   align-items: center;  
@@ -247,6 +253,17 @@ a {
   max-width: 1280px;
   /* border: 3px solid var(--derek); */
   padding: 1rem 0;
+  background-color: white;
+
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-gb {
+  position: absolute;
+  width: 100%;
+  height:100%;
+
 }
 
 .nav-item nav {
@@ -261,6 +278,7 @@ a {
   /* border: 1px solid pink; */
   margin: 0;
   padding: 0;
+  
 }
 
 .nav-item * {
@@ -288,15 +306,7 @@ a {
 
 /* ----------------- Buttons ----------------- */
 
-.button {
-  position: relative;
-  /* width: 100%; */
-  /* height: 100%; */
-}
-
-
 .button:hover {
-  /* background-color: green; */
   cursor: pointer;
 }
 
@@ -304,7 +314,15 @@ a {
   /* background-color: lightgray; */
   font-weight: 900;
   padding: 1rem 2rem;
-  border: 1px solid green;
+  border: 1px solid gray;
+}
+
+.button-b {
+  padding: .5rem 1rem;
+}
+
+.button-b:hover {
+  border-bottom: 1px solid gray;
 }
 
 /* ----------------- Mobile Size ----------------- */
@@ -398,8 +416,8 @@ a {
 .toggler{
 /* ALWAYS KEEPING THE TOGGLER OR THE CHECKBOX ON TOP OF EVERYTHING :  */
     z-index:4;
-    height: 50px;
-    width: 55px;
+    height: 75px;
+    width: 80px;
     position: absolute;
     top: 0;
     right: 0;
@@ -411,8 +429,8 @@ a {
     position: absolute;
     top: 0;
     right: 0;
-    height: 30px;
-    width: 35px;
+    height: 49px;
+    width: 55px;
     padding: 0.6rem;
     z-index: 3;
 
@@ -474,7 +492,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
 /* AND ROTATING THE TOP AND BOTTOM LINES :  */
 
-.toggler:checked + .hamburger > div::after{
+.toggler:checked + .hamburger > div::after {
     top: 0;
     transform: rotate(135deg);
     background: black;
@@ -514,23 +532,28 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   justify-content: space-between;
 }
 
-.menu >  div > nav {
+.menu > div > nav,
+.menu > div .button
+{
     display: flex;
     flex-direction: column;
     top: 0px;
     z-index: 2;
-
 /* HIDDEN INITIALLY  :  */
-
     visibility: hidden;
 }
+
+.menu-container {
+  overflow: hidden;
+}
+
 
 .menu > div > nav {
     list-style: none;
 }
 
 /* Fix this reference */
-.menu > div > nav > a{
+.menu > div > nav > a {
     color: whitesmoke;
     text-decoration: none;
     font-size: 1rem;
@@ -544,10 +567,16 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
 /* WHEN THE TOGGLER IS CHECKED, CHANGE THE VISIBILITY TO VISIBLE :  */
 
-.toggler:checked ~ .menu > div > nav{
+.toggler:checked ~ .menu > div > nav, 
+.toggler:checked ~ .menu > div .button 
+{
     transition: visibility 0.4s ease;
     transition-delay: 0.1s;
     visibility: visible;
+}
+
+.toggler:checked ~ .menu .menu-container {
+  overflow: visible;
 }
 
 
@@ -555,12 +584,10 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   border-left: 4px solid white;
   width: 100%;
   min-height: 3rem;
+  background-color: white;
 }
 
-
 .toggler:checked ~ .menu > div > nav > a:hover{
-    color: darkblue;
-    /* text-decoration: underline; */
     border-left: 4px solid gray;
     background: lightgrey;
 }
