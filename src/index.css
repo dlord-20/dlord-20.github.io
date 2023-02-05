@@ -77,6 +77,10 @@ code {
   display: grid;
 }
 
+.container .space-below {
+  padding-top: 17rem;
+}
+
 /* ----------------- Grid ----------------- */
 
 .column-one, .column-two-even, .column-two-left-third, .column-two-left-forth, .column-two-right-third, .column-two-right-forth, .column-three-even, .column-four-even {

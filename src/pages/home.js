@@ -4,6 +4,7 @@ import Button from "../components/button";
 export default function Home() {
 
     return (
+        // Maybe can change container for background image
         <div className="container">
             <Helmet>
                 <title>Home Title</title>
@@ -12,7 +13,7 @@ export default function Home() {
                 <h1>Derek Lord</h1>
                 <p>Auto generated text for description</p>
             </div>
-            <div className="column-two-even">
+            <div className="column-two-even space-below">
                 <div>
                     <h1>Two Even</h1>
                     <h2>Two Even</h2>
