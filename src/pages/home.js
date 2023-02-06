@@ -1,32 +1,7 @@
 import { Helmet } from "react-helmet";
-import { useDispatch, useSelector } from "react-redux";
 import Button from "../components/button";
-import { changeStatus, selectStatus } from "../features/checkbox/checkboxSlice";
 
 export default function Home() {
-    const checkboxStatus = useSelector(selectStatus);
-    const dispatch = useDispatch();
-
-    const handleCheckboxClick = (event) => {
-        dispatch(changeStatus());
-        if(checkboxStatus) {
-            document.getElementById("checkbox").checked = false;
-            event.target.classList.remove("checkbox-hidden");
-        } else {
-            document.getElementById("checkbox").checked = true;
-            event.target.classList.add("checkbox-hidden");
-        }
-    }
-
-    const getMenuBackground = () => {
-        if(checkboxStatus) {
-            return (
-                <div class="checkbox-hidden" id="checkbox-hidden" onClick={(event) => handleCheckboxClick(event)}></div>
-            )
-        } else {
-            return null;
-        }
-    };
 
     return (
             <div className="container">
@@ -37,7 +12,6 @@ export default function Home() {
                     <h1>Derek Lord</h1>
                     <p>Auto generated text for description</p>
                 </div>
-                {getMenuBackground()}
                 <div className="column-two-even space-below">
                     <div>
                         <h1>Two Even</h1>

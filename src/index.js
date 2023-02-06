@@ -14,6 +14,7 @@ import TopNav from './components/topNav';
 import BottomNav from './components/bottomNav';
 import { selectStatus } from './features/checkbox/checkboxSlice';
 import { changeStatus } from './features/checkbox/checkboxSlice';
+import MobileMenuBg from './components/mobileMenuBg';
 
 export default function App() {
 
@@ -21,6 +22,7 @@ export default function App() {
     <BrowserRouter>
       <Provider store={store}>
           <TopNav/>
+          <MobileMenuBg/>
           <Routes>
             <Route path="/" element={<Home/>}></Route>
             <Route path="/test" element={<Home/>}></Route>
