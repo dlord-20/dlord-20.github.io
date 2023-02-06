@@ -16,16 +16,6 @@ export default function TopNav() {
         )
     }
 
-    const handleCheckboxClick = () => {
-        dispatch(changeStatus());
-        var element = document.querySelector("#checkbox-hidden");
-        if(checkboxStatus) {
-            element.classList.add("checkbox-hidden");
-        } else {
-            element.classList.remove("checkbox-hidden");
-        }
-    }
-
     return (
         <div className="navigation">
             <div className="nav-item">
@@ -37,11 +27,11 @@ export default function TopNav() {
             <div className="nav-item nav-button">
                 {getButton()}
             </div>
-            <div className="nav-item nav-mobile">
-                <input type="checkbox" id="checkbox" className="toggler" onClick={() => handleCheckboxClick() }></input>
+            <div className="nav-item nav-mobile" id="sidebar-mobile">
+                <input type="checkbox" id="checkbox" className="toggler" onClick={() => dispatch(changeStatus()) }></input>
                 <div className="hamburger"><div></div></div>
-                <div className="menu">
-                    <div className="menu-container">
+                <div className="menu" id="sidebar-menu">
+                    <div className="menu-container" id="sidebar-nav">
                         <Menu/>
                         {getButton()}
                     </div>
