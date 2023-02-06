@@ -310,6 +310,10 @@ a {
 
 /* ----------------- Buttons ----------------- */
 
+.button {
+  background-color: white;
+}
+
 .button:hover {
   cursor: pointer;
 }
@@ -409,7 +413,6 @@ a {
     flex-direction: column;
   }
 
-
   /*  */
 
   .nav-mobile nav {
@@ -420,8 +423,8 @@ a {
 .toggler{
 /* ALWAYS KEEPING THE TOGGLER OR THE CHECKBOX ON TOP OF EVERYTHING :  */
     z-index:4;
-    height: 75px;
-    width: 80px;
+    height: 50px;
+    width: 60px;
     position: absolute;
     top: 0;
     right: 0;
@@ -530,10 +533,12 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 /* STYLING THE LIST :  */
 
 .menu-container {
-  height: 100%;
+  height: 80vh;
+  max-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: white;
 }
 
 .menu > div > nav,
@@ -550,7 +555,9 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 .menu-container {
   overflow: hidden;
 }
-
+.breakout {
+  visibility: hidden;
+}
 
 .menu > div > nav {
     list-style: none;
@@ -579,6 +586,11 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
     visibility: visible;
 }
 
+.toggler:checked ~ .menu > div .button {
+  z-index: 1000;
+}
+
+
 .toggler:checked ~ .menu .menu-container {
   overflow: visible;
 }
@@ -596,6 +608,18 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
     background: lightgrey;
 }
 
+
+.toggler:checked ~ .menu > div > .breakout {
+  position: fixed;
+  background-color: black;
+  opacity: .4;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  visibility: inherit;
+  z-index: -1;
+}
 
 /*  */
   
