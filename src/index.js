@@ -5,15 +5,13 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import { Provider, useDispatch, useSelector } from 'react-redux';
+import { Provider } from 'react-redux';
 import { store } from './app/store';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import Home from './pages/home';
 import TopNav from './components/topNav';
 import BottomNav from './components/bottomNav';
-import { selectStatus } from './features/checkbox/checkboxSlice';
-import { changeStatus } from './features/checkbox/checkboxSlice';
 import MobileMenuBg from './components/mobileMenuBg';
 
 export default function App() {

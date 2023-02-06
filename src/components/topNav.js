@@ -4,6 +4,8 @@ import Button from "./button";
 import Menu from "./menu";
 import { changeStatus } from "../features/checkbox/checkboxSlice";
 
+// NEED TO ADD WHEN YOU CLICK ON THE MENU IT CLOSES THE MOBILE MENU
+
 export default function TopNav() {
     const checkboxStatus = useSelector(selectStatus);
     const dispatch = useDispatch();
@@ -29,7 +31,6 @@ export default function TopNav() {
             <div className="nav-item">
                 <p>Logo Image</p>
             </div>
-            {/* <div className="nav-bg"></div> */}
             <div className="nav-item nav-desktop">
                 <Menu/>
             </div>
@@ -43,8 +44,6 @@ export default function TopNav() {
                     <div className="menu-container">
                         <Menu/>
                         {getButton()}
-                        {/* <div className="breakout" onClick={() => handleCheckboxClick()}> */}
-                        {/* </div> */}
                     </div>
                 </div>
             </div>
