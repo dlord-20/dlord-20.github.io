@@ -6,7 +6,8 @@ import { changeStatus } from "../features/checkbox/checkboxSlice";
 
 export default function TopNav() {
     const checkboxStatus = useSelector(selectStatus);
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
+    
     const getButton = () => {
         return (
                 <Button text="Let's Talk" type="a"/>
@@ -14,12 +15,12 @@ export default function TopNav() {
     }
 
     const handleCheckboxClick = () => {
-        console.log('hi');
         dispatch(changeStatus());
+        var element = document.querySelector("#checkbox-hidden");
         if(checkboxStatus) {
-            document.getElementById("checkbox").checked = false;
+            element.classList.add("checkbox-hidden");
         } else {
-            document.getElementById("checkbox").checked = true;
+            element.classList.remove("checkbox-hidden");
         }
     }
 
@@ -36,14 +37,14 @@ export default function TopNav() {
                 {getButton()}
             </div>
             <div className="nav-item nav-mobile">
-                <input type="checkbox" id="checkbox" className="toggler" onClick={() => dispatch(changeStatus())}></input>
+                <input type="checkbox" id="checkbox" className="toggler" onClick={() => handleCheckboxClick() }></input>
                 <div className="hamburger"><div></div></div>
                 <div className="menu">
                     <div className="menu-container">
                         <Menu/>
                         {getButton()}
-                        <div className="breakout" onClick={() => handleCheckboxClick()}>
-                        </div>
+                        {/* <div className="breakout" onClick={() => handleCheckboxClick()}> */}
+                        {/* </div> */}
                     </div>
                 </div>
             </div>

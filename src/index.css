@@ -69,6 +69,15 @@ code {
 
 /* ----------------- Overall Website Structures ----------------- */
 
+.checkbox-hidden {
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 3;
+}
 
 .container {
   margin: auto;
@@ -613,12 +622,12 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   position: fixed;
   background-color: black;
   opacity: .4;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   visibility: inherit;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 /*  */
