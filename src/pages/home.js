@@ -8,11 +8,12 @@ export default function Home() {
                 <Helmet>
                     <title>Home Title</title>
                 </Helmet>
-                <div className="column-one background-img-1 full-width">
+                
+                <div className="column-one background-img-1">
                     <h1>Derek Lord</h1>
                     <p>Auto generated text for description</p>
                 </div>
-                <div className="column-two-even space-below">
+                <div className="column-two-even">
                     <div>
                         <h1>Two Even</h1>
                         <h2>Two Even</h2>
@@ -32,20 +33,20 @@ export default function Home() {
 
                     </div>
                 </div>
-                <div className="column-two-left-third">
-                    <div>
-                        <h3>Two Left Third</h3>
+                    <div className="column-two-left-third">
+                        <div>
+                            <h3>Two Left Third</h3>
+                        </div>
+                        <div>
+                            <p>column 1</p>
+                        </div>
+                        <div>
+                            <p>column 2</p>
+                        </div>
+                        <div>
+                            <Button text="Happy" type="b"/>
+                        </div>
                     </div>
-                    <div>
-                        <p>column 1</p>
-                    </div>
-                    <div>
-                        <p>column 2</p>
-                    </div>
-                    <div>
-                        <Button text="Happy" type="b"/>
-                    </div>
-                </div>
                 <div className="column-two-left-forth">
                     <div>
                         <h3>Two Left Forth</h3>

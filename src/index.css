@@ -87,7 +87,7 @@ code {
 }
 
 .container .space-below {
-  padding-top: 17rem;
+  margin-top: 17rem;
 }
 
 /* ----------------- Grid ----------------- */
@@ -157,7 +157,7 @@ code {
 
 /* ----------------- Background Images ----------------- */
 .background-img-1 {
-  background-image: url("./images/renato-pozzi-G4oGYy_ZcsQ-unsplash.jpg");
+  background-image: url("./images/pramod-tiwari-IDFBM5QvoY0-unsplash.jpg");
   background-color: white;
   background-size: cover;
   overflow: hidden;
@@ -178,14 +178,24 @@ code {
 
 /* ----------------- Break out of container (Full-Width) ----------------- */
 
-.full-width {
+/* .full-width {
   left: 50%;
 	width: 100%;
   position: absolute;
   transform: translateX(-50%);
   overflow: hidden;
   padding: 0 !important;
+  border: 1px solid blue;
 }
+
+.fit-content {
+  min-height: 100%;
+  height: 100%;
+  border: 1px solid green;
+  /* height: 10px; */
+  /* overflow: hidden; */
+
+/* }  */
 
 /* ----------------- Fonts ----------------- */
 
@@ -256,20 +266,16 @@ a {
 /* ----------------- Navigation ----------------- */
 
 .navigation {
-  /* margin: auto; */
-  position: absolute;
+  margin: auto;
   z-index: 5;
   display: flex;
   justify-content: space-between;
   align-items: center;  
   width: 90%;
   max-width: 1280px;
-  /* border: 3px solid var(--derek); */
   padding: 1rem 0;
   background-color: white;
 
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .nav-gb {
@@ -431,7 +437,7 @@ a {
 
 .toggler{
 /* ALWAYS KEEPING THE TOGGLER OR THE CHECKBOX ON TOP OF EVERYTHING :  */
-    z-index:4;
+    z-index: 8;
     height: 50px;
     width: 60px;
     position: absolute;
@@ -448,7 +454,7 @@ a {
     height: 49px;
     width: 55px;
     padding: 0.6rem;
-    z-index: 3;
+    z-index: 7;
 
 /* FOR DISPLAYING EVERY ELEMENT IN THE CENTER : */
 
@@ -518,11 +524,10 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 /* MAIN MENU WITH THE WHITE BACKGROUND AND THE TEXT :  */
 
 .menu{
-    position: fixed;
-    z-index: 2;
+    position: absolute;
+    z-index: 6;
     background: white;
     width: 0%;
-    height: 100%;
     right: 0;
     top: 0;
     border-left: 1px solid gray;
@@ -542,8 +547,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 /* STYLING THE LIST :  */
 
 .menu-container {
-  height: 80vh;
-  max-height: 400px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
