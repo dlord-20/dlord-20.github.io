@@ -9,11 +9,15 @@ export default function Home() {
                     <title>Home Title</title>
                 </Helmet>
                 
-                <div className="column-one background-img-1">
-                    <h1>Derek Lord</h1>
-                    <p>Auto generated text for description</p>
+                <div className="column-one">
+                    <div></div>
+                    <div>
+                        <h1>Derek Lord</h1>
+                        <p>Auto generated text for description</p>
+                    </div>
                 </div>
                 <div className="column-two-even">
+                    <div className="background-color-one"></div>
                     <div>
                         <h1>Two Even</h1>
                         <h2>Two Even</h2>
@@ -34,6 +38,7 @@ export default function Home() {
                     </div>
                 </div>
                     <div className="column-two-left-third">
+                        <div></div>
                         <div>
                             <h3>Two Left Third</h3>
                         </div>
@@ -48,6 +53,7 @@ export default function Home() {
                         </div>
                     </div>
                 <div className="column-two-left-forth">
+                    <div></div>
                     <div>
                         <h3>Two Left Forth</h3>
                     </div>
@@ -62,6 +68,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="column-two-right-third">
+                    <div></div>
                     <div>
                         <h3>Two Right Third</h3>
                     </div>
@@ -76,6 +83,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="column-two-right-forth">
+                    <div></div>
                     <div>
                         <h3>Two Right Forth</h3>
                     </div>
@@ -90,6 +98,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="column-three-even">
+                    <div></div>
                     <div>
                         <h3>Three</h3>
                     </div>
@@ -107,6 +116,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="column-four-even">
+                    <div></div>
                     <div>
                         <h3>Forth Even</h3>
                     </div>

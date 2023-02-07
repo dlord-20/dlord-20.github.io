@@ -13,12 +13,14 @@ import Home from './pages/home';
 import TopNav from './components/topNav';
 import BottomNav from './components/bottomNav';
 import MobileMenuBg from './components/mobileMenuBg';
+import Background from './components/background';
 
 export default function App() {
 
   return (
     <BrowserRouter>
       <Provider store={store}>
+          <Background/>
           <TopNav/>
           <MobileMenuBg/>
           <Routes>

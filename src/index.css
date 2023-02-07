@@ -69,6 +69,16 @@ code {
 
 /* ----------------- Overall Website Structures ----------------- */
 
+.main-background {
+  /* background-image: url("./images/renato-pozzi-G4oGYy_ZcsQ-unsplash.jpg"); */
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -5;
+  background-size: cover;
+  background-position: bottom;
+}
+
 .checkbox-hidden {
   background: rgba(0, 0, 0, 0.5);
   top: 0;
@@ -84,6 +94,10 @@ code {
   width: 90%;
   max-width: 1280px;
   display: grid;
+}
+
+.container > div:first-child {
+  padding: 0;
 }
 
 .container .space-below {
@@ -102,31 +116,55 @@ code {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.column-two-even div:first-child, 
-.column-two-left-third div:first-child,
-.column-two-left-forth div:first-child,
-.column-three-even div:first-child,
-.column-two-right-third div:first-child,
-.column-two-right-forth div:first-child,
-.column-four-even div:first-child 
+
+.column-one > div:first-child,
+.column-two-even > div:first-child, 
+.column-two-left-third > div:first-child,
+.column-two-left-forth > div:first-child,
+.column-three-even > div:first-child,
+.column-two-right-third > div:first-child,
+.column-two-right-forth > div:first-child,
+.column-four-even > div:first-child 
+{
+  position: absolute;
+  width: 100%;
+  height: 20rem;
+  background-color: black;
+  left: 0;
+  opacity: .5;
+  z-index: -4;
+}
+
+.background-color-one {
+  background-color: aquamarine !important;
+  opacity: 1 !important;
+}
+
+
+.column-two-even > div:nth-child(2), 
+.column-two-left-third > div:nth-child(2),
+.column-two-left-forth > div:nth-child(2),
+.column-three-even > div:nth-child(2),
+.column-two-right-third > div:nth-child(2),
+.column-two-right-forth > div:nth-child(2),
+.column-four-even > div:nth-child(2)
 {
   grid-column-start: 1;
   grid-column-end: 6;
-  /* border: 1px solid purple; */
+  border: 1px solid purple;
   justify-self: center;
 }
 
-.column-two-even div:last-child, 
-.column-two-left-third div:last-child,
-.column-two-left-forth div:last-child,
-.column-three-even div:last-child,
-.column-two-right-third div:last-child,
-.column-two-right-forth div:last-child,
-.column-four-even div:last-child 
+.column-two-even > div:last-child, 
+.column-two-left-third > div:last-child,
+.column-two-left-forth > div:last-child,
+.column-three-even > div:last-child,
+.column-two-right-third > div:last-child,
+.column-two-right-forth > div:last-child,
+.column-four-even > div:last-child 
 {
   grid-column-start: 1;
   grid-column-end: 6;
-  /* border: 1px solid blue; */
   justify-self: center;
 }
 
