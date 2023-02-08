@@ -102,14 +102,16 @@ code {
   /* padding-to 3rem; */
 }
 
-.container > div:first-child > div:first-child {
-  /* transform: translateY(0); */
-}
-
 /* ----------------- Charts ----------------- */
 .chart {
-  /* width: 0; */
+  /* display: block; */
+  width: calc(100%);
 }
+
+/* .chart > div {
+  height: 100% !important;
+  width: 0 !important;
+} */
 
 
 /* ----------------- Grid ----------------- */

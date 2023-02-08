@@ -99,10 +99,10 @@ export default function Home() {
                     <div>
                         <h1>Chart</h1>
                         {/* <div className="chart"> */}
-                            <RenderLineChart data={data}/>
+                            {/* <RenderLineChart data={data}/> */}
                         {/* </div> */}
-                        <RenderRadarChart data={radarData}/>
-                        <RenderSimpleBarChart data={data}/>
+                        {/* <RenderRadarChart data={radarData}/> */}
+                        {/* <RenderSimpleBarChart data={data}/> */}
                     </div>
                 </div>
                 <div className="column-two-even">
@@ -121,7 +121,9 @@ export default function Home() {
                     <div>
                         <h4>Skills</h4>
                         <p>Auto generated short description of my skills</p>
-                        <RenderSimpleBarChart data={data}/>
+                        <div className="chart">
+                            <RenderSimpleBarChart data={data}/>
+                        </div>
                     </div>
                     <div>
 

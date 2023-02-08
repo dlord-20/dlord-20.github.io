@@ -12,7 +12,7 @@ import CustomToolTip from "./customToolTip";
   
   export default function RenderSimpleBarChart({ data }) {
     return (
-      <ResponsiveContainer width="100%" height={400}>
+      <ResponsiveContainer width="99%" minWidth="0" height={400}>
         <BarChart
           width={500}
           height={300}

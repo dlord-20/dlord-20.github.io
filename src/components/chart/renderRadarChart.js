@@ -12,7 +12,7 @@ import CustomToolTip from "./customToolTip";
   
   export default function RenderRadarChart({ data }) {
     return (
-      <ResponsiveContainer width="100%" height={400}>
+      <ResponsiveContainer width="99%" height={400}>
         <RadarChart  
             cx="50%" 
             cy="50%" 
