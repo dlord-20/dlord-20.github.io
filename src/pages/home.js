@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import Button from "../components/button";
+import Chart from "../components/chart/chart";
 
 export default function Home() {
 
@@ -14,6 +15,13 @@ export default function Home() {
                     <div>
                         <h1>Derek Lord</h1>
                         <p>Auto generated text for description</p>
+                    </div>
+                </div>
+                <div className="column-one">
+                    <div className="123"></div>
+                    <div>
+                        <h1>Chart</h1>
+                        <Chart/>
                     </div>
                 </div>
                 <div className="column-two-even">
@@ -53,7 +61,7 @@ export default function Home() {
                         </div>
                     </div>
                 <div className="column-two-left-forth">
-                    <div className="123"></div>
+                    <div className="background-color-one"></div>
                     <div>
                         <h3>Two Left Forth</h3>
                     </div>
@@ -83,7 +91,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="column-two-right-forth">
-                    <div className="123"></div>
+                    <div className="background-color-one"></div>
                     <div>
                         <h3>Two Right Forth</h3>
                     </div>
@@ -116,7 +124,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="column-four-even">
-                    <div className="123"></div>
+                    <div className="background-color-one"></div>
                     <div>
                         <h3>Forth Even</h3>
                     </div>
