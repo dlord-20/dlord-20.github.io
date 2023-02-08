@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet";
 import Button from "../components/button";
-import Chart from "../components/chart/chart";
+import RenderLineChart from "../components/chart/renderLineChart";
 
 export default function Home() {
 
@@ -21,7 +21,7 @@ export default function Home() {
                     <div className="123"></div>
                     <div>
                         <h1>Chart</h1>
-                        <Chart/>
+                        <RenderLineChart data={""}/>
                     </div>
                 </div>
                 <div className="column-two-even">

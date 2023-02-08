@@ -1,5 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
-import { selectStatus } from "../features/checkbox/checkboxSlice";
+import { useDispatch } from "react-redux";
 import Button from "./button";
 import Menu from "./menu";
 import { changeStatus } from "../features/checkbox/checkboxSlice";
@@ -7,7 +6,6 @@ import { changeStatus } from "../features/checkbox/checkboxSlice";
 // NEED TO ADD WHEN YOU CLICK ON THE MENU IT CLOSES THE MOBILE MENU
 
 export default function TopNav() {
-    const checkboxStatus = useSelector(selectStatus);
     const dispatch = useDispatch();
     
     const getButton = () => {

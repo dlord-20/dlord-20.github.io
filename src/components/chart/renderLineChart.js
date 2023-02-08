@@ -1,5 +1,5 @@
 import {
-    BarChart,
+    LineChart,
     Bar,
     XAxis,
     YAxis,
@@ -9,10 +9,10 @@ import {
     ResponsiveContainer,
   } from "recharts";
   
-  export default function Chart({ data }) {
+  export default function RenderLineChart({ data }) {
     return (
       <ResponsiveContainer width="100%" height={400}>
-        <BarChart
+        <LineChart
           data={data}
           margin={{
             top: 5,
@@ -28,7 +28,7 @@ import {
           <Legend />
           <Bar dataKey="name" fill="#8884d8" />
           <Bar dataKey="priceUsd" fill="#82ca9d" />
-        </BarChart>
+        </LineChart>
       </ResponsiveContainer>
     );
   }
