@@ -5,7 +5,7 @@ import RenderRadarChart from "../components/chart/renderRadarChart";
 import RenderSimpleBarChart from "../components/chart/renderSimpleBarChart";
 
 export default function Home() {
-    const data = [{name: 'HTML', Skills: 75}, {name: 'CSS', Skills: 20}];
+    const data = [{name: 'html', Skills: 75, description: "Derek Rocks"}, {name: 'css', Skills: 20, description: "Derek Rocks"}];
     const radarData = [
         {
           subject: 'Math',

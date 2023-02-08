@@ -1,7 +1,8 @@
 
 export default function CustomToolTip({payload, label, active}) {
+// Going to need to customize this section to fit the right description depending on the input
     const getIntroOfPage = (label) => {
-        return label;
+        return `${label} details`;
     }
 
     if(active) {
@@ -9,7 +10,7 @@ export default function CustomToolTip({payload, label, active}) {
             <div className="tooltip-custom">
                 <p className="tooltip-label">{`${label} : ${payload[0].value}`}</p>
                 <p className="tooltip-intro">{getIntroOfPage(label)}</p>
-                <p className="tooltip-desc">Anything you want can be displayed here.</p>
+                {/* <p className="tooltip-desc">{description}</p> */}
             </div>
         );
     }  
