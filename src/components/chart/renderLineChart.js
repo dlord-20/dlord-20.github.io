@@ -12,7 +12,7 @@ import CustomToolTip from "./customToolTip";
   
   export default function RenderLineChart({ data }) {
     return (
-      <ResponsiveContainer width="100%" height={400}>
+      <ResponsiveContainer width="95%" maxHeight={400}>
         <LineChart
           data={data}
         >

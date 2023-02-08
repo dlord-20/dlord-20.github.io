@@ -106,6 +106,12 @@ code {
   /* transform: translateY(0); */
 }
 
+/* ----------------- Charts ----------------- */
+.chart {
+  /* width: 0; */
+}
+
+
 /* ----------------- Grid ----------------- */
 
 .column-one, .column-two-even, .column-two-left-third, .column-two-left-forth, .column-two-right-third, .column-two-right-forth, .column-three-even, .column-four-even {

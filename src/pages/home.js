@@ -98,7 +98,9 @@ export default function Home() {
                     <div className="123"></div>
                     <div>
                         <h1>Chart</h1>
-                        <RenderLineChart data={data}/>
+                        {/* <div className="chart"> */}
+                            <RenderLineChart data={data}/>
+                        {/* </div> */}
                         <RenderRadarChart data={radarData}/>
                         <RenderSimpleBarChart data={data}/>
                     </div>
@@ -119,6 +121,7 @@ export default function Home() {
                     <div>
                         <h4>Skills</h4>
                         <p>Auto generated short description of my skills</p>
+                        <RenderSimpleBarChart data={data}/>
                     </div>
                     <div>
 
