@@ -28,7 +28,7 @@ import CustomToolTip from "./customToolTip";
             <CartesianGrid horizontal="false" />
             <XAxis type="number" dataKey="name" axisLine={false} domain={[0, 100]} ticks={[0, 25, 50, 75, 100]} strokeWidth={0.5} stroke="#000"/>
             <YAxis width={40} type="category" dataKey="name"/>
-            <Tooltip content={<CustomToolTip />}/>
+            <Tooltip content={<CustomToolTip />}  wrapperStyle={{ outline: "none" }}/>
             <Legend />
             <Bar dataKey="Skills" fill="#8884d8" animationDuration={1000}/>
             {/* <Bar dataKey="uv" fill="#82ca9d" /> */}

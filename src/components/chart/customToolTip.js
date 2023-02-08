@@ -1,7 +1,7 @@
 
 export default function CustomToolTip({payload, label, active}) {
-    const getIntroOfPage = () => {
-        return "Hello";
+    const getIntroOfPage = (label) => {
+        return label;
     }
 
     if(active) {

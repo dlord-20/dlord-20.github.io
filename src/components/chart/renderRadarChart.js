@@ -3,9 +3,7 @@ import {
     RadarChart,
     PolarGrid,
     PolarAngleAxis,
-    PolarRadiusAxis,
     Tooltip,
-    Legend,
     ResponsiveContainer,
   } from "recharts";
 import CustomToolTip from "./customToolTip";
@@ -21,10 +19,8 @@ import CustomToolTip from "./customToolTip";
         >
             <PolarGrid/>
             <PolarAngleAxis dataKey="subject"/>
-            {/* <PolarRadiusAxis /> */}
             <Radar name="Derek" dataKey="A" stroke="#000" fill="#888" fillOpacity={0.6} />
-            <Tooltip content={<CustomToolTip/>}/>
-            {/* <Legend stroke="#000"/> */}
+            <Tooltip content={<CustomToolTip/>} wrapperStyle={{ outline: "none" }}/>
         </RadarChart>
       </ResponsiveContainer>
     );
