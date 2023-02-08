@@ -37,48 +37,7 @@ export default function Home() {
           B: 90,
           fullMark: 150,
         },
-        {
-          subject: 'History',
-          A: 65,
-          B: 85,
-          fullMark: 150,
-        },
-        {
-            subject: 'Test',
-            A: 65,
-            B: 85,
-            fullMark: 150,
-          },
-          {
-            subject: 'Histo',
-            A: 65,
-            B: 85,
-            fullMark: 150,
-          },
-          {
-            subject: 'Hisdsftory',
-            A: 65,
-            B: 85,
-            fullMark: 150,
-          },
-          {
-            subject: 'Hidstory',
-            A: 65,
-            B: 85,
-            fullMark: 150,
-          },
-          {
-            subject: 'Hisddsftory',
-            A: 65,
-            B: 85,
-            fullMark: 150,
-          },
-          {
-            subject: 'Hidstfory',
-            A: 65,
-            B: 85,
-            fullMark: 150,
-          },
+
       ];
 
     return (
@@ -98,11 +57,9 @@ export default function Home() {
                     <div className="123"></div>
                     <div>
                         <h1>Chart</h1>
-                        {/* <div className="chart"> */}
-                            {/* <RenderLineChart data={data}/> */}
-                        {/* </div> */}
-                        {/* <RenderRadarChart data={radarData}/> */}
-                        {/* <RenderSimpleBarChart data={data}/> */}
+                        <RenderLineChart data={data}/>
+                        <RenderRadarChart data={radarData}/>
+                        <RenderSimpleBarChart data={data}/>
                     </div>
                 </div>
                 <div className="column-two-even">
@@ -121,9 +78,7 @@ export default function Home() {
                     <div>
                         <h4>Skills</h4>
                         <p>Auto generated short description of my skills</p>
-                        <div className="chart">
-                            <RenderSimpleBarChart data={data}/>
-                        </div>
+                        <RenderSimpleBarChart data={data}/>
                     </div>
                     <div>
 

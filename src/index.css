@@ -103,10 +103,10 @@ code {
 }
 
 /* ----------------- Charts ----------------- */
-.chart {
-  /* display: block; */
+/* .chart {
+  display: block;
   width: calc(100%);
-}
+} */
 
 /* .chart > div {
   height: 100% !important;
@@ -434,8 +434,12 @@ a {
     grid-column: span 3;
   }
 
-  .column-two-even div:nth-child(2) {
+  .column-two-even div:nth-child(3) {
     grid-row: 3;
+  }
+
+  .nav-bottom {
+    height: 8.5rem;
   }
 
   .navigation > :first-child {

@@ -21,10 +21,10 @@ import CustomToolTip from "./customToolTip";
         >
             <PolarGrid/>
             <PolarAngleAxis dataKey="subject"/>
-            <PolarRadiusAxis />
+            {/* <PolarRadiusAxis /> */}
             <Radar name="Derek" dataKey="A" stroke="#000" fill="#888" fillOpacity={0.6} />
             <Tooltip content={<CustomToolTip/>}/>
-            <Legend stroke="#000"/>
+            {/* <Legend stroke="#000"/> */}
         </RadarChart>
       </ResponsiveContainer>
     );
