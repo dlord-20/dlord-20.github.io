@@ -1,33 +1,27 @@
 import {
     LineChart,
-    Bar,
     XAxis,
     YAxis,
     CartesianGrid,
     Tooltip,
     Legend,
     ResponsiveContainer,
+    Line
   } from "recharts";
+import CustomToolTip from "./customToolTip";
   
   export default function RenderLineChart({ data }) {
     return (
       <ResponsiveContainer width="100%" height={400}>
         <LineChart
           data={data}
-          margin={{
-            top: 5,
-            right: 30,
-            left: 20,
-            bottom: 5,
-          }}
         >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
+            <Line type="monotone" dataKey="Skills" stroke="#000"/>
+          <CartesianGrid stroke="#000"/>
+          <XAxis dataKey="name" stroke="#000"/>
           <YAxis />
-          <Tooltip />
-          <Legend />
-          <Bar dataKey="name" fill="#8884d8" />
-          <Bar dataKey="priceUsd" fill="#82ca9d" />
+          <Tooltip content={<CustomToolTip/>}/>
+          <Legend stroke="#000"/>
         </LineChart>
       </ResponsiveContainer>
     );

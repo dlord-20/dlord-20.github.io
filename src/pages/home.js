@@ -1,8 +1,85 @@
 import { Helmet } from "react-helmet";
 import Button from "../components/button";
 import RenderLineChart from "../components/chart/renderLineChart";
+import RenderRadarChart from "../components/chart/renderRadarChart";
+import RenderSimpleBarChart from "../components/chart/renderSimpleBarChart";
 
 export default function Home() {
+    const data = [{name: 'HTML', Skills: 75}, {name: 'CSS', Skills: 20}];
+    const radarData = [
+        {
+          subject: 'Math',
+          A: 120,
+          B: 110,
+          fullMark: 150,
+        },
+        {
+          subject: 'Chinese',
+          A: 98,
+          B: 130,
+          fullMark: 150,
+        },
+        {
+          subject: 'English',
+          A: 86,
+          B: 130,
+          fullMark: 150,
+        },
+        {
+          subject: 'Geography',
+          A: 99,
+          B: 100,
+          fullMark: 150,
+        },
+        {
+          subject: 'Physics',
+          A: 85,
+          B: 90,
+          fullMark: 150,
+        },
+        {
+          subject: 'History',
+          A: 65,
+          B: 85,
+          fullMark: 150,
+        },
+        {
+            subject: 'Test',
+            A: 65,
+            B: 85,
+            fullMark: 150,
+          },
+          {
+            subject: 'Histo',
+            A: 65,
+            B: 85,
+            fullMark: 150,
+          },
+          {
+            subject: 'Hisdsftory',
+            A: 65,
+            B: 85,
+            fullMark: 150,
+          },
+          {
+            subject: 'Hidstory',
+            A: 65,
+            B: 85,
+            fullMark: 150,
+          },
+          {
+            subject: 'Hisddsftory',
+            A: 65,
+            B: 85,
+            fullMark: 150,
+          },
+          {
+            subject: 'Hidstfory',
+            A: 65,
+            B: 85,
+            fullMark: 150,
+          },
+      ];
 
     return (
             <div className="container">
@@ -21,7 +98,9 @@ export default function Home() {
                     <div className="123"></div>
                     <div>
                         <h1>Chart</h1>
-                        <RenderLineChart data={""}/>
+                        <RenderLineChart data={data}/>
+                        <RenderRadarChart data={radarData}/>
+                        <RenderSimpleBarChart data={data}/>
                     </div>
                 </div>
                 <div className="column-two-even">
