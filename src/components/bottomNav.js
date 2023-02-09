@@ -4,8 +4,8 @@ export default function BottomNav() {
 
     return (
         <div className="container">
-            <div className="column-two-even">
-                <div></div>
+            <div className="column-two-even nav-bottom-container">
+                <div className="bg-height-17 bg-color-dark-blue"></div>
                 <div></div>
                 <div className="nav-bottom">
                     <p>Copyright &copy; 2023 Derek Lord. All Rights Reserved.</p>

@@ -15,28 +15,27 @@ export default function Home() {
                 </Helmet>
                 
                 <div className="column-one">
-                    <div className="123"></div>
+                    <div className="bg-height-20 bg-color-light-blue"></div>
                     <div>
                         <h1>Derek Lord</h1>
                         <p>Auto generated text for description</p>
                     </div>
                 </div>
                 <div className="column-one">
-                    <div className="123"></div>
+                    <div className="bg-height-40 bg-color-dark-blue"></div>
                     <div>
                         <h1>Radar Chart</h1>
                         <RenderRadarChart data={programmingData}/>
                     </div>
                 </div>
                 <div className="column-one">
-                    <div className="123"></div>
+                    <div className="bg-height-20 bg-color-blue"></div>
                     <div>
                         <h1>Bar Chart</h1>
-                        <RenderSimpleBarChart data={experienceData}/>
                     </div>
                 </div>
                 <div className="column-two-even">
-                    <div className="background-color-one"></div>
+                    <div className="bg-height-40 bg-color-white"></div>
                     <div>
                         <h1>Two Even</h1>
                         <h2>Two Even</h2>
@@ -46,7 +45,7 @@ export default function Home() {
                         <h6>Two Even</h6>
                     </div>
                     <div>
-                        <img src="#" alt="This will be a graph showing my skills/experience"/>
+                        <RenderSimpleBarChart data={experienceData}/>
                     </div>
                     <div>
                         <h4>Skills</h4>
@@ -57,7 +56,7 @@ export default function Home() {
                     </div>
                 </div>
                     <div className="column-two-left-third">
-                        <div className="123"></div>
+                        <div className="bg-height-20 bg-color-gray"></div>
                         <div>
                             <h3>Two Left Third</h3>
                         </div>
@@ -72,7 +71,7 @@ export default function Home() {
                         </div>
                     </div>
                 <div className="column-two-left-forth">
-                    <div className="background-color-one"></div>
+                    <div className="bg-height-20 bg-color-light-gray"></div>
                     <div>
                         <h3>Two Left Forth</h3>
                     </div>
@@ -87,7 +86,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="column-two-right-third">
-                    <div className="123"></div>
+                    <div className="bg-height-20 bg-color-dark-gray"></div>
                     <div>
                         <h3>Two Right Third</h3>
                     </div>
@@ -102,7 +101,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="column-two-right-forth">
-                    <div className="background-color-one"></div>
+                    <div className="bg-height-20 bg-color-black-gray"></div>
                     <div>
                         <h3>Two Right Forth</h3>
                     </div>
@@ -117,7 +116,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="column-three-even">
-                    <div className="123"></div>
+                    <div className="bg-height-20 bg-color-light-gray"></div>
                     <div>
                         <h3>Three</h3>
                     </div>
@@ -135,7 +134,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="column-four-even">
-                    <div className="background-color-one"></div>
+                    <div className="bg-height-20 bg-color-dark-gray"></div>
                     <div>
                         <h3>Forth Even</h3>
                     </div>
