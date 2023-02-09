@@ -19,7 +19,7 @@ import CustomToolTip from "./customToolTip";
       };
 
     return (
-      <ResponsiveContainer width="99%" minWidth="0" height={400}>
+      <ResponsiveContainer width="99%" minWidth="0" height={250}>
         <BarChart
           width={500}
           height={300}
