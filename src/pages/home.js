@@ -3,6 +3,7 @@ import Button from "../components/button";
 import RenderLineChart from "../components/chart/renderLineChart";
 import RenderRadarChart from "../components/chart/renderRadarChart";
 import RenderSimpleBarChart from "../components/chart/renderSimpleBarChart";
+import { experienceData } from "../data/data";
 
 export default function Home() {
     const data = [{name: 'html', Skills: 75, description: "Derek Rocks"}, {name: 'css', Skills: 20, description: "Derek Rocks"}];
@@ -59,7 +60,7 @@ export default function Home() {
                         <h1>Chart</h1>
                         <RenderLineChart data={data}/>
                         <RenderRadarChart data={radarData}/>
-                        <RenderSimpleBarChart data={data}/>
+                        <RenderSimpleBarChart data={experienceData}/>
                     </div>
                 </div>
                 <div className="column-two-even">
