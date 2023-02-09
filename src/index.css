@@ -64,7 +64,19 @@ code {
 /* ----------------- Global Values ----------------- */
 
 :root {
-  --derek: rgb(217, 114, 11);
+  /* Root colors */
+  --light-blue: rgb(142, 202, 230); /* #8ECAE6 */
+  --blue: rgb(33, 158, 188); /* #219EBC */
+  --dark-blue: rgb(2, 48, 71); /* #023047 */
+  --black-blue: rgb(2, 35, 51); /* #022333 */
+  --bright-orange: rgb(255, 183, 3); /* #FFB703 */
+  --orange: rgb(251, 133, 0); /* #FB8500 */
+  --white: rgb(216, 216, 216); /* #D9D9D9 */
+  --light-gray: rgb(195, 195, 195); /* #C4C4C4 */
+  --gray: rgb(153, 153, 153); /* #999999 */
+  --dark-gray: rgb(112, 112, 112); /* #707070 */
+  --black-gray: rgb(54, 54, 54); /* #363636 */
+
 }
 
 /* ----------------- Overall Website Structures ----------------- */
@@ -119,18 +131,34 @@ code {
 
 .tooltip-custom {
   padding: .5rem;
-  background: rgba(255, 255, 255, 0.308);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 4px;
-  box-shadow: 0 !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.227);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3) !important;
   /* max-width: 50%; */
   min-width: 150px;
+  color: var(--white) !important;
+}
+
+.tooltip-label {
+  font-size: 1.2rem;
+  font-family: "source-sans-pro", sans-serif;
+  font-weight: 700;
+}
+
+.tooltip-intro {
+  font-family: "quasimoda", sans-serif;
+}
+
+.tooltip-label, .tooltip-intro {
+  color: var(--white);
 }
 
 .recharts-tooltip-wrapper {
   max-width: 50%;
+  color: var(--white);
 }
 
 /* ----------------- Grid ----------------- */
@@ -157,8 +185,8 @@ code {
 {
   position: absolute;
   width: 100%;
-  height: 25rem;
-  background-color: pink;
+  height: 35rem;
+  background-color: var(--black-blue);
   left: 0;
   /* opacity: .5; */
   z-index: -4;

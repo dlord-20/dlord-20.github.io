@@ -17,10 +17,10 @@ import CustomToolTip from "./customToolTip";
             outerRadius="80%" 
             data={data}
         >
-            <PolarGrid/>
-            <PolarAngleAxis dataKey="subject"/>
-            <Radar name="Derek" dataKey="A" stroke="#000" fill="#888" fillOpacity={0.6} />
-            <Tooltip content={<CustomToolTip/>} wrapperStyle={{ outline: "none" }}/>
+            <PolarGrid stroke="#999999"/>
+            <PolarAngleAxis dataKey="subject" stroke="#D9D9D9"/>
+            <Radar name="Derek" dataKey="A" stroke="#FFB703" fill="#FB8500" fillOpacity={0.9} />
+            <Tooltip cursor={{ stroke: "#D9D9D9", strokeWidth: 1}} content={<CustomToolTip/>} wrapperStyle={{ outline: "none" }}/>
         </RadarChart>
       </ResponsiveContainer>
     );
