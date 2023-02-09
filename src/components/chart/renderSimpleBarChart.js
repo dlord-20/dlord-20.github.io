@@ -32,17 +32,39 @@ import CustomToolTip from "./customToolTip";
           }}
           layout="vertical"
         >
-            <CartesianGrid horizontal="false" />
-            <XAxis type="number" dataKey="name" axisLine={false} domain={[0, 5]} ticks={[0, 1, 2, 3, 4, 5]} strokeWidth={0.5} stroke="#000"/>
-            <YAxis width={40} type="category" dataKey="name"/>
-            <Tooltip content={<CustomToolTip />}  wrapperStyle={{ outline: "none" }}/>
-            <Legend 
-                payload={[{value: 'Years of Experience', type: 'square', color: "#8884d8"}]}
-                // formatter={{renderColorfulLegendText}}
-                formatter={(value, entry, index) => <span style={{color: "#000"}}>{value}</span>}
-
+            <CartesianGrid 
+                horizontal="false" 
+                stroke="#C4C4C4"
             />
-            <Bar dataKey="experience" fill="#8884d8" animationDuration={1000}/>
+            <XAxis 
+                type="number" 
+                dataKey="name" 
+                axisLine={false} 
+                domain={[0, 5]} 
+                ticks={[0, 1, 2, 3, 4, 5]} 
+                strokeWidth={0.5} 
+                stroke="#C4C4C4" 
+            />
+            <YAxis 
+                width={40} 
+                type="category" 
+                dataKey="name" 
+                stroke="#C4C4C4"
+            />
+            <Tooltip 
+                cursor={{ stroke: "#D9D9D9", strokeWidth: 1, fill: "#023047"}} content={<CustomToolTip />}  wrapperStyle={{ outline: "none" }}
+            />
+            <Legend 
+                payload={
+                    [{value: 'Years of Experience', type: 'square', color: "#FB8500"}]
+                }
+                formatter={(value, entry, index) => <span style={{color: "#D9D9D9"}}>{value}</span>}
+            />
+            <Bar 
+                dataKey="experience" 
+                fill="#FB8500" 
+                animationDuration={1000}
+            />
             {/* <Bar dataKey="uv" fill="#82ca9d" /> */}
         </BarChart>
       </ResponsiveContainer>

@@ -24,14 +24,14 @@ export default function Home() {
                 <div className="column-one">
                     <div className="123"></div>
                     <div>
-                        <h1>Chart</h1>
+                        <h1>Radar Chart</h1>
                         <RenderRadarChart data={programmingData}/>
                     </div>
                 </div>
                 <div className="column-one">
                     <div className="123"></div>
                     <div>
-                        <h1>Chart</h1>
+                        <h1>Bar Chart</h1>
                         <RenderSimpleBarChart data={experienceData}/>
                     </div>
                 </div>
