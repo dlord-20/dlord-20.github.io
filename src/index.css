@@ -125,8 +125,12 @@ code {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3) !important;
-  max-width: 50%;
+  /* max-width: 50%; */
   min-width: 150px;
+}
+
+.recharts-tooltip-wrapper {
+  max-width: 50%;
 }
 
 /* ----------------- Grid ----------------- */
