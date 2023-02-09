@@ -1,45 +1,12 @@
 import { Helmet } from "react-helmet";
 import Button from "../components/button";
-import RenderLineChart from "../components/chart/renderLineChart";
 import RenderRadarChart from "../components/chart/renderRadarChart";
 import RenderSimpleBarChart from "../components/chart/renderSimpleBarChart";
-import { experienceData } from "../data/data";
+import { experienceData, programmingData } from "../data/data";
 
 export default function Home() {
     const data = [{name: 'html', Skills: 75, description: "Derek Rocks"}, {name: 'css', Skills: 20, description: "Derek Rocks"}];
-    const radarData = [
-        {
-          subject: 'Math',
-          A: 120,
-          B: 110,
-          fullMark: 150,
-        },
-        {
-          subject: 'Chinese',
-          A: 98,
-          B: 130,
-          fullMark: 150,
-        },
-        {
-          subject: 'English',
-          A: 86,
-          B: 130,
-          fullMark: 150,
-        },
-        {
-          subject: 'Geography',
-          A: 99,
-          B: 100,
-          fullMark: 150,
-        },
-        {
-          subject: 'Physics',
-          A: 85,
-          B: 90,
-          fullMark: 150,
-        },
 
-      ];
 
     return (
             <div className="container">
@@ -58,8 +25,7 @@ export default function Home() {
                     <div className="123"></div>
                     <div>
                         <h1>Chart</h1>
-                        <RenderLineChart data={data}/>
-                        <RenderRadarChart data={radarData}/>
+                        <RenderRadarChart data={programmingData}/>
                         <RenderSimpleBarChart data={experienceData}/>
                     </div>
                 </div>

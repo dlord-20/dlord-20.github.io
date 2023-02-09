@@ -1,33 +1,7 @@
+import { experienceData, programmingData } from "../../data/data";
+
 
 export default function CustomToolTip({payload, label, active}) {
-// Going to need to customize this section to fit the right description depending on the input
-const data = [
-    {
-        name: 'Email', 
-        experience: 5, 
-        description: "I've handled email campaigns for large companies and set up email automation for serveral small companies."
-    }, 
-    {
-        name: 'Programming', 
-        experience: 3, 
-        description: "Html, css, and javascript are my main languages that I use to deliver customized content. See more details below"
-    },
-    {
-        name: 'Branding', 
-        experience: 3, 
-        description: "I've set up branding for multiple small companies including their brand colors and guidelines."
-    },
-    {
-        name: 'Website', 
-        experience: 4, 
-        description: "Landing Pages, Web Design, and Anayltics. I deliver the content designed for the customer backed numbers."
-    },
-];
-const programmingData = [
-    {
-        description: "Test"
-    },
-]
 
     const getTitle = (label, value) => {
         switch(label) {
@@ -37,22 +11,30 @@ const programmingData = [
             case"Website":
                 return `${label}: ${value} years of experience`;
             default:
-                return `${label}`;
+                return `${label}: ${value}`;
         }
     }
 
     const getIntroOfPage = (label) => {
         switch(label) {
             case "Email":
-                return data[0].description;
+                return experienceData[0].description;
             case "Programming":
-                return data[1].description;
+                return experienceData[1].description;
             case "Branding":
-                return data[2].description;
+                return experienceData[2].description;
             case "Website":
-                return data[3].description;
-            case "":
+                return experienceData[3].description;
+            case "Html":
                 return programmingData[0].description;
+            case "Css":
+                return programmingData[1].description;
+            case "Javascript":
+                return programmingData[2].description;
+            case "ReactJS":
+                return programmingData[3].description;
+            case "Git":
+                return programmingData[4].description;
             default:
                 return `${label} details`;
         }

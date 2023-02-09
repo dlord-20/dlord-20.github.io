@@ -21,36 +21,39 @@ export const experienceData = [
     },
 ];
 
-const radarData = [
+export const programmingData = [
     {
-      subject: 'Math',
-      A: 120,
-      B: 110,
-      fullMark: 150,
+      subject: 'Html',
+      A: 80,
+      description: "I first studied html in 2015 and have used it in various work and personal settings since."
     },
     {
-      subject: 'Chinese',
-      A: 98,
+      subject: 'Css',
+      A: 85,
       B: 130,
       fullMark: 150,
+      description: "I learned css while I learned html in 2015 and studied more in depth again with codecademy."
     },
     {
-      subject: 'English',
-      A: 86,
+      subject: 'Javascript',
+      A: 55,
       B: 130,
       fullMark: 150,
+      description: "I learned Javascript through a Codecademy course and use it all the time since."
     },
     {
-      subject: 'Geography',
-      A: 99,
+      subject: 'ReactJS',
+      A: 50,
       B: 100,
       fullMark: 150,
+      description: "I use react almost every time I create a new website because it is so much faster after the initial load. I love React"
     },
     {
-      subject: 'Physics',
+      subject: 'Git',
       A: 85,
       B: 90,
       fullMark: 150,
+      description: "I use Git whenever I code so I can manage my files and get easily revert to an older commit if I need to."
     },
 
   ];
