@@ -79,7 +79,6 @@ export default function Home() {
                     <div>
                         <h4>Skills</h4>
                         <p>Auto generated short description of my skills</p>
-                        <RenderSimpleBarChart data={data}/>
                     </div>
                     <div>
 
