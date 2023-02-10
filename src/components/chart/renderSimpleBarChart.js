@@ -12,12 +12,6 @@ import CustomToolTip from "./customToolTip";
   
   export default function RenderSimpleBarChart({ data }) {
 
-    const renderColorfulLegendText = (value, entry) => {
-        const { color } = entry;
-      
-        return <span style={{ color }}>{value}</span>;
-      };
-
     return (
       <ResponsiveContainer width="99%" minWidth="0" height={250}>
         <BarChart

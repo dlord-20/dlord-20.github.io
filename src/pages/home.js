@@ -5,15 +5,13 @@ import RenderSimpleBarChart from "../components/chart/renderSimpleBarChart";
 import { experienceData, programmingData } from "../data/data";
 
 export default function Home() {
-    const data = [{name: 'html', Skills: 75, description: "Derek Rocks"}, {name: 'css', Skills: 20, description: "Derek Rocks"}];
-
 
     return (
             <div className="container">
                 <Helmet>
                     <title>Home Title</title>
                 </Helmet>
-                
+                {/* Changing all of this */}
                 <div className="column-one">
                     <div className="bg-height-20 bg-color-light-blue"></div>
                     <div>
