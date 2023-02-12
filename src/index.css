@@ -108,22 +108,9 @@ code {
   display: grid;
 }
 
-.container > div:first-child {
-  padding: 3rem 0;
-  margin: 0 auto;
-  /* padding-to 3rem; */
-}
+
 
 /* ----------------- Charts ----------------- */
-/* .chart {
-  display: block;
-  width: calc(100%);
-} */
-
-/* .chart > div {
-  height: 100% !important;
-  width: 0 !important;
-} */
 
 .test-chart:hover {
   border: 0;
@@ -166,8 +153,7 @@ code {
 .column-one, .column-two-even, .column-two-left-third, .column-two-left-forth, .column-two-right-third, .column-two-right-forth, .column-three-even, .column-four-even {
   display: grid;
   /* border: 1px solid green; */
-  padding: 2rem 0;
-  margin: 2rem 0;
+  padding: 3rem 0;
   width: 100%;
 }
 
@@ -175,38 +161,7 @@ code {
   grid-template-columns: repeat(2, 1fr);
 }
 
-/* .column-one > div:first-child,
-.column-two-even > div:first-child, 
-.column-two-left-third > div:first-child,
-.column-two-left-forth > div:first-child,
-.column-three-even > div:first-child,
-.column-two-right-third > div:first-child,
-.column-two-right-forth > div:first-child,
-.column-four-even > div:first-child 
-{
-  position: absolute;
-  width: 100%;
-  background-color: var(--black-blue);
-  left: 0;
-  z-index: -4;
-  transform: translateY(-3rem);
-} */
-
-
-/* .column-two-even > div:nth-child(2), 
-.column-two-left-third > div:nth-child(2),
-.column-two-left-forth > div:nth-child(2),
-.column-three-even > div:nth-child(2),
-.column-two-right-third > div:nth-child(2),
-.column-two-right-forth > div:nth-child(2),
-.column-four-even > div:nth-child(2)
-{
-  grid-column-start: 1;
-  grid-column-end: 6;
-  border: 1px solid purple;
-  justify-self: center;
-} */
-
+.column-one,
 .column-two-even > div:first-child, 
 .column-two-left-third > div:first-child,
 .column-two-left-forth > div:first-child,
@@ -219,6 +174,7 @@ code {
   grid-column-end: 6;
   border: 1px solid purple;
   justify-self: center;
+  text-align: center;
   min-width: 100%;
 }
 
@@ -492,11 +448,8 @@ a {
   .column-two-right-third, 
   .column-two-right-forth, 
   .column-three-even, 
-  .column-four-even 
-  {
-    padding: 1rem;
+  .column-four-even {
     grid-template-columns: 1fr;
-    
   }
 
   .column-two-even div, 
