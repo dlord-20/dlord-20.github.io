@@ -14,6 +14,7 @@ import TopNav from './components/topNav';
 import BottomNav from './components/bottomNav';
 import MobileMenuBg from './components/mobileMenuBg';
 import Background from './components/background';
+import Test from './pages/test';
 
 export default function App() {
 
@@ -25,7 +26,7 @@ export default function App() {
           <MobileMenuBg/>
           <Routes>
             <Route path="/" element={<Home/>}></Route>
-            <Route path="/test" element={<Home/>}></Route>
+            <Route path="/test" element={<Test/>}></Route>
           </Routes>
           <BottomNav/>
       </Provider>
