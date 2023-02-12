@@ -143,7 +143,7 @@ export default function Test() {
                     </div>
                 </div>
             </div>
-            <div className="bg-color-light-gray">
+            <div className="bg-color-blue">
                 <div className="container">
                     <div className="column-two-right-third">
                         <div>
