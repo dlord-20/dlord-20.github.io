@@ -38,8 +38,8 @@ import CustomToolTip from "./customToolTip";
                     type="number" 
                     dataKey="name" 
                     axisLine={false} 
-                    domain={[0, 5]} 
-                    ticks={[0, 1, 2, 3, 4, 5]} 
+                    domain={[0, 10]} 
+                    ticks={[0, 2, 4, 6, 8, 10]} 
                     strokeWidth={0.5} 
                     stroke="#C4C4C4" 
                 />

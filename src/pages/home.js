@@ -34,7 +34,6 @@ export default function Home() {
             <div className="bg-color-blue">
                 <div className="container">
                     <div className="column-one">
-                        <div className="bg-height-20 bg-color-blue"></div>
                         <div>
                             <h1>Bar Chart</h1>
                         </div>
