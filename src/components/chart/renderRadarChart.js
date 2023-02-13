@@ -21,7 +21,7 @@ import CustomToolTip from "./customToolTip";
                 data={data}
             >
                 <PolarGrid 
-                    stroke="#999999"
+                    stroke="#bcbfbd"
                 />
                 <PolarAngleAxis 
                     dataKey="subject" 
@@ -30,8 +30,8 @@ import CustomToolTip from "./customToolTip";
                 <Radar 
                     name="Derek"
                     dataKey="A"
-                    stroke="#FFB703" 
-                    fill="#FB8500" 
+                    stroke="#2d5c72" 
+                    fill="#f03a39" 
                     fillOpacity={0.9} 
                 />
                 <Tooltip 

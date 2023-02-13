@@ -50,17 +50,17 @@ import CustomToolTip from "./customToolTip";
                     stroke="#C4C4C4"
                 />
                 <Tooltip 
-                    cursor={{ stroke: "#D9D9D9", strokeWidth: 1, fill: "#023047"}} content={<CustomToolTip />}  wrapperStyle={{ outline: "none" }}
+                    cursor={{ stroke: "#fbfefc", strokeWidth: 1, fill: "#2d5c72"}} content={<CustomToolTip />}  wrapperStyle={{ outline: "none" }}
                 />
                 <Legend 
                     payload={
-                        [{value: 'Years of Experience', type: 'square', color: "#FB8500"}]
+                        [{value: 'Years of Experience', type: 'square', color: "#59b7e3"}]
                     }
-                    formatter={(value, entry, index) => <span style={{color: "#D9D9D9"}}>{value}</span>}
+                    formatter={(value, entry, index) => <span style={{color: "#fbfefc"}}>{value}</span>}
                 />
                 <Bar 
                     dataKey="experience" 
-                    fill="#FB8500" 
+                    fill="#f03a39" 
                     animationDuration={1000}
                 />
                 {/* <Bar dataKey="uv" fill="#82ca9d" /> */}

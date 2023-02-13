@@ -108,7 +108,41 @@ code {
 
   /* Color Set Five - https://huemint.com/website-2/#palette=21354a-f6faf4-ee7172-6ab4bb -> https://huemint.com/website-2/#palette=f5faee-262324-1b5a99-dd5139 */
 
-  /* Color Set Six - https://huemint.com/website-2/#palette=631b22-fbfefc-d08a5b-518184 - https://huemint.com/website-2/#palette=631b22-f1eff2-1e7ca7-d7b726 */
+  /* Color Set Six - https://huemint.com/website-2/#palette=631b22-fbfefc-d08a5b-518184 - https://huemint.com/website-2/#palette=631b22-f1eff2-1e7ca7-d7b726 */ 
+  --six-maroon-darker: #320e11;
+  --six-maroon-dark: #4a141a;
+  --six-maroon-main: #631b22;
+  --six-maroon-light: #82494e;
+  --six-maroon-lighter: #a1767a;
+
+  --six-cream-darker: #68452e;
+  --six-cream-dark: #9c6844;
+  --six-cream-main: #d08a5b;
+  --six-cream-light: #d9a17c;
+  --six-cream-lighter: #e3b99d;
+
+  --six-blue-darker: #2d5c72;
+  --six-blue-dark: #4389aa;
+  --six-blue-main: #59b7e3;
+  --six-blue-light: #7ac5e9;
+  --six-blue-lighter: #9bd4ee;
+
+  --six-white-black: #000000;
+  --six-white-darker: #3f403f;
+  --six-white-dark: #7e7f7e;
+  --six-white-gray: #bcbfbd;
+  --six-white-main: #fbfefc;
+
+  /* THEE COLORS */
+
+  --white-main: #fbfdf6;
+  --dark-main: #2a3442;
+  --red-main: #f32428;
+
+  --dark-main-2: #323743;
+  --light-main-2: #f9fbf9;
+  --red-main-2: #f03a39;
+
 
   /* NEED SOME COLORS */
 
@@ -139,6 +173,27 @@ code {
 }
 
 /* ----------------- Testing Colors ----------------- */
+
+.primary-color {
+  background-color: var(--dark-main-2);
+}
+
+.primary-color-2 {
+  background-color: var(--dark-main-2);
+}
+
+.secondary-color * {
+  color: var(--light-main-2);
+}
+
+.tri-color {
+  background-color: var(--red-main-2) !important;
+}
+
+.four-color {
+  color: var(--light-main-2) !important;
+}
+
 /* color 1 */
 /* .primary-color {
   background-color: var(--one-off-white);
@@ -157,7 +212,7 @@ code {
 } */
 
 /* color 2 */
-.primary-color {
+/* .primary-color {
   background-color: var(--two-white);
 }
 
@@ -171,7 +226,7 @@ code {
 
 .four-color {
   color: var(--two-gold) !important;
-}
+} */
 
 /* color 3 */
 /* .primary-color {

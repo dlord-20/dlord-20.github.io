@@ -33,18 +33,18 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="bg-color-blue">
+            <div className="primary-color-2">
                 <div className="container">
-                    <div className="column-one">
+                    <div className="column-one secondary-color">
                         <div>
                             <h1>Bar Chart</h1>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="bg-color-dark-blue">
+            <div className="primary-color">
                 <div className="container">
-                    <div className="column-two-even">
+                    <div className="column-two-even secondary-color">
 
                         <div>
                             <h1>Two Even</h1>
