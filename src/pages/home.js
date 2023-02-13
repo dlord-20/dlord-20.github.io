@@ -11,19 +11,21 @@ export default function Home() {
             <Helmet>
                 <title>Home Title</title>
             </Helmet>
-            <div className="bg-color-blue">
+            <div className="primary-color">
                 <div className="container">
-                    <div className="column-one">
+                    <div className="column-one secondary-color">
                         <div>
                             <h1>Derek Lord</h1>
                             <p>Auto generated text for description</p>
+                            <br/>
+                            <Button text="Testing"/>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="bg-color-dark-blue">
+            <div className="primary-color">
                 <div className="container">
-                    <div className="column-one">
+                    <div className="column-one secondary-color">
                         <div>
                             <h1>Radar Chart</h1>
                             <RenderRadarChart data={programmingData}/>

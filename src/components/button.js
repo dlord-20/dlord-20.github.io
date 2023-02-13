@@ -21,7 +21,7 @@ export default function Button(props) {
 
     return (
         <Link to={`/test`} >
-            <div className={`button ${buttonType}`}>
+            <div className={`button ${buttonType} tri-color four-color`}>
                 {text}
             </div>
         </Link>

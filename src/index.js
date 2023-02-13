@@ -15,6 +15,7 @@ import BottomNav from './components/bottomNav';
 import MobileMenuBg from './components/mobileMenuBg';
 import Background from './components/background';
 import Test from './pages/test';
+import TimeLineTest from './pages/timelineTest';
 
 export default function App() {
 
@@ -27,6 +28,8 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home/>}></Route>
             <Route path="/test" element={<Test/>}></Route>
+            <Route path="/timeline-test" element={<TimeLineTest/>}></Route>
+
           </Routes>
           <BottomNav/>
       </Provider>

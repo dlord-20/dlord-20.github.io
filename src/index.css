@@ -65,19 +65,141 @@ code {
 
 :root {
   /* Root colors */
-  --light-blue: rgb(142, 202, 230); /* #8ECAE6 */
-  --blue: rgb(33, 158, 188); /* #219EBC */
-  --dark-blue: rgb(2, 48, 71); /* #023047 */
-  --black-blue: rgb(2, 35, 51); /* #022333 */
-  --bright-orange: rgb(255, 183, 3); /* #FFB703 */
-  --orange: rgb(251, 133, 0); /* #FB8500 */
-  --white: rgb(216, 216, 216); /* #D9D9D9 */
-  --light-gray: rgb(195, 195, 195); /* #C4C4C4 */
-  --gray: rgb(153, 153, 153); /* #999999 */
-  --dark-gray: rgb(112, 112, 112); /* #707070 */
-  --black-gray: rgb(54, 54, 54); /* #363636 */
+
+  /* Color Set One */
+  --one-off-white:#f0f2f5;
+   /* rgb(94, 95, 96);  */
+  --one-dark-blue: #333537; 
+  /* #333537 */
+  --one-teal: #599794; 
+  /* #599794 */
+  --one-gold: #ffc373; 
+  /* #ffc373 */
+
+  /* Color Set Two */
+  --two-white: #fffeff; 
+  /* #fffeff */
+  --two-dark-blue: #0e2746; 
+  /* #0e2746 */
+  --two-blue: #6893a0; 
+  /* #6893a0 */
+  --two-gold: #eec064; 
+  /* #eec064 */
+
+  /* Color Set Three */
+  --three-blue: #335673; 
+  /* #335673 */
+  --three-yellow: #fffa36; 
+  /* #fffa36 */
+  --three-gray: #d4d1d0; 
+  /* #d4d1d0 */
+  --three-light-blue: #2788fe; 
+  /* #2788fe */
+
+  /* Color Set Four */
+  --four-blue: #335673; 
+  /* #335673 */
+  --four-yellow: #e3b833; 
+  /* #e3b833 */
+  --four-gray: #d4d1d0; 
+  /* #d4d1d0 */
+  --four-dark-blue: #2b3a50; 
+  /* #2b3a50 */
+
+  --light-blue: rgb(142, 202, 230); 
+  /* #8ECAE6 */
+  --blue: rgb(33, 158, 188); 
+  /* #219EBC */
+  --dark-blue: rgb(2, 48, 71); 
+  /* #023047 */
+  --black-blue: rgb(2, 35, 51); 
+  /* #022333 */
+  --bright-orange: rgb(255, 183, 3); 
+  /* #FFB703 */
+  --orange: rgb(251, 133, 0); 
+  /* #FB8500 */
+
+  --white: rgb(216, 216, 216); 
+  /* #D9D9D9 */
+  --light-gray: rgb(195, 195, 195); 
+  /* #C4C4C4 */
+  --gray: rgb(153, 153, 153); 
+  /* #999999 */
+  --dark-gray: rgb(112, 112, 112); 
+  /* #707070 */
+  --black-gray: rgb(54, 54, 54); 
+  /* #363636 */
 
 }
+
+/* ----------------- Testing Colors ----------------- */
+/* color 1 */
+/* .primary-color {
+  background-color: var(--one-off-white);
+}
+
+.secondary-color * {
+  color: var(--one-dark-blue);
+}
+
+.tri-color {
+  background-color: var(--one-teal) !important;
+}
+
+.four-color {
+  color: var(--one-gold) !important;
+} */
+
+/* color 2 */
+.primary-color {
+  background-color: var(--two-white);
+}
+
+.secondary-color * {
+  color: var(--two-dark-blue);
+}
+
+.tri-color {
+  background-color: var(--two-blue) !important;
+}
+
+.four-color {
+  color: var(--two-gold) !important;
+}
+
+/* color 3 */
+/* .primary-color {
+  background-color: var(--three-blue);
+}
+
+.secondary-color * {
+  color: var(--three-yellow);
+}
+
+.tri-color {
+  background-color: var(--three-gray) !important;
+}
+
+.four-color {
+  color: var(--three-light-blue) !important;
+} */
+
+/* color 4 */
+/* .primary-color {
+  background-color: var(--four-blue);
+}
+
+.secondary-color * {
+  color: var(--four-yellow);
+}
+
+.tri-color {
+  background-color: var(--four-gray) !important;
+}
+
+.four-color {
+  color: var(--four-dark-blue) !important;
+} */
 
 /* ----------------- Overall Website Structures ----------------- */
 
@@ -108,7 +230,12 @@ code {
   display: grid;
 }
 
-
+/* ----------------- Timeline ----------------- */
+.timeline-element *,
+.timeline-element 
+{
+  color: black;
+}
 
 /* ----------------- Charts ----------------- */
 
@@ -172,7 +299,7 @@ code {
 {
   grid-column-start: 1;
   grid-column-end: 6;
-  border: 1px solid purple;
+  /* border: 1px solid purple; */
   justify-self: center;
   text-align: center;
   min-width: 100%;
@@ -240,7 +367,7 @@ code {
 
 /* ----------------- Background Colors ----------------- */
 
-.bg-color-light-blue {
+/* .bg-color-light-blue {
   background-color: var(--light-blue) !important;
 }
 
@@ -253,7 +380,7 @@ code {
 }
 
 .bg-color-white {
-  background-color: var(--white) !important;
+  background-color: var(--off-white) !important;
 }
 
 .bg-color-light-gray {
@@ -270,7 +397,7 @@ code {
 
 .bg-color-black-gray {
   background-color: var(--black-gray) !important;
-}
+} */
 
 
 /* ----------------- Fonts ----------------- */
@@ -418,7 +545,7 @@ a {
   /* background-color: lightgray; */
   font-weight: 900;
   padding: 1rem 2rem;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
 }
 
 .button-b {
@@ -426,7 +553,7 @@ a {
 }
 
 .button-b:hover {
-  border-bottom: 1px solid gray;
+  /* border-bottom: 1px solid gray; */
 }
 
 /* ----------------- Mobile Size ----------------- */
