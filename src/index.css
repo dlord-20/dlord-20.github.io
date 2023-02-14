@@ -17,7 +17,7 @@ time, mark, audio, video, nav {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-  color: black;
+  color: var(--light-main);
   text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
@@ -225,7 +225,7 @@ a {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.column-one,
+
 .column-two-even > div:first-child, 
 .column-two-left-third > div:first-child,
 .column-two-left-forth > div:first-child,
@@ -281,10 +281,18 @@ a {
 }
 
 /* ----------------- Timeline ----------------- */
-.timeline-element *,
-.timeline-element 
+.timeline-element
 {
-  color: black;
+  color: var(--light-main);
+}
+
+.timeline-element * {
+  color: var(--dark-main)
+}
+
+.highlight-word {
+  color: var(--red-main);
+  font-weight: 700;
 }
 
 /* ----------------- Charts ----------------- */
@@ -430,9 +438,14 @@ a {
   align-items: flex-end;
 }
 
+.nav-bottom-menu nav {
+  display: flex;
+  flex-direction: column;
+}
 
 .nav-bottom-menu nav * {
   padding: .2rem 0;
+  transition: padding 100ms ease-in-out;
 }
 
 .nav-bottom-menu nav *:hover {

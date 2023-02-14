@@ -10,6 +10,6 @@ export default function Menu() {
             <MenuItem item={{title: 'About', link: '/about'}}/>        
             <MenuItem item={{title: 'Blog', link: '/blog'}}/>  
             <MenuItem item={{title: 'Contact', link: '/contact'}}/>    
-    </nav>
+        </nav>
     );
 }

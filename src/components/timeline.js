@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
@@ -12,13 +11,11 @@ const contentArrowStyle = {
 }
 
 
-export default function TimeLineTest() {
+export default function TimeLine() {
 
     return (
         <div className="timeline-container">
-            <Helmet>
-                <title>Timeline Title</title>
-            </Helmet>
+
             <VerticalTimeline
                 lineColor={'#f9fbf9'}
             >
