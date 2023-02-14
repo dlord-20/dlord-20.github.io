@@ -466,7 +466,8 @@ a {
 .button {
   color: white;
   max-width: max-content;
-  transition: background-color 100ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  padding: 1rem 2rem;
 }
 
 .button:hover {
@@ -476,8 +477,6 @@ a {
 .button-a {
   background-color: var(--red-main);
   font-weight: 900;
-  padding: 1rem 2rem;
-  /* border: 1px solid gray; */
 }
 
 .button-a:hover {
@@ -485,13 +484,13 @@ a {
 }
 
 .button-b {
-  padding: .5rem 1rem;
   border: 1px solid var(--red-main);
 }
 
 .button-b:hover {
   background-color: var(--red-main);
 }
+
 
 /* ----------------- Mobile Size ----------------- */
 /* ----------------- Mobile Size ----------------- */

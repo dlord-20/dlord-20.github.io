@@ -70,7 +70,7 @@ export default function TimeLine() {
                     <div className="timeline-element">
                         <h3 className="vertical-timeline-element-title">Collegiate Athlete</h3>
                         <h4 className="vertical-timeline-element-subtitle">Track and Field</h4>
-                        <p>Sprinter | 100, 200, 4x1 | Team Captain</p>
+                        <p>Sprinter | 100, 200, 4x1 | <span className="highlight-word">Team Captain</span></p>
                     </div>
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
