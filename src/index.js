@@ -17,11 +17,14 @@ import MobileMenuBg from './components/mobileMenuBg';
 import Background from './components/background';
 import Test from './pages/test';
 import TimeLineTest from './pages/timelineTest';
+import ScrollToTop from './components/scrollToTop';
 
 export default function App() {
 
   return (
     <BrowserRouter>
+            <ScrollToTop/>
+
       <Provider store={store}>
           <Background/>
           <TopNav/>
@@ -44,3 +47,5 @@ root.render(<App />);
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+

@@ -18,7 +18,7 @@ export default function TimeLine() {
 
             <VerticalTimeline
                 lineColor={'#f9fbf9'}
-                // animate={false}
+                animate={false}
             >
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
