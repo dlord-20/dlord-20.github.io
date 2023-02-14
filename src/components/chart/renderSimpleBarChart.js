@@ -50,7 +50,7 @@ import CustomToolTip from "./customToolTip";
                     stroke="#C4C4C4"
                 />
                 <Tooltip 
-                    cursor={{ stroke: "#fbfefc", strokeWidth: 1, fill: "#2d5c72"}} content={<CustomToolTip />}  wrapperStyle={{ outline: "none" }}
+                    cursor={{ stroke: "#fbfefc", strokeWidth: 1, fill: "#262932"}} content={<CustomToolTip />}  wrapperStyle={{ outline: "none" }}
                 />
                 <Legend 
                     payload={

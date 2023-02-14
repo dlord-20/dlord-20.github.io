@@ -20,10 +20,12 @@ export default function Button(props) {
     }
 
     return (
-        <Link to={`/test`} >
-            <div className={`button ${buttonType} tri-color four-color`}>
-                {text}
-            </div>
-        </Link>
+        <div className='button-container'>
+            <Link to={`/test`} >
+                <div className={`button ${buttonType}`}>
+                    {text}
+                </div>
+            </Link>
+        </div>
     );
 }

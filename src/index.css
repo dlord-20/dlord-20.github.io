@@ -66,400 +66,49 @@ code {
 :root {
   /* Root colors */
 
-  /* Color Set One */
-  --one-off-white:#f0f2f5;
-   /* rgb(94, 95, 96);  */
-  --one-dark-blue: #333537; 
-  /* #333537 */
-  --one-teal: #599794; 
-  /* #599794 */
-  --one-gold: #ffc373; 
-  /* #ffc373 */
+  --dark-darker: #191c22;
+  --dark-dark: #262932;
+  --dark-main: #323743;
+  --dark-light: #5b5f69;
+  --dark-lighter: #84878e;
 
-  /* Color Set Two */
-  --two-white: #fffeff; 
-  /* #fffeff */
-  --two-dark-blue: #0e2746; 
-  /* #0e2746 */
-  --two-blue: #6893a0; 
-  /* #6893a0 */
-  --two-gold: #eec064; 
-  /* #eec064 */
+  --light-black: #000000;
+  --light-darker: #3e3f3e;
+  --light-gray: #7d7e7d;
+  --light-gray: #bbbcbb;
+  --light-main: #f9fbf9;
 
-  /* Color Set Three */
-  --three-blue: #335673; 
-  /* #335673 */
-  --three-yellow: #fffa36; 
-  /* #fffa36 */
-  --three-gray: #d4d1d0; 
-  /* #d4d1d0 */
-  --three-light-blue: #2788fe; 
-  /* #2788fe */
-
-  /* Color Set Four */
-  --four-blue: #335673; 
-  /* #335673 */
-  --four-yellow: #e3b833; 
-  /* #e3b833 */
-  --four-gray: #d4d1d0; 
-  /* #d4d1d0 */
-  --four-dark-blue: #2b3a50; 
-  /* #2b3a50 */
-
-  /* Color Set Five - https://huemint.com/website-2/#palette=21354a-f6faf4-ee7172-6ab4bb -> https://huemint.com/website-2/#palette=f5faee-262324-1b5a99-dd5139 */
-
-  /* Color Set Six - https://huemint.com/website-2/#palette=631b22-fbfefc-d08a5b-518184 - https://huemint.com/website-2/#palette=631b22-f1eff2-1e7ca7-d7b726 */ 
-  --six-maroon-darker: #320e11;
-  --six-maroon-dark: #4a141a;
-  --six-maroon-main: #631b22;
-  --six-maroon-light: #82494e;
-  --six-maroon-lighter: #a1767a;
-
-  --six-cream-darker: #68452e;
-  --six-cream-dark: #9c6844;
-  --six-cream-main: #d08a5b;
-  --six-cream-light: #d9a17c;
-  --six-cream-lighter: #e3b99d;
-
-  --six-blue-darker: #2d5c72;
-  --six-blue-dark: #4389aa;
-  --six-blue-main: #59b7e3;
-  --six-blue-light: #7ac5e9;
-  --six-blue-lighter: #9bd4ee;
-
-  --six-white-black: #000000;
-  --six-white-darker: #3f403f;
-  --six-white-dark: #7e7f7e;
-  --six-white-gray: #bcbfbd;
-  --six-white-main: #fbfefc;
-
-  /* THEE COLORS */
-
-  --white-main: #fbfdf6;
-  --dark-main: #2a3442;
-  --red-main: #f32428;
-
-  --dark-main-2: #323743;
-  --light-main-2: #f9fbf9;
-  --red-main-2: #f03a39;
+  --red-darker: #781d1d;
+  --red-dark: #b42c2b;
+  --red-main: #f03a39;
+  --red-light: #f36161;
+  --red-lighter: #f68988;
 
 
-  /* NEED SOME COLORS */
-
-  --light-blue: rgb(142, 202, 230); 
-  /* #8ECAE6 */
-  --blue: rgb(33, 158, 188); 
-  /* #219EBC */
-  --dark-blue: rgb(2, 48, 71); 
-  /* #023047 */
-  --black-blue: rgb(2, 35, 51); 
-  /* #022333 */
-  --bright-orange: rgb(255, 183, 3); 
-  /* #FFB703 */
-  --orange: rgb(251, 133, 0); 
-  /* #FB8500 */
-
-  --white: rgb(216, 216, 216); 
-  /* #D9D9D9 */
-  --light-gray: rgb(195, 195, 195); 
-  /* #C4C4C4 */
-  --gray: rgb(153, 153, 153); 
-  /* #999999 */
-  --dark-gray: rgb(112, 112, 112); 
-  /* #707070 */
-  --black-gray: rgb(54, 54, 54); 
-  /* #363636 */
 
 }
 
-/* ----------------- Testing Colors ----------------- */
+/* ----------------- Colors ----------------- */
 
 .primary-color {
-  background-color: var(--dark-main-2);
+  background-color: var(--dark-main);
 }
 
 .primary-color-2 {
-  background-color: var(--dark-main-2);
+  background-color: var(--dark-main);
 }
 
 .secondary-color * {
-  color: var(--light-main-2);
+  color: var(--light-main);
 }
 
 .tri-color {
-  background-color: var(--red-main-2) !important;
+  background-color: var(--red-main) !important;
 }
 
 .four-color {
-  color: var(--light-main-2) !important;
+  color: var(--light-main) !important;
 }
-
-/* color 1 */
-/* .primary-color {
-  background-color: var(--one-off-white);
-}
-
-.secondary-color * {
-  color: var(--one-dark-blue);
-}
-
-.tri-color {
-  background-color: var(--one-teal) !important;
-}
-
-.four-color {
-  color: var(--one-gold) !important;
-} */
-
-/* color 2 */
-/* .primary-color {
-  background-color: var(--two-white);
-}
-
-.secondary-color * {
-  color: var(--two-dark-blue);
-}
-
-.tri-color {
-  background-color: var(--two-blue) !important;
-}
-
-.four-color {
-  color: var(--two-gold) !important;
-} */
-
-/* color 3 */
-/* .primary-color {
-  background-color: var(--three-blue);
-}
-
-.secondary-color * {
-  color: var(--three-yellow);
-}
-
-.tri-color {
-  background-color: var(--three-gray) !important;
-}
-
-.four-color {
-  color: var(--three-light-blue) !important;
-} */
-
-/* color 4 */
-/* .primary-color {
-  background-color: var(--four-blue);
-}
-
-.secondary-color * {
-  color: var(--four-yellow);
-}
-
-.tri-color {
-  background-color: var(--four-gray) !important;
-}
-
-.four-color {
-  color: var(--four-dark-blue) !important;
-} */
-
-/* ----------------- Overall Website Structures ----------------- */
-
-.main-background {
-  /* background-image: url("./images/renato-pozzi-G4oGYy_ZcsQ-unsplash.jpg"); */
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  z-index: -5;
-  background-size: cover;
-  background-position: bottom;
-  background-color: var(--dark-main-2);
-}
-
-.checkbox-hidden {
-  background: rgba(0, 0, 0, 0.5);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 3;
-}
-
-.container {
-  margin: auto;
-  width: 90%;
-  max-width: 1280px;
-  display: grid;
-}
-
-/* ----------------- Timeline ----------------- */
-.timeline-element *,
-.timeline-element 
-{
-  color: black;
-}
-
-/* ----------------- Charts ----------------- */
-
-.test-chart:hover {
-  border: 0;
-}
-
-.tooltip-custom {
-  padding: .5rem;
-  background: rgba(49, 49, 49, 0.608);
-  border-radius: 4px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3) !important;
-  max-width: 300px;
-  min-width: 150px;
-  color: var(--white) !important;
-}
-
-.tooltip-label {
-  font-size: 1.2rem;
-  font-family: "source-sans-pro", sans-serif;
-  font-weight: 700;
-}
-
-.tooltip-intro {
-  font-family: "quasimoda", sans-serif;
-}
-
-.tooltip-label, .tooltip-intro {
-  color: var(--white);
-}
-
-.recharts-tooltip-wrapper {
-  max-width: 50%;
-  color: var(--white);
-}
-
-/* ----------------- Grid ----------------- */
-
-.column-one, .column-two-even, .column-two-left-third, .column-two-left-forth, .column-two-right-third, .column-two-right-forth, .column-three-even, .column-four-even {
-  display: grid;
-  /* border: 1px solid green; */
-  padding: 3rem 0;
-  width: 100%;
-}
-
-.column-two-even {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.column-one,
-.column-two-even > div:first-child, 
-.column-two-left-third > div:first-child,
-.column-two-left-forth > div:first-child,
-.column-three-even > div:first-child,
-.column-two-right-third > div:first-child,
-.column-two-right-forth > div:first-child,
-.column-four-even > div:first-child
-{
-  grid-column-start: 1;
-  grid-column-end: 6;
-  /* border: 1px solid purple; */
-  justify-self: center;
-  text-align: center;
-  min-width: 100%;
-}
-
-.column-two-even > div:last-child, 
-.column-two-left-third > div:last-child,
-.column-two-left-forth > div:last-child,
-.column-three-even > div:last-child,
-.column-two-right-third > div:last-child,
-.column-two-right-forth > div:last-child,
-.column-four-even > div:last-child 
-{
-  grid-column-start: 1;
-  grid-column-end: 6;
-  justify-self: center;
-}
-
-.column-two-left-third {
-  grid-template-columns: 2fr 1fr;
-}
-
-.column-two-left-forth {
-  grid-template-columns: 3fr 1fr;
-}
-
-.column-two-right-third {
-  grid-template-columns: 1fr 2fr;
-}
-
-.column-two-right-forth {
-  grid-template-columns: 1fr 3fr;
-}
-
-.column-three-even {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.column-four-even {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-
-/* ----------------- Background Images ----------------- */
-.background-img-1 {
-  background-image: url("./images/pramod-tiwari-IDFBM5QvoY0-unsplash.jpg");
-  background-color: white;
-  background-size: cover;
-  overflow: hidden;
-  background-position: bottom;
-  max-width: 100%;
-  max-height: 100%;
-  height: 250px;
-}
-
-.background-img-1 h1 {
-  align-self: flex-end;
-  justify-self: center;
-}
-
-.background-img-1 p {
-  justify-self: center;
-}
-
-
-/* ----------------- Background Colors ----------------- */
-
-/* .bg-color-light-blue {
-  background-color: var(--light-blue) !important;
-}
-
-.bg-color-dark-blue {
-  background-color: var(--dark-blue) !important;
-}
-
-.bg-color-blue {
-  background-color: var(--blue) !important;
-}
-
-.bg-color-white {
-  background-color: var(--off-white) !important;
-}
-
-.bg-color-light-gray {
-  background-color: var(--light-gray) !important;
-}
-
-.bg-color-gray {
-  background-color: var(--gray) !important;
-}
-
-.bg-color-dark-gray {
-  background-color: var(--dark-gray) !important;
-}
-
-.bg-color-black-gray {
-  background-color: var(--black-gray) !important;
-} */
 
 
 /* ----------------- Fonts ----------------- */
@@ -528,6 +177,176 @@ a {
   text-decoration: none;
 }
 
+
+/* ----------------- Overall Website Structures ----------------- */
+
+.main-background {
+  /* background-image: url("./images/renato-pozzi-G4oGYy_ZcsQ-unsplash.jpg"); */
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -5;
+  background-size: cover;
+  background-position: bottom;
+  background-color: var(--dark-main);
+}
+
+.checkbox-hidden {
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 3;
+}
+
+.container {
+  margin: auto;
+  width: 90%;
+  max-width: 1100px;
+  display: grid;
+}
+
+.nav-bottom-container {
+  max-width: 1280px !important;
+}
+
+/* ----------------- Grid ----------------- */
+
+.column-one, .column-two-even, .column-two-left-third, .column-two-left-forth, .column-two-right-third, .column-two-right-forth, .column-three-even, .column-four-even {
+  display: grid;
+  /* border: 1px solid green; */
+  padding: 3rem 0;
+  width: 100%;
+}
+
+.column-two-even {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.column-one,
+.column-two-even > div:first-child, 
+.column-two-left-third > div:first-child,
+.column-two-left-forth > div:first-child,
+.column-three-even > div:first-child,
+.column-two-right-third > div:first-child,
+.column-two-right-forth > div:first-child,
+.column-four-even > div:first-child
+{
+  grid-column-start: 1;
+  grid-column-end: 6;
+  /* border: 1px solid purple; */
+  justify-self: center;
+  text-align: center;
+  min-width: 100%;
+}
+
+.column-two-even > div:last-child, 
+.column-two-left-third > div:last-child,
+.column-two-left-forth > div:last-child,
+.column-three-even > div:last-child,
+.column-two-right-third > div:last-child,
+.column-two-right-forth > div:last-child,
+.column-four-even > div:last-child 
+{
+  grid-column-start: 1;
+  grid-column-end: 6;
+  justify-self: center;
+  text-align: center;
+}
+
+.column-two-left-third {
+  grid-template-columns: 2fr 1fr;
+}
+
+.column-two-left-forth {
+  grid-template-columns: 3fr 1fr;
+}
+
+.column-two-right-third {
+  grid-template-columns: 1fr 2fr;
+}
+
+.column-two-right-forth {
+  grid-template-columns: 1fr 3fr;
+}
+
+.column-three-even {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.column-four-even {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* ----------------- Timeline ----------------- */
+.timeline-element *,
+.timeline-element 
+{
+  color: black;
+}
+
+/* ----------------- Charts ----------------- */
+
+.test-chart:hover {
+  border: 0;
+}
+
+.tooltip-custom {
+  padding: .5rem;
+  background: rgba(49, 49, 49, 0.608);
+  border-radius: 4px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  max-width: 300px;
+  min-width: 150px;
+  color: var(--light-main) !important;
+}
+
+.tooltip-label {
+  font-size: 1.2rem;
+  font-family: "source-sans-pro", sans-serif;
+  font-weight: 700;
+}
+
+.tooltip-intro {
+  font-family: "quasimoda", sans-serif;
+}
+
+.tooltip-label, .tooltip-intro {
+  color: var(--white);
+}
+
+.recharts-tooltip-wrapper {
+  max-width: 50%;
+  color: var(--light-main);
+}
+
+
+/* ----------------- Background Images ----------------- */
+.background-img-1 {
+  background-image: url("./images/pramod-tiwari-IDFBM5QvoY0-unsplash.jpg");
+  background-color: white;
+  background-size: cover;
+  overflow: hidden;
+  background-position: bottom;
+  max-width: 100%;
+  max-height: 100%;
+  height: 250px;
+}
+
+.background-img-1 h1 {
+  align-self: flex-end;
+  justify-self: center;
+}
+
+.background-img-1 p {
+  justify-self: center;
+}
+
 /* ----------------- Navigation ----------------- */
 
 .navigation {
@@ -539,11 +358,11 @@ a {
   width: 90%;
   max-width: 1280px;
   padding: 1rem 0;
-  background-color: var(--dark-main-2);
+  background-color: var(--dark-main);
 }
 
 .navigation * {
-  color: var(--light-main-2) !important;
+  color: var(--light-main) !important;
 }
 
 .nav-gb {
@@ -571,6 +390,31 @@ a {
 .nav-item * {
   margin: 0;
   padding: 0;
+  /* border: 1px solid pink; */
+}
+
+.menu-item {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 3px;
+  margin-right: 10px;
+}
+.menu-item:last-child {
+  margin-right: 0;
+}
+
+.menu-item:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 1.5px;
+  width: 0px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+.menu-item:hover:after {
+  width: 100%;
+  background: var(--red-main);
 }
 
 .nav-mobile {
@@ -597,9 +441,19 @@ a {
 
 
 /* ----------------- Buttons ----------------- */
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button-container p {
+  max-width: max-content;
+}
 
 .button {
-  background-color: white;
+  color: white;
+  max-width: max-content;
+  transition: background-color 100ms ease-in-out;
 }
 
 .button:hover {
@@ -607,18 +461,23 @@ a {
 }
 
 .button-a {
-  /* background-color: lightgray; */
+  background-color: var(--red-main);
   font-weight: 900;
   padding: 1rem 2rem;
   /* border: 1px solid gray; */
 }
 
+.button-a:hover {
+  background-color: var(--red-dark);
+}
+
 .button-b {
   padding: .5rem 1rem;
+  border: 1px solid var(--red-main);
 }
 
 .button-b:hover {
-  /* border-bottom: 1px solid gray; */
+  background-color: var(--red-main);
 }
 
 /* ----------------- Mobile Size ----------------- */
@@ -755,7 +614,7 @@ a {
     text-align: left;
     top: 0;
     left: 0;
-    background: black;
+    background: var(--light-main);
     height: 1.7px;
     width: 60%;
     transition: all  0.4s ease;
@@ -769,7 +628,7 @@ a {
     content: '';
     position: absolute;
     top: -10px;
-    background: black;
+    background: var(--light-main);
     width: 100%;
     height: 1.5px;
     transition: all  0.4s ease;
@@ -792,7 +651,7 @@ a {
   .toggler:checked + .hamburger > div::before{
     top: 0;
     transform: rotate(45deg);
-    background: black;
+    background: var(--light-main);
   }
 
   /* AND ROTATING THE TOP AND BOTTOM LINES :  */
@@ -800,7 +659,7 @@ a {
   .toggler:checked + .hamburger > div::after {
     top: 0;
     transform: rotate(135deg);
-    background: black;
+    background: var(--light-main);
   }
 
 
@@ -809,11 +668,11 @@ a {
   .menu{
     position: absolute;
     z-index: 6;
-    background: white;
+    background: var(--dark-main);
     width: 0%;
     right: 0;
     top: 0;
-    border-left: 1px solid gray;
+    /* border-left: 1px solid gray; */
   /* APPLYING TRANSITION TO THE MENU :  */
     transition: all 0.4s ease;
   }
@@ -831,7 +690,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: white;
+    background-color: var(--dark-main);
   }
 
   .menu > div > nav,
@@ -857,17 +716,17 @@ a {
   }
 
   /* Fix this reference */
-  .menu > div > nav > a {
-    color: whitesmoke;
+  /* .menu > div > nav > a {
+    color: none;
     text-decoration: none;
     font-size: 1rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* padding: 1rem; */
+    padding: 1rem; 
     margin-right: 2rem;
     width: 100%;
     text-align: left;
     z-index: 2;
-  }
+  } */ 
 
   /* WHEN THE TOGGLER IS CHECKED, CHANGE THE VISIBILITY TO VISIBLE :  */
 
@@ -890,21 +749,21 @@ a {
 
 
   .toggler:checked ~ .menu > div > nav > a { 
-    border-left: 4px solid white;
+    border-left: 4px solid var(--dark-main);
     width: 100%;
     min-height: 3rem;
-    background-color: white;
+    background-color: var(--dark-main);
   }
 
   .toggler:checked ~ .menu > div > nav > a:hover{
-    border-left: 4px solid gray;
-    background: lightgrey;
+    border-left: 4px solid var(--red-main);
+    background: var(--dark-light);
   }
 
 
   .toggler:checked ~ .menu > div > .breakout {
     position: fixed;
-    background-color: black;
+    background-color: var(--light-main);
     opacity: .4;
     width: 100%;
     height: 100%;
@@ -914,6 +773,20 @@ a {
     /* z-index: -1; */
   }
 
-  /*  */
+
+  /* ----------------- Mobile Size | Buttons ----------------- */
+  .navigation .button-container {
+    display: block;
+  }
+
+  .button-container p {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .navigation .button {
+    max-width: 100%;
+    padding-left: 1rem;
+  }
   
 }
