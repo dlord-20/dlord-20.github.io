@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import {
   BrowserRouter,
   Routes,
-  Route
+  Route,
+  
 } from "react-router-dom";
 import { Provider } from 'react-redux';
 import { store } from './app/store';
@@ -29,7 +30,6 @@ export default function App() {
             <Route path="/" element={<Home/>}></Route>
             <Route path="/test" element={<Test/>}></Route>
             <Route path="/timeline-test" element={<TimeLineTest/>}></Route>
-
           </Routes>
           <BottomNav/>
       </Provider>

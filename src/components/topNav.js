@@ -1,12 +1,22 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Button from "./button";
 import Menu from "./menu";
-import { changeStatus } from "../features/checkbox/checkboxSlice";
+import { changeStatus, selectStatus } from "../features/checkbox/checkboxSlice";
 
 // NEED TO ADD WHEN YOU CLICK ON THE MENU IT CLOSES THE MOBILE MENU
 
 export default function TopNav() {
     const dispatch = useDispatch();
+    const checkboxStatus = useSelector(selectStatus);
+
+    const handleButtonClick = () => {
+        dispatch(changeStatus());
+        if(checkboxStatus) {
+            document.getElementById("checkbox").checked = false;
+        } else {
+            document.getElementById("checkbox").checked = true;
+        }
+    }
     
     const getButton = () => {
         return (
@@ -31,7 +41,9 @@ export default function TopNav() {
                 <div className="menu" id="sidebar-menu">
                     <div className="menu-container" id="sidebar-nav">
                         <Menu/>
-                        {getButton()}
+                        <div onClick={() => handleButtonClick()}>
+                            {getButton()}
+                        </div>
                     </div>
                 </div>
             </div>

@@ -303,7 +303,7 @@ a {
 
 .tooltip-custom {
   padding: .5rem;
-  background: rgba(49, 49, 49, 0.608);
+  background: rgba(182, 182, 182, 0.608);
   border-radius: 4px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(5px);
@@ -418,7 +418,7 @@ a {
   height: 1.5px;
   width: 0px;
   background: transparent;
-  transition: width .5s ease, background-color .5s ease;
+  transition: width .25s ease, background-color .25s ease-in-out;
 }
 .menu-item:hover:after {
   width: 100%;
@@ -466,7 +466,7 @@ a {
 .button {
   color: white;
   max-width: max-content;
-  transition: all 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
   padding: 1rem 2rem;
 }
 
@@ -500,8 +500,14 @@ a {
 @media only screen and (max-width: 700px) {
 
   /* ----------------- Mobile Size - Overall Website Structure ----------------- */
+  .vertical-timeline--animate {
+    transition: none !important;
+    animation: none !important;
+  }
+
   .container {
     width: 100%;
+    padding: 1rem;
   }
 
   .column-one, 

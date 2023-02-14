@@ -11,7 +11,7 @@ export default function MenuItem(props) {
     const checkboxStatus = useSelector(selectStatus)
 
     const handleCheckboxClick = (event) => {
-        const isTopNav = event.target.parentNode.parentNode.parentNode.parentNode.id;;
+        const isTopNav = event.target.parentNode.parentNode.parentNode.parentNode.id;
         if(isTopNav === 'sidebar-nav' || isTopNav === 'sidebar-menu' || isTopNav === 'sidebar-mobile') {
             dispatch(changeStatus());
             if(checkboxStatus) {
