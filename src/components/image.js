@@ -7,7 +7,7 @@ export default function Image(props) {
 
 
     return (
-        <div className="image-blue">
+        <div className="image">
             <LazyLoadImage 
                 alt={image.alt}
                 height={image.height}

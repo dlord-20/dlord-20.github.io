@@ -14,6 +14,30 @@ export default function Home() {
             <Helmet>
                 <title>Home Title</title>
             </Helmet>
+            <div className="bg-color-blue" id="2">
+                <div className="container">
+                    <div className="column-two-left-third">
+                        <div>
+                            <h3>Two Left Third</h3>
+                        </div>
+                        <div>
+                            <h1>Hi, I'm<br/>Derek Lord</h1>
+                            <p>I'm an eager digital marketer who is on a mission to decrease customer turnover while attracting new cliential.</p>
+                            <Button text="Let's Talk" link="works"/>
+                        </div>
+                        <div className="potrait">
+                            <Image img={{
+                                alt: "test",
+                                height: "100%",
+                                width: "100%",
+                                src: "Derek-Lord-Smiling-Small.jpg",
+                                }}/>
+                        </div>
+                        <div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div className="primary-color" id="cover">
                 <div className="container">
                     <div className="column-one secondary-color">
@@ -83,30 +107,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="bg-color-blue" id="2">
-                <div className="container">
-                    <div className="column-two-left-third">
-                        <div>
-                            <h3>Two Left Third</h3>
-                        </div>
-                        <div>
-                            <h1>Hi, I'm<br/>Derek Lord</h1>
-                            <p>I'm an eager digital marketer who is on a mission to decrease customer turnover while attracting new cliential.</p>
-                            <Button text="Let's Talk" link="works"/>
-                        </div>
-                        <div>
-                            <Image img={{
-                                alt: "test",
-                                height: "100%",
-                                width: "100%",
-                                src: "Derek-Lord-Smiling-Small.jpg",
-                                }}/>
-                        </div>
-                        <div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <div className="bg-color-dark-blue" id="3">
                 <div className="container">
                     <div className="column-two-left-forth">
