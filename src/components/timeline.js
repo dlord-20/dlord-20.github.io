@@ -30,7 +30,7 @@ export default function TimeLine() {
                     // icon={}
                 >
                     <div className="timeline-element">
-                        <h3>Independent Contractor</h3>
+                        <h3>Freelancer</h3>
                         <h4>Thuwal, The Kingdom of Saudi Arabia</h4>
                         <p>Start-up branding | <span className="highlight-word">Marketing</span> | Design | Website Creation | Email | General Marketing Automation</p>
                     </div>

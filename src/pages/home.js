@@ -88,10 +88,11 @@ export default function Home() {
                             <h3>Two Left Third</h3>
                         </div>
                         <div>
-                            <p>column 1</p>
+                            <h1>Hi, I'm<br/>Derek Lord</h1>
+                            <p>I believe that with the right skills you can achieve anything</p>
                         </div>
                         <div>
-                            <p>column 2</p>
+
                         </div>
                         <div>
                             <Button text="Happy" type="b"/>
