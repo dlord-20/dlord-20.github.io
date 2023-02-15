@@ -4,6 +4,8 @@ import RenderRadarChart from "../components/chart/renderRadarChart";
 import RenderSimpleBarChart from "../components/chart/renderSimpleBarChart";
 import { experienceData, programmingData } from "../data/data";
 import TimeLine from "../components/timeline";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import Image from "../components/image";
 
 export default function Home() {
 
@@ -89,13 +91,18 @@ export default function Home() {
                         </div>
                         <div>
                             <h1>Hi, I'm<br/>Derek Lord</h1>
-                            <p>I believe that with the right skills you can achieve anything</p>
+                            <p>I'm an eager digital marketer who is on a mission to decrease customer turnover while attracting new cliential.</p>
+                            <Button text="Let's Talk" link="works"/>
                         </div>
                         <div>
-
+                            <Image img={{
+                                alt: "test",
+                                height: "100%",
+                                width: "100%",
+                                src: "Derek-Lord-Smiling-Small.jpg",
+                                }}/>
                         </div>
                         <div>
-                            <Button text="Happy" type="b"/>
                         </div>
                     </div>
                 </div>

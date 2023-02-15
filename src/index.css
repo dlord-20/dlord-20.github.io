@@ -455,7 +455,7 @@ a {
 /* ----------------- Buttons ----------------- */
 .button-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .button-container p {
