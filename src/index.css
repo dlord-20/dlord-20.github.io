@@ -357,39 +357,30 @@ a {
 /* ----------------- Images ----------------- */
 
 .potrait {
-  /* border: 20px solid var(--dark-main); */
-
-  /* border-radius: 30rem; */
-  /* box-shadow: -5px -5px 8px 5px var(--red-main), 5px 5px 8px 5px var(--light-main); */
+  position: relative;
   margin: 24px;
 }
 
 
 .potrait img {
   box-shadow:
-  0 0 0 12px var(--dark-main),
-  0 0 0 24px var(--dark-darker);
-  /* border-radius: 25rem; */
-  /* border: 20px solid var(--dark-main); */
+  0 0 0 10px var(--dark-darker);
+  padding: 15px;
 }
 
 .potrait .image::before {
   content: "";
   position: absolute;
   /* display: block; */
-  top: 240px;
-  left: 975px;
+  top: 15%;
+  left: -12.5%;
   right: 0;
   bottom: 0;
-  width: 500px;
-  height: 300px;
+  width: 125%;
+  height: 70%;
   background-color: var(--red-dark);
-  /* opacity: .75; */
+  opacity: .8;
   /* background: transparent; */
-}
-
-.potrait::after {
-  
 }
 
 
@@ -845,4 +836,10 @@ a {
     padding-left: 1rem;
   }
   
+  /* ----------------- Images ----------------- */
+
+  .potrait {
+    margin: 5rem;
+  }
+
 }
