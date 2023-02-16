@@ -14,16 +14,20 @@ export default function Home() {
             <Helmet>
                 <title>Home Title</title>
             </Helmet>
-            <div className="bg-color-blue" id="2">
+            <div className="bg-color-blue" id="cover">
                 <div className="container">
                     <div className="column-two-left-third">
                         <div>
-                            <h3>Two Left Third</h3>
                         </div>
-                        <div>
-                            <h1>Hi, I'm<br/>Derek Lord</h1>
-                            <p>I'm an eager digital marketer who is on a mission to decrease customer turnover while attracting new cliential.</p>
-                            <Button text="Let's Talk" link="works"/>
+                        <div className="section-container">
+                            <div className="center-left">
+                                <h1>Hi, I'm<br/>Derek Lord</h1>
+                                <p>I'm an eager digital marketer who is on a mission to decrease customer turnover while attracting new cliential.</p>
+                                <div className="buttons">
+                                    <Button text="Let's Talk" link="works"/>
+                                    <Button text="Come see" link="services" type="b" />
+                                </div>
+                            </div>
                         </div>
                         <div className="potrait">
                             <Image img={{
@@ -38,7 +42,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="primary-color" id="cover">
+            <div className="primary-color" id="test">
                 <div className="container">
                     <div className="column-one secondary-color">
                         <div>

@@ -364,7 +364,7 @@ a {
 
 .potrait img {
   box-shadow:
-  0 0 0 10px var(--dark-darker);
+  0 0 0 10px var(--dark-dark);
   padding: 15px;
 }
 
@@ -513,11 +513,39 @@ a {
 }
 
 .button-b {
-  border: 1px solid var(--red-main);
+  box-shadow: inset 0 0 0 1px var(--red-main);
+  -webkit-box-shadow: inset 0 0 0 1px var(--red-main);
+  -moz-box-shadow: inset 0 0 0 1px var(--red-main);
 }
 
 .button-b:hover {
   background-color: var(--red-main);
+}
+
+.buttons {
+  display: flex;
+}
+
+.buttons div:first-child {
+  margin-right: 1rem;
+}
+
+/* ----------------- Alignment ----------------- */
+.section-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.center-left > * {
+  /* border: 1px solid var(--dark-lighter); */
+  max-width: 450px;
+  padding: .5rem;
+  /* NEED TO DO PADDING FOR TEXT AT TOP LEVEL */
 }
 
 
