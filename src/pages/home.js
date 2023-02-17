@@ -25,7 +25,7 @@ export default function Home() {
                                 <p>I'm an eager digital marketer who is on a mission to decrease customer turnover while attracting new cliential.</p>
                                 <div className="buttons">
                                     <Button text="Let's Talk" link="works"/>
-                                    <Button text="Come see" link="services" type="b" />
+                                    <Button text="Check out my work" link="services" type="b" />
                                 </div>
                             </div>
                         </div>
