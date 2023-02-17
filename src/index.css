@@ -295,6 +295,23 @@ a {
   font-weight: 700;
 }
 
+.highlight-container {
+  position: relative;
+  max-width: fit-content;
+}
+
+.highlight::before {
+  content: "";
+  position: absolute;
+  background-color: var(--red-main);
+  top: 1rem;
+  left: -.25rem;
+  width: 105%;
+  height: 60%;
+  z-index: -1;
+  opacity: .8;
+}
+
 /* ----------------- Charts ----------------- */
 
 .test-chart:hover {

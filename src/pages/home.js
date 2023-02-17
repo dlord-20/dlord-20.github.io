@@ -4,7 +4,6 @@ import RenderRadarChart from "../components/chart/renderRadarChart";
 import RenderSimpleBarChart from "../components/chart/renderSimpleBarChart";
 import { experienceData, programmingData } from "../data/data";
 import TimeLine from "../components/timeline";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import Image from "../components/image";
 
 export default function Home() {
@@ -21,7 +20,7 @@ export default function Home() {
                         </div>
                         <div className="section-container">
                             <div className="center-left">
-                                <h1>Hi, I'm<br/>Derek Lord</h1>
+                                <h1>Hi, I'm<br/><div className="highlight-container">Derek <span className="highlight">Lord</span></div></h1>
                                 <p>I'm an eager digital marketer who is on a mission to decrease customer turnover while attracting new cliential.</p>
                                 <div className="buttons">
                                     <Button text="Let's Talk" link="works"/>
