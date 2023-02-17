@@ -18,13 +18,15 @@ export default function Home() {
                     <div className="column-two-left-third">
                         <div>
                         </div>
-                        <div className="section-container">
-                            <div className="center-left">
-                                <h1>Hi, I'm<br/><div className="highlight-container">Derek <span className="highlight">Lord</span></div></h1>
-                                <p>I'm an eager digital marketer who is on a mission to decrease customer turnover while attracting new cliential.</p>
-                                <div className="buttons">
-                                    <Button text="Let's Talk" link="works"/>
-                                    <Button text="Check out my work" link="services" type="b" />
+                        <div className="section-container cover-container">
+                            <div className="cover">
+                                <div className="center-left">
+                                    <h1>Hi, I'm<br/><div className="highlight-container">Derek <span className="highlight">Lord</span></div></h1>
+                                    <p>I'm an eager digital marketer who is on a mission to decrease customer turnover while attracting new cliential.</p>
+                                    <div className="buttons">
+                                        <Button text="Let's Talk" link="works"/>
+                                        <Button text="Check out my work" link="services" type="b" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
