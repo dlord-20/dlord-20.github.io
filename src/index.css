@@ -317,7 +317,7 @@ a {
 }
 
 .cover::before {
-  content: "AI EDITOR";
+  content: "AI EDITOR?";
   position: absolute;
   top: 0rem;
   left: .7rem;
