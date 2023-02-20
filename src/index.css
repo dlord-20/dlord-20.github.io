@@ -316,7 +316,7 @@ a {
   position: relative;
 }
 
-/* Probably don't want this on the site */
+/* Probably don't want this on the site- maybe want some fancy changing title for what I do? */
 .cover::before {
   content: "AI EDITOR?";
   position: absolute;
