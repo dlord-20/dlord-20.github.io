@@ -316,7 +316,7 @@ a {
   position: relative;
 }
 
-/* Probably don't want this on the site- maybe want some fancy changing title for what I do? - I HATE BEING SICK - Looks Like I won't really be able to code again till next week - my throat is bleeding!*/
+/* Probably don't want this on the site- maybe want some fancy changing title for what I do? - I HATE BEING SICK - Looks Like I won't really be able to code again till next week - my throat is bleeding! I'm melting*/
 .cover::before {
   content: "AI EDITOR?";
   position: absolute;
