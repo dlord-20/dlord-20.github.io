@@ -18,19 +18,25 @@ export default function Home() {
 
     gsap.registerPlugin(ScrollTrigger);
 
-    // const slideIn = () => {
-        gsap.to("#timeline", {
+    const tl = gsap.timeline({
         scrollTrigger: {
             trigger: "#timeline",
             start: "top 80%",
             markers: true,
-            toggleActions: "restart pause reverse pause",
+            toggleActions: "restart pause reverse none",
         },
+    });
+
+    tl.to("#timeline", {
+        rotation: 360,
+        duration: 3,
+        opacity: 0
+    })
+    .to("#timeline", {
         rotation: 360,
         duration: 3,
         opacity: 1
     });
-    // };
 
     return (
         <div>
