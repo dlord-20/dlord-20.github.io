@@ -5,8 +5,31 @@ import RenderSimpleBarChart from "../components/chart/renderSimpleBarChart";
 import { experienceData, programmingData } from "../data/data";
 import TimeLine from "../components/timeline";
 import Image from "../components/image";
+import { gsap } from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useEffect } from "react";
 
 export default function Home() {
+    const header = React.createRef();
+
+    useEffect(() => {
+        gsap.to(header.current, {color: "#8c0", duration: 6})
+    }, [header]);
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    // const slideIn = () => {
+        gsap.to("#timeline", {
+        scrollTrigger: {
+            trigger: "#timeline",
+            start: "top 80%",
+            markers: true,
+            toggleActions: "restart pause reverse pause",
+        },
+        rotation: 360,
+        duration: 3
+    });
+    // };
 
     return (
         <div>
@@ -21,7 +44,9 @@ export default function Home() {
                         <div className="section-container cover-container">
                             <div className="cover">
                                 <div className="center-left">
-                                    <h1>Hi, I'm<br/><div className="highlight-container">Derek <span className="highlight">Lord</span></div></h1>
+                                    <h1 ref={header}>
+                                        Hi, I'm<br/><div className="highlight-container">Derek <span className="highlight">Lord</span></div>
+                                    </h1>
                                     <p>I'm an eager digital marketer who is on a mission to decrease customer turnover while attracting new cliential.</p>
                                     <div className="buttons">
                                         <Button text="Let's Talk" link="works"/>

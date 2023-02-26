@@ -312,23 +312,7 @@ a {
   opacity: .8;
 }
 
-.cover-container {
-  position: relative;
-}
 
-/* Probably don't want this on the site- maybe want some fancy changing title for what I do? - I HATE BEING SICK - Looks Like I won't really be able to code again till next week - my throat is bleeding! I'm melting - I want to have peace*/
-.cover::before {
-  content: "AI EDITOR?";
-  position: absolute;
-  top: 0rem;
-  left: .7rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: var(--dark-dark);
-  font-size: 5rem;
-  z-index: -1;
-  max-width: 100%;
-}
 
 /* ----------------- Charts ----------------- */
 
