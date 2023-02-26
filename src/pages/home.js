@@ -18,24 +18,36 @@ export default function Home() {
 
     gsap.registerPlugin(ScrollTrigger);
 
-    const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: "#timeline",
-            start: "top 80%",
-            markers: true,
-            toggleActions: "restart pause reverse none",
-        },
-    });
+    // const tl = gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: "#timeline",
+    //         start: "top 80%",
+    //         markers: true,
+    //         toggleActions: "restart pause reverse none",
+    //     },
+    // });
 
-    tl.to("#timeline", {
-        rotation: 360,
-        duration: 3,
-        opacity: 0
-    })
-    .to("#timeline", {
-        rotation: 360,
-        duration: 3,
-        opacity: 1
+    // tl.to("#timeline", {
+    //     rotation: 360,
+    //     duration: 3,
+    //     opacity: 0
+    // })
+    // .to("#timeline", {
+    //     rotation: 360,
+    //     duration: 3,
+    //     opacity: 1
+    // });
+
+    useEffect(() => {gsap.to(".right-to-left-incoming", {
+        scrollTrigger: {
+            trigger: ".right-to-left-incoming",
+            start: "center center",
+            markers: true,
+            toggleActions: "restart pause reverse none"
+        },
+        opacity: 1,
+        duration: 3
+        })
     });
 
     return (
@@ -145,7 +157,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="bg-color-dark-blue" id="3">
+            <div className="bg-color-dark-blue right-to-left-incoming" id="3">
                 <div className="container">
                     <div className="column-two-left-forth">
                         <div>

@@ -312,6 +312,12 @@ a {
   opacity: .8;
 }
 
+/* ----------------- gsap ----------------- */
+
+.right-to-left-incoming {
+  /* transform: translateX(200px); */
+  opacity: 0;
+}
 
 
 /* ----------------- Charts ----------------- */
