@@ -316,7 +316,8 @@ a {
 
 .right-to-left-incoming {
   /* transform: translateX(200px); */
-  opacity: 0;
+  /* left: 200px; */
+  /* opacity: 0; */
 }
 
 

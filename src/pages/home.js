@@ -38,17 +38,24 @@ export default function Home() {
     //     opacity: 1
     // });
 
-    useEffect(() => {gsap.to(".right-to-left-incoming", {
+    const tl =  gsap.timeline({
         scrollTrigger: {
             trigger: ".right-to-left-incoming",
             start: "center center",
             markers: true,
             toggleActions: "restart pause reverse none"
         },
-        opacity: 1,
-        duration: 3
-        })
     });
+
+    useEffect(() => {
+        tl.fromTo(".right-to-left-incoming", {
+            x: 50,
+            opacity: 0
+        }, {
+            x: 0,
+            opacity: 1
+        });
+    })
 
     return (
         <div>
