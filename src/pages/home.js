@@ -27,7 +27,8 @@ export default function Home() {
             toggleActions: "restart pause reverse pause",
         },
         rotation: 360,
-        duration: 3
+        duration: 3,
+        opacity: 1
     });
     // };
 
