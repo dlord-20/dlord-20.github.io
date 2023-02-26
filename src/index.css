@@ -27,6 +27,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+  overflow-x: hidden !important;
 }
 ol, ul {
 	list-style: none;
@@ -219,6 +220,7 @@ a {
   /* border: 1px solid green; */
   padding: 3rem 0;
   width: 100%;
+  position: relative;
 }
 
 .column-two-even {
@@ -314,11 +316,11 @@ a {
 
 /* ----------------- gsap ----------------- */
 
-.right-to-left-incoming {
+/* .right-to-left-incoming { */
   /* transform: translateX(200px); */
   /* left: 200px; */
   /* opacity: 0; */
-}
+/* } */
 
 
 /* ----------------- Charts ----------------- */

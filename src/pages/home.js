@@ -12,50 +12,31 @@ import React, { useEffect } from "react";
 export default function Home() {
     const header = React.createRef();
 
-    useEffect(() => {
-        gsap.to(header.current, {color: "#8c0", duration: 6})
-    }, [header]);
+    // useEffect(() => {
+    //     gsap.to(header.current, {color: "#8c0", duration: 6})
+    // }, [header]);
 
     gsap.registerPlugin(ScrollTrigger);
 
-    // const tl = gsap.timeline({
-    //     scrollTrigger: {
-    //         trigger: "#timeline",
-    //         start: "top 80%",
-    //         markers: true,
-    //         toggleActions: "restart pause reverse none",
-    //     },
-    // });
-
-    // tl.to("#timeline", {
-    //     rotation: 360,
-    //     duration: 3,
-    //     opacity: 0
-    // })
-    // .to("#timeline", {
-    //     rotation: 360,
-    //     duration: 3,
-    //     opacity: 1
-    // });
-
-    const tl =  gsap.timeline({
-        scrollTrigger: {
-            trigger: ".right-to-left-incoming",
-            start: "center center",
-            markers: true,
-            toggleActions: "restart pause reverse none"
-        },
-    });
-
     useEffect(() => {
-        tl.fromTo(".right-to-left-incoming", {
+        gsap.from(".right-to-left-incoming", {
             x: 50,
             opacity: 0
-        }, {
-            x: 0,
-            opacity: 1
         });
-    })
+
+        gsap.to(".right-to-left-incoming", {
+            scrollTrigger: {
+                trigger: ".right-to-left-incoming",
+                start: "center center",
+                // end: "center center",
+                markers: true,
+                toggleActions: "restart pause reverse none"
+            },
+            x: 0,
+            opacity: 1,
+            duration: 2
+        });
+    });
 
     return (
         <div>
@@ -164,10 +145,10 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="bg-color-dark-blue right-to-left-incoming" id="3">
+            <div className="bg-color-dark-blue" id="3">
                 <div className="container">
-                    <div className="column-two-left-forth">
-                        <div>
+                    <div className="column-two-left-forth right-to-left-incoming">
+                        <div className="f">
                             <h3>Two Left Forth</h3>
                         </div>
                         <div>
