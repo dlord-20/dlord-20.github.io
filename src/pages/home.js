@@ -18,24 +18,42 @@ export default function Home() {
 
     gsap.registerPlugin(ScrollTrigger);
 
-    useEffect(() => {
-        gsap.from(".right-to-left-incoming", {
-            x: 50,
-            opacity: 0
-        });
+    // useEffect(() => {
+    //     gsap.from(".right-to-left-incoming", {
+    //         x: 50,
+    //         opacity: 0
+    //     });
 
-        gsap.to(".right-to-left-incoming", {
+    //     gsap.to(".right-to-left-incoming", {
+    //         scrollTrigger: {
+    //             trigger: ".right-to-left-incoming",
+    //             start: "center center",
+    //             // end: "center center",
+    //             markers: true,
+    //             toggleActions: "restart pause reverse none"
+    //         },
+    //         x: 0,
+    //         opacity: 1,
+    //         duration: 2
+    //     });
+    // });
+
+    useEffect(() => {
+        let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".right-to-left-incoming",
-                start: "center center",
-                // end: "center center",
+                start: "center 80%",
+                end: "+=500",
                 markers: true,
-                toggleActions: "restart pause reverse none"
-            },
-            x: 0,
-            opacity: 1,
-            duration: 2
+                scrub: 1
+            }
         });
+
+        tl.addLabel("start")
+            .from(".right-to-left-incoming", {x: 50, opacity: 0})
+            .addLabel("move")
+            .to(".right-to-left", {x: 0, opacity: 1});
+
     });
 
     return (
@@ -165,7 +183,7 @@ export default function Home() {
             </div>
             <div className="bg-color-blue" id="4">
                 <div className="container">
-                    <div className="column-two-right-third">
+                    <div className="column-two-right-third ">
                         <div>
                             <h3>Two Right Third</h3>
                         </div>
