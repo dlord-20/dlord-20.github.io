@@ -39,21 +39,25 @@ export default function Home() {
     // });
 
     useEffect(() => {
-        let tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".right-to-left-incoming",
-                start: "center 80%",
-                end: "+=500",
-                markers: true,
-                scrub: 1
-            }
-        });
+        var sections = gsap.utils.toArray('.right-to-left-incoming');
 
-        tl.addLabel("start")
-            .from(".right-to-left-incoming", {x: 50, opacity: 0})
-            .addLabel("move")
-            .to(".right-to-left", {x: 0, opacity: 1});
+        sections.forEach((section) => {
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top 80%",
+                    end: "+=500",
+                    markers: true,
+                    scrub: 1
+                }
+            });
 
+            tl.addLabel("start")
+                .from(section, {x: 50, opacity: 0})
+                .addLabel("move")
+                .to(section, {x: 0, opacity: 1});
+
+        })
     });
 
     return (
@@ -117,7 +121,7 @@ export default function Home() {
             </div>
             <div className="primary-color-2" id="bar-chart">
                 <div className="container">
-                    <div className="column-one secondary-color">
+                    <div className="column-one secondary-color right-to-left-incoming">
                         <div>
                             <h1>Bar Chart</h1>
                         </div>
@@ -126,7 +130,7 @@ export default function Home() {
             </div>
             <div className="primary-color" id="experience">
                 <div className="container">
-                    <div className="column-two-even secondary-color">
+                    <div className="column-two-even secondary-color right-to-left-incoming">
 
                         <div>
                             <h1>Two Even</h1>
@@ -151,7 +155,7 @@ export default function Home() {
             </div>
             <div className="primary-color" id="timeline">
                 <div className="container">
-                    <div className="column-one">
+                    <div className="column-one right-to-left-incoming">
                         <div>
                             <h2>Timeline</h2>
                         </div>
@@ -183,7 +187,7 @@ export default function Home() {
             </div>
             <div className="bg-color-blue" id="4">
                 <div className="container">
-                    <div className="column-two-right-third ">
+                    <div className="column-two-right-third right-to-left-incoming">
                         <div>
                             <h3>Two Right Third</h3>
                         </div>
@@ -201,7 +205,7 @@ export default function Home() {
             </div>
             <div className="bg-color-dark-blue" id="5">
                 <div className="container">
-                    <div className="column-two-right-forth">
+                    <div className="column-two-right-forth right-to-left-incoming">
                         <div>
                             <h3>Two Right Forth</h3>
                         </div>
@@ -219,7 +223,7 @@ export default function Home() {
             </div>
             <div className="bg-color-blue" id="6">
                 <div className="container">
-                    <div className="column-three-even">
+                    <div className="column-three-even right-to-left-incoming">
                         <div>
                             <h3>Three</h3>
                         </div>
@@ -240,7 +244,7 @@ export default function Home() {
             </div>
             <div className="bg-color-white" id="7">
                 <div className="container">
-                    <div className="column-four-even">
+                    <div className="column-four-even right-to-left-incoming">
                         <div>
                             <h3>Forth Even</h3>
                         </div>
