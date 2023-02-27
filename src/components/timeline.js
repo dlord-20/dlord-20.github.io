@@ -87,7 +87,7 @@ export default function TimeLine() {
                         <p>Need | something | here</p>
                     </div>
                 </VerticalTimelineElement>
-                </VerticalTimeline>
+            </VerticalTimeline>
         </div>
     );
 }

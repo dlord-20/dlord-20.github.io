@@ -7,9 +7,10 @@ import TimeLine from "../components/timeline";
 import Image from "../components/image";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import React from "react";
+import React, { useEffect} from "react";
 import { useRightToLeftFadeIn } from "../features/effects/right-to-left-fade-in-on-scroll";
 import { useLeftToRightFadeIn } from "../features/effects/left-to-right-fade-in-on-scroll";
+import { useTimelineEffect } from "../features/effects/timeline-effects";
 
 export default function Home() {
     const header = React.createRef();
@@ -22,7 +23,30 @@ export default function Home() {
 
     //Effect for fading in section by section
     useRightToLeftFadeIn();
-    useLeftToRightFadeIn();
+    // useLeftToRightFadeIn();
+    useTimelineEffect();
+
+    // useEffect(() => {
+    //     var sections = gsap.utils.toArray('.right-to-left-incoming');
+
+    //     sections.forEach((section) => {
+    //         let tl = gsap.timeline({
+    //             scrollTrigger: {
+    //                 trigger: section,
+    //                 start: "top 80%",
+    //                 markers: true,
+    //                 // kill: true
+    //                 scrub: true,
+    //             }
+    //         });
+
+    //         tl.addLabel("start")
+    //             .from(section, {x: 50, opacity: 0})
+    //             .addLabel("move")
+    //             .to(section, {x: 0, opacity: 1});
+
+    //     })
+    // }, []);
 
 
     return (
@@ -132,29 +156,34 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="bg-color-dark-blue" id="3">
+            <div className="" id="3">
                 <div className="container">
                     <div className="column-two-left-forth right-to-left-incoming">
                         <div className="f">
                             <h3>Two Left Forth</h3>
+                            <p>askdvubnwiuvc aqisucbnis wuvbiuvc biudbviuwdbvijsd avisdbviusdviu dvuic sadvb isdvb vidsub vdsibv cuidsbv dsbv saiuvb usiadbisd auviud vuisd vbuiwdbfv isduabiuds vudsibv isudbvisdub isbdvi sduiv bsiudbv biudbvf sduvb sidubv suidbv suiadbv iusda iusadbv sudbviusd viubsd ivbsd viusd baviusad viusdb viubsadv uidbs viusdbv iuabv uiduvib saidbv iusdb viusadbviusdb viusdbv iuasbd visduivb dsuivbiusd bvisudbviusd viusdbvisu dviub dsvuibasd uvbiusdb viuds bvuisdbv uisdvb sidubv uisd vuisdb vuisdb vuidb viuasdbv uidbv iud vuisdbv sdui</p>
                         </div>
                         <div>
                             <p>column 1</p>
+                            <p>askdvubnwiuvc aqisucbnis wuvbiuvc biudbviuwdbvijsd avisdbviusdviu dvuic sadvb isdvb vidsub vdsibv cuidsbv dsbv saiuvb usiadbisd auviud vuisd vbuiwdbfv isduabiuds vudsibv isudbvisdub isbdvi sduiv bsiudbv biudbvf sduvb sidubv suidbv suiadbv iusda iusadbv sudbviusd viubsd ivbsd viusd baviusad viusdb viubsadv uidbs viusdbv iuabv uiduvib saidbv iusdb viusadbviusdb viusdbv iuasbd visduivb dsuivbiusd bvisudbviusd viusdbvisu dviub dsvuibasd uvbiusdb viuds bvuisdbv uisdvb sidubv uisd vuisdb vuisdb vuidb viuasdbv uidbv iud vuisdbv sdui</p>
                         </div>
                         <div>
                             <p>column 2</p>
+                            <p>askdvubnwiuvc aqisucbnis wuvbiuvc biudbviuwdbvijsd avisdbviusdviu dvuic sadvb isdvb vidsub vdsibv cuidsbv dsbv saiuvb usiadbisd auviud vuisd vbuiwdbfv isduabiuds vudsibv isudbvisdub isbdvi sduiv bsiudbv biudbvf sduvb sidubv suidbv suiadbv iusda iusadbv sudbviusd viubsd ivbsd viusd baviusad viusdb viubsadv uidbs viusdbv iuabv uiduvib saidbv iusdb viusadbviusdb viusdbv iuasbd visduivb dsuivbiusd bvisudbviusd viusdbvisu dviub dsvuibasd uvbiusdb viuds bvuisdbv uisdvb sidubv uisd vuisdb vuisdb vuidb viuasdbv uidbv iud vuisdbv sdui</p>
                         </div>
                         <div>
                             <p>Bottom title</p>
+                            <p>askdvubnwiuvc aqisucbnis wuvbiuvc biudbviuwdbvijsd avisdbviusdviu dvuic sadvb isdvb vidsub vdsibv cuidsbv dsbv saiuvb usiadbisd auviud vuisd vbuiwdbfv isduabiuds vudsibv isudbvisdub isbdvi sduiv bsiudbv biudbvf sduvb sidubv suidbv suiadbv iusda iusadbv sudbviusd viubsd ivbsd viusd baviusad viusdb viubsadv uidbs viusdbv iuabv uiduvib saidbv iusdb viusadbviusdb viusdbv iuasbd visduivb dsuivbiusd bvisudbviusd viusdbvisu dviub dsvuibasd uvbiusdb viuds bvuisdbv uisdvb sidubv uisd vuisdb vuisdb vuidb viuasdbv uidbv iud vuisdbv sdui</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="bg-color-blue" id="4">
+            <div className="" id="4">
                 <div className="container">
                     <div className="column-two-right-third right-to-left-incoming">
                         <div>
                             <h3>Two Right Third</h3>
+                            <p>askdvubnwiuvc aqisucbnis wuvbiuvc biudbviuwdbvijsd avisdbviusdviu dvuic sadvb isdvb vidsub vdsibv cuidsbv dsbv saiuvb usiadbisd auviud vuisd vbuiwdbfv isduabiuds vudsibv isudbvisdub isbdvi sduiv bsiudbv biudbvf sduvb sidubv suidbv suiadbv iusda iusadbv sudbviusd viubsd ivbsd viusd baviusad viusdb viubsadv uidbs viusdbv iuabv uiduvib saidbv iusdb viusadbviusdb viusdbv iuasbd visduivb dsuivbiusd bvisudbviusd viusdbvisu dviub dsvuibasd uvbiusdb viuds bvuisdbv uisdvb sidubv uisd vuisdb vuisdb vuidb viuasdbv uidbv iud vuisdbv sdui</p>
                         </div>
                         <div>
                             <p>column 1</p>
@@ -168,7 +197,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="bg-color-dark-blue" id="5">
+            <div className="primary-color" id="5">
                 <div className="container">
                     <div className="column-two-right-forth right-to-left-incoming">
                         <div>
@@ -186,7 +215,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="bg-color-blue" id="6">
+            <div className="" id="6">
                 <div className="container">
                     <div className="column-three-even right-to-left-incoming">
                         <div>
@@ -207,7 +236,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="bg-color-white" id="7">
+            <div className="" id="7">
                 <div className="container">
                     <div className="column-four-even right-to-left-incoming">
                         <div>

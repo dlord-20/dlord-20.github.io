@@ -10,10 +10,8 @@ export const useRightToLeftFadeIn = () => {
                 scrollTrigger: {
                     trigger: section,
                     start: "top 80%",
-                    end: "+=500",
                     markers: true,
-                    scrub: 1
-                }
+                    scrub: 1                }
             });
 
             tl.addLabel("start")
