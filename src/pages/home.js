@@ -7,8 +7,9 @@ import TimeLine from "../components/timeline";
 import Image from "../components/image";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import React, { useEffect } from "react";
+import React from "react";
 import { useRightToLeftFadeIn } from "../features/effects/right-to-left-fade-in-on-scroll";
+import { useLeftToRightFadeIn } from "../features/effects/left-to-right-fade-in-on-scroll";
 
 export default function Home() {
     const header = React.createRef();
@@ -21,6 +22,7 @@ export default function Home() {
 
     //Effect for fading in section by section
     useRightToLeftFadeIn();
+    useLeftToRightFadeIn();
 
 
     return (
@@ -118,7 +120,7 @@ export default function Home() {
             </div>
             <div className="primary-color" id="timeline">
                 <div className="container">
-                    <div className="column-one right-to-left-incoming">
+                    <div className="column-one">
                         <div>
                             <h2>Timeline</h2>
                         </div>
