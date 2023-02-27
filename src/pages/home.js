@@ -8,6 +8,7 @@ import Image from "../components/image";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useEffect } from "react";
+import { useRightToLeftFadeIn } from "../features/effects/right-to-left-fade-in-on-scroll";
 
 export default function Home() {
     const header = React.createRef();
@@ -18,47 +19,9 @@ export default function Home() {
 
     gsap.registerPlugin(ScrollTrigger);
 
-    // useEffect(() => {
-    //     gsap.from(".right-to-left-incoming", {
-    //         x: 50,
-    //         opacity: 0
-    //     });
+    //Effect for fading in section by section
+    useRightToLeftFadeIn();
 
-    //     gsap.to(".right-to-left-incoming", {
-    //         scrollTrigger: {
-    //             trigger: ".right-to-left-incoming",
-    //             start: "center center",
-    //             // end: "center center",
-    //             markers: true,
-    //             toggleActions: "restart pause reverse none"
-    //         },
-    //         x: 0,
-    //         opacity: 1,
-    //         duration: 2
-    //     });
-    // });
-
-    useEffect(() => {
-        var sections = gsap.utils.toArray('.right-to-left-incoming');
-
-        sections.forEach((section) => {
-            let tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top 80%",
-                    end: "+=500",
-                    markers: true,
-                    scrub: 1
-                }
-            });
-
-            tl.addLabel("start")
-                .from(section, {x: 50, opacity: 0})
-                .addLabel("move")
-                .to(section, {x: 0, opacity: 1});
-
-        })
-    });
 
     return (
         <div>
