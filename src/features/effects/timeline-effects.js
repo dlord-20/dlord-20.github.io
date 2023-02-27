@@ -30,6 +30,23 @@ export const useTimelineEffect = () => {
                         .to(sections[i], {x: 0, opacity: 1});
                 }
             }
+        });
+
+        mm.add("(max-width: 1169px", () => {
+            for(let i = 0; i < sections.length; i ++) {
+                let tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: sections[i],
+                        start: "top 80%",
+                        // markers: true,
+                        scrub: 1
+                    }
+                });
+                tl.addLabel("start")
+                    .from(sections[i], {x: 50, opacity: 0})
+                    .addLabel("move")
+                    .to(sections[i], {x: 0, opacity: 1});
+            }
         })
     }
 )};
