@@ -10,14 +10,24 @@ export const useRightToLeftFadeIn = () => {
                 scrollTrigger: {
                     trigger: section,
                     start: "top 80%",
+                    end: "bottom bottom",
                     markers: true,
-                    scrub: 1                }
+                    scrub: 1                
+                }
             });
 
             tl.addLabel("start")
-                .from(section, {x: 50, opacity: 0})
+                .from(section, {
+                    x: 50, 
+                    opacity: 0,
+                    duration: 2000
+                })
                 .addLabel("move")
-                .to(section, {x: 0, opacity: 1});
+                .to(section, {
+                    x: 0, 
+                    opacity: 1, 
+                    duration: 2000
+                });
 
         })
     });

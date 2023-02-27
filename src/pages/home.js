@@ -20,6 +20,7 @@ export default function Home() {
     // }, [header]);
 
     gsap.registerPlugin(ScrollTrigger);
+    gsap.defaults({ ease: "power2.in"});
 
     //Effect for fading in section by section
     useRightToLeftFadeIn();
