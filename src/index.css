@@ -536,6 +536,7 @@ a {
 
 .button-container p {
   max-width: max-content;
+  white-space: nowrap;
 }
 
 .button {
@@ -909,6 +910,11 @@ a {
   .button-container p {
     width: 100%;
     max-width: 100%;
+    white-space: nowrap;
+  }
+
+  .cover .button-container:nth-child(2) {
+    display: none;
   }
 
   .navigation .button {

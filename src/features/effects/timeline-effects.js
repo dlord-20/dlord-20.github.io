@@ -11,7 +11,7 @@ export const useTimelineEffect = () => {
                 gsap.timeline({
                     scrollTrigger: {
                         trigger: section,
-                        start: "top 80%",
+                        start: "top 85%",
                         end: "bottom bottom",
                         // markers: true,
                         scrub: 1

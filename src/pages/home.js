@@ -50,7 +50,7 @@ export default function Home() {
                                     <p>I'm an eager digital marketer who is on a mission to decrease customer turnover while attracting new cliential.</p>
                                     <div className="buttons">
                                         <Button text="Let's Talk" link="works"/>
-                                        <Button text="Check out my work" link="services" type="b" />
+                                        <Button text="See More" link="services" type="b" />
                                     </div>
                                 </div>
                             </div>
@@ -64,18 +64,6 @@ export default function Home() {
                                 }}/>
                         </div>
                         <div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="primary-color" id="test">
-                <div className="container">
-                    <div className="column-one secondary-color">
-                        <div>
-                            <h1>Derek Lord</h1>
-                            <p>Auto generated text for description</p>
-                            <br/>
-                            <Button text="Testing"/>
                         </div>
                     </div>
                 </div>

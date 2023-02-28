@@ -4,15 +4,28 @@ import { gsap } from 'gsap';
 export const fadeController = (sectionsArray, xStart, yStart) => {
     return (
         sectionsArray.forEach((section) => {
-            let tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top 80%",
-                    end: "+=200",
-                    markers: true,
-                    scrub: 1                
-                }
-            });
+            let tl;
+            if(yStart !== 0) {
+                tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: section,
+                        start: `${yStart * -1} 85%`,
+                        end: "+=150",
+                        // markers: true,
+                        scrub: 1                
+                    }
+                });
+            } else {
+                tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 85%",
+                        end: "+=150",
+                        // markers: true,
+                        scrub: 1                
+                    }
+                });
+            }
             tl.addLabel("start")
                 .from(section, {
                     x: xStart,
