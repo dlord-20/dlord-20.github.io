@@ -38,7 +38,7 @@ export const useTimelineEffect = () => {
         };
 
         var sections = gsap.utils.toArray('.vertical-timeline-element-content');
-        // vertical-timeline-element-icon
+
         mm.add("(min-width: 1170px)", () => {
             for(let i = 0; i < sections.length; i ++) {
                 let tl = timeline(sections[i]);
@@ -55,6 +55,29 @@ export const useTimelineEffect = () => {
                 let tl = timeline(sections[i]);
                 effect(tl, sections[i], 50);
             }
-        })
+        });
+
+
+        var timelineDates = gsap.utils.toArray('.vertical-timeline-element-date');
+
+        mm.add("(min-width: 1170px)", () => {
+            for(let i = 0; i < sections.length; i ++) {
+                let tl = timeline(timelineDates[i]);
+                if(i % 2 === 0) {
+                    effect(tl, timelineDates[i], 100);
+                } else {
+                    effect(tl, timelineDates[i], -100);
+                }
+            }
+        });
+
+        mm.add("(max-width: 1169px", () => {
+            for(let i = 0; i < sections.length; i ++) {
+                let tl = timeline(timelineDates[i]);
+                effect(tl, timelineDates[i], 100);
+            }
+        });
+
+
     }, [])
 };

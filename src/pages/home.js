@@ -120,7 +120,7 @@ export default function Home() {
             </div>
             <div className="primary-color" id="experience">
                 <div className="container">
-                    <div className="column-two-even secondary-color right-to-left-incoming">
+                    <div className="column-two-even secondary-color">
 
                         <div>
                             <h1>Two Even</h1>
