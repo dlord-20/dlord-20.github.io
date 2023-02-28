@@ -11,7 +11,7 @@ export const useRightToLeftFadeIn = () => {
                     trigger: section,
                     start: "top 80%",
                     end: "bottom bottom",
-                    markers: true,
+                    // markers: true,
                     scrub: 1                
                 }
             });
@@ -25,8 +25,7 @@ export const useRightToLeftFadeIn = () => {
                 .addLabel("move")
                 .to(section, {
                     x: 0, 
-                    opacity: 1, 
-                    duration: 2000
+                    opacity: 1
                 });
 
         })
