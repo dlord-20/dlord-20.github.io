@@ -7,7 +7,7 @@ import TimeLine from "../components/timeline";
 import Image from "../components/image";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import React from "react";
+import React, { useEffect} from "react";
 import { useRightToLeftFadeIn } from "../features/effects/fadeIn/right-to-left-fade-in-on-scroll";
 import { useTimelineEffect } from "../features/effects/timeline-effects";
 import { useDownToUpFadeIn } from "../features/effects/fadeIn/down-to-up-fade-in-on-scroll";
@@ -30,6 +30,56 @@ export default function Home() {
     useTimelineEffect();
     useDownToUpFadeIn();
 
+    useEffect(() => {
+        let tl = gsap.timeline();
+
+        tl.from(".header", {x: 25, opacity: 0})
+            .to(".header", {x: 0, opacity: 1,}, "-=.5")
+            .from(".highlight-container", {x: 25, opacity: 0})
+            .to(".highlight-container", {x: 0, opacity: 1}, "-=.55")
+            .from(".description", {x: 25, opacity: 0})
+            .to(".description", {x: 0, opacity: 1}, "-=.55")
+            .from(".buttons", {x: 25, opacity: 0})
+            .to(".buttons", {x: 0, opacity: 1}, "-=.55");
+
+            // Starting to mess around with my new intro section
+            var columns = gsap.utils.toArray('.alphabet');
+
+            let alphabetTl = gsap.timeline();
+            const word = "DESIGNER";
+            const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+  
+            for(let i = 0; i < columns.length; i++) {
+                const letter = word.charAt(i);
+                console.log(letter);
+                switch (letter) {
+                    case "A":
+                        alphabetTl.to(columns[i], {y: -100}, 0);
+                        break;
+                    case "B":
+                        alphabetTl.to(columns[i], {y: -90}, 0);
+                        break;
+                    case "C":
+                        alphabetTl.to(columns[i], {y: -80}, 0);
+                        break;
+                    case "D":
+                        alphabetTl.to(columns[i], {y: -70}, 0);
+                        break;
+                    case "E":
+                        alphabetTl.to(columns[i], {y: -60}, 0);
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            // let num = 5;
+            // columns.forEach(column => {
+            //     alphabetTl.to(column, {y: `+=${num}`}, 0);
+            //     num += 15;
+            // });
+    }, []);
+
 
     return (
         <div>
@@ -44,10 +94,10 @@ export default function Home() {
                         <div className="section-container cover-container">
                             <div className="cover">
                                 <div className="center-left">
-                                    <h1 ref={header}>
+                                    <h1 className="header" ref={header}>
                                         Hi, I'm<br/><div className="highlight-container">Derek <span className="highlight">Lord</span></div>
                                     </h1>
-                                    <p>I'm an eager digital marketer who is on a mission to decrease customer turnover while attracting new cliential.</p>
+                                    <p className="description">I'm an eager digital marketer who is on a mission to decrease customer turnover while attracting new cliential.</p>
                                     <div className="buttons">
                                         <Button text="Let's Talk" link="works"/>
                                         <Button text="See More" link="services" type="b" />
@@ -64,6 +114,25 @@ export default function Home() {
                                 }}/>
                         </div>
                         <div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="primary-color" id="alphabet">
+                <div className="container">
+                    <div className="column-one secondary-color">
+                        <div className="word-container">
+                            <p className="alphabet">a<br/>b<br/>c<br/>d<br/>e<br/>f<br/>g<br/>h<br/>i<br/>j<br/>k<br/>l<br/>m<br/>n<br/>o<br/>p<br/>q<br/>r<br/>s<br/>t<br/>u<br/>v<br/>w<br/>x<br/>y<br/>z</p>
+                            <p className="alphabet">a<br/>b<br/>c<br/>d<br/>e<br/>f<br/>g<br/>h<br/>i<br/>j<br/>k<br/>l<br/>m<br/>n<br/>o<br/>p<br/>q<br/>r<br/>s<br/>t<br/>u<br/>v<br/>w<br/>x<br/>y<br/>z</p>
+                            <p className="alphabet">a<br/>b<br/>c<br/>d<br/>e<br/>f<br/>g<br/>h<br/>i<br/>j<br/>k<br/>l<br/>m<br/>n<br/>o<br/>p<br/>q<br/>r<br/>s<br/>t<br/>u<br/>v<br/>w<br/>x<br/>y<br/>z</p>
+                            <p className="alphabet">a<br/>b<br/>c<br/>d<br/>e<br/>f<br/>g<br/>h<br/>i<br/>j<br/>k<br/>l<br/>m<br/>n<br/>o<br/>p<br/>q<br/>r<br/>s<br/>t<br/>u<br/>v<br/>w<br/>x<br/>y<br/>z</p>
+                            <p className="alphabet">a<br/>b<br/>c<br/>d<br/>e<br/>f<br/>g<br/>h<br/>i<br/>j<br/>k<br/>l<br/>m<br/>n<br/>o<br/>p<br/>q<br/>r<br/>s<br/>t<br/>u<br/>v<br/>w<br/>x<br/>y<br/>z</p>
+                            <p className="alphabet">a<br/>b<br/>c<br/>d<br/>e<br/>f<br/>g<br/>h<br/>i<br/>j<br/>k<br/>l<br/>m<br/>n<br/>o<br/>p<br/>q<br/>r<br/>s<br/>t<br/>u<br/>v<br/>w<br/>x<br/>y<br/>z</p>
+                            <p className="alphabet">a<br/>b<br/>c<br/>d<br/>e<br/>f<br/>g<br/>h<br/>i<br/>j<br/>k<br/>l<br/>m<br/>n<br/>o<br/>p<br/>q<br/>r<br/>s<br/>t<br/>u<br/>v<br/>w<br/>x<br/>y<br/>z</p>
+                            <p className="alphabet">a<br/>b<br/>c<br/>d<br/>e<br/>f<br/>g<br/>h<br/>i<br/>j<br/>k<br/>l<br/>m<br/>n<br/>o<br/>p<br/>q<br/>r<br/>s<br/>t<br/>u<br/>v<br/>w<br/>x<br/>y<br/>z</p>
+                            <p className="word">Designer</p>
+                            <br/>
+                            <Button text="Testing"/>
                         </div>
                     </div>
                 </div>

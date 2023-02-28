@@ -929,3 +929,20 @@ a {
   }
 
 }
+
+
+  /* ----------------- clock ticker ----------------- */
+
+  .word,
+  .alphabet
+  {
+    text-transform: uppercase;
+  }
+
+  .alphabet {
+    z-index: 10;
+  }
+
+  .word-container {
+    display: flex;
+  }
