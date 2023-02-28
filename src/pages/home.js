@@ -11,6 +11,7 @@ import React, { useEffect} from "react";
 import { useRightToLeftFadeIn } from "../features/effects/right-to-left-fade-in-on-scroll";
 import { useLeftToRightFadeIn } from "../features/effects/left-to-right-fade-in-on-scroll";
 import { useTimelineEffect } from "../features/effects/timeline-effects";
+import { useDownToUpFadeIn } from "../features/effects/down-to-up-fade-in-on-scroll";
 
 export default function Home() {
     const header = React.createRef();
@@ -24,30 +25,9 @@ export default function Home() {
 
     //Effect for fading in section by section
     useRightToLeftFadeIn();
-    // useLeftToRightFadeIn();
+    useLeftToRightFadeIn();
     useTimelineEffect();
-
-    // useEffect(() => {
-    //     var sections = gsap.utils.toArray('.right-to-left-incoming');
-
-    //     sections.forEach((section) => {
-    //         let tl = gsap.timeline({
-    //             scrollTrigger: {
-    //                 trigger: section,
-    //                 start: "top 80%",
-    //                 markers: true,
-    //                 // kill: true
-    //                 scrub: true,
-    //             }
-    //         });
-
-    //         tl.addLabel("start")
-    //             .from(section, {x: 50, opacity: 0})
-    //             .addLabel("move")
-    //             .to(section, {x: 0, opacity: 1});
-
-    //     })
-    // }, []);
+    useDownToUpFadeIn();
 
 
     return (
@@ -120,7 +100,7 @@ export default function Home() {
             </div>
             <div className="primary-color" id="experience">
                 <div className="container">
-                    <div className="column-two-even secondary-color">
+                    <div className="column-two-even secondary-color down-to-up-incoming">
 
                         <div>
                             <h1>Two Even</h1>
