@@ -7,11 +7,12 @@ import TimeLine from "../components/timeline";
 import Image from "../components/image";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import React, { useEffect} from "react";
-import { useRightToLeftFadeIn } from "../features/effects/right-to-left-fade-in-on-scroll";
-import { useLeftToRightFadeIn } from "../features/effects/left-to-right-fade-in-on-scroll";
+import React from "react";
+import { useRightToLeftFadeIn } from "../features/effects/fadeIn/right-to-left-fade-in-on-scroll";
 import { useTimelineEffect } from "../features/effects/timeline-effects";
-import { useDownToUpFadeIn } from "../features/effects/down-to-up-fade-in-on-scroll";
+import { useDownToUpFadeIn } from "../features/effects/fadeIn/down-to-up-fade-in-on-scroll";
+import { useLeftToRightFadeIn } from "../features/effects/fadeIn/left-to-right-fade-in-on-scroll";
+
 
 export default function Home() {
     const header = React.createRef();
