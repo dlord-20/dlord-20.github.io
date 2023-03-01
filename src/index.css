@@ -946,10 +946,9 @@ a {
 
   .word-container {
     display: flex;
-    border: 1px solid pink;
+    /* border: 1px solid pink; */
     overflow: hidden;
     height: 128px;
-    background: linear-gradient(rgba( 0, 0, 0, 0), var(--light-main), rgba( 0, 0, 0, 0));
   }
 
   .letter-container {
@@ -959,14 +958,14 @@ a {
   .letter {
     /* background-image: linear-gradient(45deg, var(--dark-main), rgba(255,0,0,0)); */
       /* Fallback: Set a background color. */
-      background-image: linear-gradient(60deg, #E21143, #FFB03A);
+      /* background-image: linear-gradient(60deg, #E21143, #FFB03A);
       background-clip: text;
-      color: transparent;
+      color: transparent; */
   }
 
   .opacity-container {
-    border: 1px solid green;
-    height: 48px;
+    /* border: 1px solid green;
+    height: 48px; */
     /* overflow: hidden; */
   }
 

@@ -50,43 +50,30 @@ export default function Home() {
             var columns = gsap.utils.toArray('.alphabet');
             var letters = gsap.utils.toArray('.letter');
 
-            let alphabetTl = gsap.timeline();
+            let alphabetTl = gsap.timeline({repeat: 3});
+            const words = ["MARKETER", "DESIGNER", " ACTOR", "  MODEL", "SPRINTER", "    LDS", "HUSBAND", " FATHER"]
             const word = "MARKETER";
             const word2 = "DESIGNER";
+            let num = 1;
 
-  
-            for(let i = 0; i < columns.length; i++) {
-                const letter = word.charAt(i);
-
-                for(let j = 0; j < alphabet.length; j++) {
-                    if(letter === alphabet[j]) {
-                        alphabetTl.from(columns[i], { y: -16 * 12}, 0);
-                        alphabetTl.to(columns[i], { y: (j - 3) * - 16 + 8}, 1);
-
+            for(let k = 0; k < words.length; k++) {
+                for(let i = 0; i < columns.length; i++) {
+                    let letter = words[k].charAt(i);
+                    for(let j = 0; j < alphabet.length; j++) {
+                        // alphabetTl.from(letters[(i * 26) + j], {opacity: .2}, 0)
+                        if(letter === alphabet[j]) {
+                            alphabetTl.from(columns[i], { y: - 16 * 12}, 0)
+                            alphabetTl.to(columns[i], { y: (j - 3) * - 16 + 8}, num)
+                        } else {
+                            alphabetTl.to(letters[(i * 26) + j], {opacity: .2}, num)
+                            if(k !== words.length - 1) {
+                                alphabetTl.to(letters[(i * 26) + j], {opacity: 1}, 1.5 + num);
+                            }
+                        }
                     }
                 }
+                num += 1.5;
             }
-
-            for(let i = 0; i < columns.length; i++) {
-                const letter = word2.charAt(i);
-
-                for(let j = 0; j < alphabet.length; j++) {
-                    if(letter === alphabet[j]) {
-                        alphabetTl.from(columns[i], { y: -16 * 12}, 0)
-                        alphabetTl.to(columns[i], { y: (j - 3) * - 16 + 8}, 5)
-                        alphabetTl.to(letters[(i*26) + j], {x: 50, border: "1px solid black"}, 0);
-                        console.log((j+1)*26);
-
-
-                    }
-                }
-            }
-
-            // let num = 5;
-            // columns.forEach(column => {
-            //     alphabetTl.to(column, {y: `+=${num}`}, 0);
-            //     num += 15;
-            // });
     }, []);
 
     const getAlphabetColumn = () => {
@@ -160,6 +147,7 @@ export default function Home() {
                             {getAlphabetColumn()}
                             {getAlphabetColumn()}
                         </div>
+                        <br/>
                         <Button text="Testing"/>
                     </div>
                 </div>
