@@ -14,6 +14,8 @@ import { useDownToUpFadeIn } from "../features/effects/fadeIn/down-to-up-fade-in
 import { useLeftToRightFadeIn } from "../features/effects/fadeIn/left-to-right-fade-in-on-scroll";
 
 
+
+
 export default function Home() {
     const header = React.createRef();
 
@@ -46,6 +48,7 @@ export default function Home() {
 
             // Starting to mess around with my new intro section
             var columns = gsap.utils.toArray('.alphabet');
+            var letters = gsap.utils.toArray('.letter');
 
             let alphabetTl = gsap.timeline();
             const word = "MARKETER";
@@ -69,8 +72,11 @@ export default function Home() {
 
                 for(let j = 0; j < alphabet.length; j++) {
                     if(letter === alphabet[j]) {
-                        alphabetTl.from(columns[i], { y: -16 * 12}, 0);
-                        alphabetTl.to(columns[i], { y: (j - 3) * - 16 + 8}, 5);
+                        alphabetTl.from(columns[i], { y: -16 * 12}, 0)
+                        alphabetTl.to(columns[i], { y: (j - 3) * - 16 + 8}, 5)
+                        alphabetTl.to(letters[(i*26) + j], {x: 50, border: "1px solid black"}, 0);
+                        console.log((j+1)*26);
+
 
                     }
                 }
@@ -93,7 +99,6 @@ export default function Home() {
             )
             column.push(group)
         });
-        console.log(column);
 
         return (
             <div className="alphabet">
