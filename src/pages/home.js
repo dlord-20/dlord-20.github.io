@@ -58,7 +58,7 @@ export default function Home() {
                 for(let j = 0; j < alphabet.length; j++) {
                     if(letter === alphabet[j]) {
                         alphabetTl.from(columns[i], { y: -16 * 12}, 0);
-                        alphabetTl.to(columns[i], { y: (j - 3) * - 16}, 1);
+                        alphabetTl.to(columns[i], { y: (j - 3) * - 16 + 8}, 1);
 
                     }
                 }
@@ -70,7 +70,7 @@ export default function Home() {
                 for(let j = 0; j < alphabet.length; j++) {
                     if(letter === alphabet[j]) {
                         alphabetTl.from(columns[i], { y: -16 * 12}, 0);
-                        alphabetTl.to(columns[i], { y: (j - 3) * - 16}, 5);
+                        alphabetTl.to(columns[i], { y: (j - 3) * - 16 + 8}, 5);
 
                     }
                 }

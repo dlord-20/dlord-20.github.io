@@ -948,8 +948,8 @@ a {
     display: flex;
     border: 1px solid pink;
     overflow: hidden;
-    height: 112px;
-    background: linear-gradient(var(--dark-main), rgba(255,0,0,0), var(--dark-main));
+    height: 128px;
+    background: linear-gradient(rgba( 0, 0, 0, 0), var(--light-main), rgba( 0, 0, 0, 0));
   }
 
   .letter-container {
