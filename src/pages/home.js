@@ -54,6 +54,7 @@ export default function Home() {
             const words = ["MARKETER", "DESIGNER", " ACTOR", "  MODEL", "SPRINTER", "    LDS", "HUSBAND", " FATHER", "   8", "7", "       6", "     5", "  4", "      3", "    2", " 1", "00000000"]
             let num = 0;
             const clockGap = .75;
+            const fontSize = 16;
 
             for(let k = 0; k < words.length; k++) {
                 for(let i = 0; i < columns.length; i++) {
@@ -63,7 +64,7 @@ export default function Home() {
                         // Check the current letter with the alphabet
                         if(letter === alphabet[j]) {
                             // Move the column to the correct letter position to make the word
-                            alphabetTl.to(columns[i], { y: (j - 3) * - 16 + 8}, num)
+                            alphabetTl.to(columns[i], { y: (j - 3) * - fontSize + fontSize/2}, num)
                         } else {
                             // Make all the other letters besides the letters in the current word a little transparent
                             alphabetTl.to(letters[(i * alphabet.length) + j], {opacity: .2}, num)
@@ -79,25 +80,36 @@ export default function Home() {
             // END OF ALPHABET CLOCK
     }, []);
 
-    const getAlphabetColumn = () => {
-        let column = [];
-        alphabet.forEach(letter => {
-            const group = (
-                <div className="letter-container">
-                    <p><span className="letter">{letter}</span></p>
-                </div>
-            )
-            column.push(group)
-        });
+    // START OF ALPHABET CLOCK
+    // Formats each character to JSX in the alphabet array
+    const column = [];
+    alphabet.forEach(letter => {
+        const group = (
+            <div className="letter-container">
+                <p><span className="letter">{letter}</span></p>
+            </div>
+        )
+        column.push(group)
+    });
 
+    //Formats each letters in the column array into one object
+    const getAlphabetColumn = () => {
         return (
             <div className="alphabet">
-                <div className="opacity-container">
-                    {column}
-                </div>
+                {column}
             </div>
         )
     }
+
+    //Returns the columns of the number of alphabet columns requested
+    const getAlphabetColumns = (numberOfColumns) => {
+        const columns = [];
+        for(let i = 0; i < numberOfColumns; i++) {
+            columns.push(getAlphabetColumn());
+        }
+        return columns;
+    }
+    // END OF ALPHABET CLOCK
 
 
     return (
@@ -141,14 +153,7 @@ export default function Home() {
                 <div className="container">
                     <div className="column-one secondary-color">
                         <div className="word-container">
-                            {getAlphabetColumn()}
-                            {getAlphabetColumn()}
-                            {getAlphabetColumn()}
-                            {getAlphabetColumn()}
-                            {getAlphabetColumn()}
-                            {getAlphabetColumn()}
-                            {getAlphabetColumn()}
-                            {getAlphabetColumn()}
+                            {getAlphabetColumns(8)}
                         </div>
                         <br/>
                         <Button text="Testing"/>
