@@ -46,7 +46,7 @@ export default function Home() {
             var columns = gsap.utils.toArray('.alphabet');
 
             let alphabetTl = gsap.timeline();
-            const word = "DESIGNER";
+            const word = "THOMASDL";
             const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
   
             for(let i = 0; i < columns.length; i++) {
@@ -56,7 +56,9 @@ export default function Home() {
                 for(let j = 0; j < alphabet.length; j++) {
                     if(letter === alphabet[j]) {
                         console.log(columns[i] + ' ' + letter);
-                        alphabetTl.to(columns[i], { y: 50}, 0);
+
+                        alphabetTl.to(columns[i], { y: j * -16}, 0);
+
                     }
                 }
 
