@@ -24,7 +24,7 @@ export default function Home() {
     // }, [header]);
 
     gsap.registerPlugin(ScrollTrigger);
-    gsap.defaults({ ease: "power2.in"});
+    gsap.defaults({ ease: "back"});
 
     //Effect for fading in section by section
     useRightToLeftFadeIn();
@@ -32,7 +32,7 @@ export default function Home() {
     useTimelineEffect();
     useDownToUpFadeIn();
 
-    const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+    const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
     useEffect(() => {
         let tl = gsap.timeline();
@@ -50,29 +50,37 @@ export default function Home() {
             var columns = gsap.utils.toArray('.alphabet');
             var letters = gsap.utils.toArray('.letter');
 
-            let alphabetTl = gsap.timeline({repeat: 3});
-            const words = ["MARKETER", "DESIGNER", " ACTOR", "  MODEL", "SPRINTER", "    LDS", "HUSBAND", " FATHER"]
-            const word = "MARKETER";
-            const word2 = "DESIGNER";
-            let num = 1;
+            let alphabetTl = gsap.timeline();
+            const words = ["MARKETER", "DESIGNER", " ACTOR", "  MODEL", "SPRINTER", "    LDS", "HUSBAND", " FATHER", "8", " 7", "  6", "   5", "    4", "     3", "      2", "       1"]
+            let num = 0;
+            const clockGap = 1;
 
             for(let k = 0; k < words.length; k++) {
                 for(let i = 0; i < columns.length; i++) {
+                    //Get the letter in the current word
                     let letter = words[k].charAt(i);
+
                     for(let j = 0; j < alphabet.length; j++) {
+                        console.log(letter + ' ' + alphabet[j]);
                         // alphabetTl.from(letters[(i * 26) + j], {opacity: .2}, 0)
+                        // Check the current letter with the alphabet
                         if(letter === alphabet[j]) {
-                            alphabetTl.from(columns[i], { y: - 16 * 12}, 0)
+                            // alphabetTl.from(columns[i], { y: - 16 * 12}, 0)
+                            // Move the column to the correct letter position to make the word
+                            console.log("Made it")
                             alphabetTl.to(columns[i], { y: (j - 3) * - 16 + 8}, num)
                         } else {
-                            alphabetTl.to(letters[(i * 26) + j], {opacity: .2}, num)
+                            // Make all the other letters besides the letters in the current word a little transparent
+                            alphabetTl.to(letters[(i * alphabet.length) + j], {opacity: .2}, num)
+                            // Reset opacity on all letters except during the last word
                             if(k !== words.length - 1) {
-                                alphabetTl.to(letters[(i * 26) + j], {opacity: 1}, 1.5 + num);
-                            }
+                                console.log("Running Reset");
+                                alphabetTl.to(letters[(i * alphabet.length) + j], {opacity: 1}, clockGap + num);
+                            } 
                         }
                     }
                 }
-                num += 1.5;
+                num += clockGap;
             }
     }, []);
 
