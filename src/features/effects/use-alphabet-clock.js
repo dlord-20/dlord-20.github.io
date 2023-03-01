@@ -4,11 +4,8 @@ import { alphabet } from "../../data/data";
 
 export const useAlphabetClock = () => {
 
-    
-
     useEffect(() => {
 
-        // START OF ALPHABET CLOCK
         var columns = gsap.utils.toArray('.alphabet');
         var letters = gsap.utils.toArray('.letter');
 
@@ -39,7 +36,6 @@ export const useAlphabetClock = () => {
             }
             num += clockGap;
         }
-        // END OF ALPHABET CLOCK
 
     }, [])
 }

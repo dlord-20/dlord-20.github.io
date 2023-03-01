@@ -4,14 +4,12 @@ import { useAlphabetClock } from "../features/effects/use-alphabet-clock";
 export default function AlphabetClock() {
 
     useAlphabetClock();
-    console.log("here");
-    // START OF ALPHABET CLOCK
 
     // Formats each character to JSX in the alphabet array
     const column = [];
     alphabet.forEach(letter => {
         const group = (
-            <div className="letter-container">
+            <div className="letter-container" key={letter + "-letter"}>
                 <p><span className="letter">{letter}</span></p>
             </div>
         )
@@ -19,9 +17,9 @@ export default function AlphabetClock() {
     });
 
     //Formats each letters in the column array into one object
-    const getAlphabetColumn = () => {
+    const getAlphabetColumn = (num) => {
         return (
-            <div className="alphabet">
+            <div className="alphabet" key={num + "-column"}>
                 {column}
             </div>
         )
@@ -31,11 +29,10 @@ export default function AlphabetClock() {
     const getAlphabetColumns = (numberOfColumns) => {
         const columns = [];
         for(let i = 0; i < numberOfColumns; i++) {
-            columns.push(getAlphabetColumn());
+            columns.push(getAlphabetColumn(i));
         }
         return columns;
     }
-    // END OF ALPHABET CLOCK
 
     return (
         getAlphabetColumns(8)
