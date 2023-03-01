@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { gsap } from 'gsap';
 
 export const fadeController = (sectionsArray, xStart, yStart) => {
