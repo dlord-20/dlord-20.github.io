@@ -51,26 +51,34 @@ export default function Home() {
   
             for(let i = 0; i < columns.length; i++) {
                 const letter = word.charAt(i);
-                console.log(letter);
-                switch (letter) {
-                    case "A":
-                        alphabetTl.to(columns[i], {y: -100}, 0);
-                        break;
-                    case "B":
-                        alphabetTl.to(columns[i], {y: -90}, 0);
-                        break;
-                    case "C":
-                        alphabetTl.to(columns[i], {y: -80}, 0);
-                        break;
-                    case "D":
-                        alphabetTl.to(columns[i], {y: -70}, 0);
-                        break;
-                    case "E":
-                        alphabetTl.to(columns[i], {y: -60}, 0);
-                        break;
-                    default:
-                        break;
+                // console.log(letter);
+
+                for(let j = 0; j < alphabet.length; j++) {
+                    if(letter === alphabet[j]) {
+                        console.log(columns[i] + ' ' + letter);
+                        alphabetTl.to(columns[i], { y: 50}, 0);
+                    }
                 }
+
+                // switch (letter) {
+                //     case "A":
+                //         alphabetTl.to(columns[i], {y: -100}, 0);
+                //         break;
+                //     case "B":
+                //         alphabetTl.to(columns[i], {y: -90}, 0);
+                //         break;
+                //     case "C":
+                //         alphabetTl.to(columns[i], {y: -80}, 0);
+                //         break;
+                //     case "D":
+                //         alphabetTl.to(columns[i], {y: -70}, 0);
+                //         break;
+                //     case "E":
+                //         alphabetTl.to(columns[i], {y: -60}, 0);
+                //         break;
+                //     default:
+                //         break;
+                // }
             }
 
             // let num = 5;
