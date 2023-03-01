@@ -30,6 +30,8 @@ export default function Home() {
     useTimelineEffect();
     useDownToUpFadeIn();
 
+    const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
     useEffect(() => {
         let tl = gsap.timeline();
 
@@ -46,41 +48,32 @@ export default function Home() {
             var columns = gsap.utils.toArray('.alphabet');
 
             let alphabetTl = gsap.timeline();
-            const word = "THOMASDL";
-            const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+            const word = "MARKETER";
+            const word2 = "DESIGNER";
+
   
             for(let i = 0; i < columns.length; i++) {
                 const letter = word.charAt(i);
-                // console.log(letter);
 
                 for(let j = 0; j < alphabet.length; j++) {
                     if(letter === alphabet[j]) {
-                        console.log(columns[i] + ' ' + letter);
-
-                        alphabetTl.to(columns[i], { y: j * -16}, 0);
+                        alphabetTl.from(columns[i], { y: -16 * 12}, 0);
+                        alphabetTl.to(columns[i], { y: (j - 3) * - 16}, 1);
 
                     }
                 }
+            }
 
-                // switch (letter) {
-                //     case "A":
-                //         alphabetTl.to(columns[i], {y: -100}, 0);
-                //         break;
-                //     case "B":
-                //         alphabetTl.to(columns[i], {y: -90}, 0);
-                //         break;
-                //     case "C":
-                //         alphabetTl.to(columns[i], {y: -80}, 0);
-                //         break;
-                //     case "D":
-                //         alphabetTl.to(columns[i], {y: -70}, 0);
-                //         break;
-                //     case "E":
-                //         alphabetTl.to(columns[i], {y: -60}, 0);
-                //         break;
-                //     default:
-                //         break;
-                // }
+            for(let i = 0; i < columns.length; i++) {
+                const letter = word2.charAt(i);
+
+                for(let j = 0; j < alphabet.length; j++) {
+                    if(letter === alphabet[j]) {
+                        alphabetTl.from(columns[i], { y: -16 * 12}, 0);
+                        alphabetTl.to(columns[i], { y: (j - 3) * - 16}, 5);
+
+                    }
+                }
             }
 
             // let num = 5;
@@ -89,6 +82,27 @@ export default function Home() {
             //     num += 15;
             // });
     }, []);
+
+    const getAlphabetColumn = () => {
+        let column = [];
+        alphabet.forEach(letter => {
+            const group = (
+                <div className="letter-container">
+                    <p><span className="letter">{letter}</span></p>
+                </div>
+            )
+            column.push(group)
+        });
+        console.log(column);
+
+        return (
+            <div className="alphabet">
+                <div className="opacity-container">
+                    {column}
+                </div>
+            </div>
+        )
+    }
 
 
     return (
@@ -132,18 +146,16 @@ export default function Home() {
                 <div className="container">
                     <div className="column-one secondary-color">
                         <div className="word-container">
-                            <p className="alphabet">a<br/>b<br/>c<br/>d<br/>e<br/>f<br/>g<br/>h<br/>i<br/>j<br/>k<br/>l<br/>m<br/>n<br/>o<br/>p<br/>q<br/>r<br/>s<br/>t<br/>u<br/>v<br/>w<br/>x<br/>y<br/>z</p>
-                            <p className="alphabet">a<br/>b<br/>c<br/>d<br/>e<br/>f<br/>g<br/>h<br/>i<br/>j<br/>k<br/>l<br/>m<br/>n<br/>o<br/>p<br/>q<br/>r<br/>s<br/>t<br/>u<br/>v<br/>w<br/>x<br/>y<br/>z</p>
-                            <p className="alphabet">a<br/>b<br/>c<br/>d<br/>e<br/>f<br/>g<br/>h<br/>i<br/>j<br/>k<br/>l<br/>m<br/>n<br/>o<br/>p<br/>q<br/>r<br/>s<br/>t<br/>u<br/>v<br/>w<br/>x<br/>y<br/>z</p>
-                            <p className="alphabet">a<br/>b<br/>c<br/>d<br/>e<br/>f<br/>g<br/>h<br/>i<br/>j<br/>k<br/>l<br/>m<br/>n<br/>o<br/>p<br/>q<br/>r<br/>s<br/>t<br/>u<br/>v<br/>w<br/>x<br/>y<br/>z</p>
-                            <p className="alphabet">a<br/>b<br/>c<br/>d<br/>e<br/>f<br/>g<br/>h<br/>i<br/>j<br/>k<br/>l<br/>m<br/>n<br/>o<br/>p<br/>q<br/>r<br/>s<br/>t<br/>u<br/>v<br/>w<br/>x<br/>y<br/>z</p>
-                            <p className="alphabet">a<br/>b<br/>c<br/>d<br/>e<br/>f<br/>g<br/>h<br/>i<br/>j<br/>k<br/>l<br/>m<br/>n<br/>o<br/>p<br/>q<br/>r<br/>s<br/>t<br/>u<br/>v<br/>w<br/>x<br/>y<br/>z</p>
-                            <p className="alphabet">a<br/>b<br/>c<br/>d<br/>e<br/>f<br/>g<br/>h<br/>i<br/>j<br/>k<br/>l<br/>m<br/>n<br/>o<br/>p<br/>q<br/>r<br/>s<br/>t<br/>u<br/>v<br/>w<br/>x<br/>y<br/>z</p>
-                            <p className="alphabet">a<br/>b<br/>c<br/>d<br/>e<br/>f<br/>g<br/>h<br/>i<br/>j<br/>k<br/>l<br/>m<br/>n<br/>o<br/>p<br/>q<br/>r<br/>s<br/>t<br/>u<br/>v<br/>w<br/>x<br/>y<br/>z</p>
-                            <p className="word">Designer</p>
-                            <br/>
-                            <Button text="Testing"/>
+                            {getAlphabetColumn()}
+                            {getAlphabetColumn()}
+                            {getAlphabetColumn()}
+                            {getAlphabetColumn()}
+                            {getAlphabetColumn()}
+                            {getAlphabetColumn()}
+                            {getAlphabetColumn()}
+                            {getAlphabetColumn()}
                         </div>
+                        <Button text="Testing"/>
                     </div>
                 </div>
             </div>
