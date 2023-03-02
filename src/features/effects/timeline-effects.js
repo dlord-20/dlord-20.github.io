@@ -12,8 +12,8 @@ export const useTimelineEffect = () => {
                     scrollTrigger: {
                         trigger: section,
                         start: "top 85%",
-                        end: "bottom bottom",
-                        // markers: true,
+                        end: "bottom 80%",
+                        markers: true,
                         scrub: 1
                     }
                 })
@@ -74,7 +74,7 @@ export const useTimelineEffect = () => {
         mm.add("(max-width: 1169px", () => {
             for(let i = 0; i < sections.length; i ++) {
                 let tl = timeline(timelineDates[i]);
-                effect(tl, timelineDates[i], 100);
+                effect(tl, timelineDates[i], 0);
             }
         });
 

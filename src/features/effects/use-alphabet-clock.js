@@ -19,18 +19,30 @@ export const useAlphabetClock = () => {
             for(let i = 0; i < columns.length; i++) {
                 //Get the letter in the current word
                 let letter = words[k].charAt(i);
+                let isLetterBelow = false
                 for(let j = 0; j < alphabet.length; j++) {
                     // Check the current letter with the alphabet
                     if(letter === alphabet[j]) {
+                        // Makes the letters for the correct word to have full opacity
+                        alphabetTl.to(letters[(i * alphabet.length) + j], { opacity: 1 }, num)
+
+                        // Makes the letter right above of main letter a little transparent
+                        alphabetTl.to(letters[(i * alphabet.length) + j - 1], { opacity: .35 }, num)
+                        
+
                         // Move the column to the correct letter position to make the word
-                        alphabetTl.to(columns[i], { y: (j - 3) * - fontSize + fontSize/2}, num)
+                        alphabetTl.to(columns[i], { y: (j - 3) * - fontSize + fontSize/2, opacity: 1}, num)
+                        // Makes it possible to affect the letter below
+                        isLetterBelow = true;
+                    } else if (isLetterBelow) {
+                        // Makes the letter right below of main letter a little transparent
+
+                        alphabetTl.to(letters[(i * alphabet.length) + j], { opacity: .35 }, num)
+                        // Makes this only affects the letter right below the actual word
+                        isLetterBelow = false;
                     } else {
                         // Make all the other letters besides the letters in the current word a little transparent
                         alphabetTl.to(letters[(i * alphabet.length) + j], {opacity: .2}, num)
-                        // Reset opacity on all letters except during the last word
-                        if(k !== words.length - 1) {
-                            alphabetTl.to(letters[(i * alphabet.length) + j], {opacity: 1}, clockGap + num);
-                        } 
                     }
                 }
             }

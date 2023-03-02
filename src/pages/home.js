@@ -37,6 +37,7 @@ export default function Home() {
 
 
     useEffect(() => {
+        // START Cover text animation
         let tl = gsap.timeline();
 
         tl.from(".header", {x: 25, opacity: 0})
@@ -47,6 +48,8 @@ export default function Home() {
             .to(".description", {x: 0, opacity: 1}, "-=.55")
             .from(".buttons", {x: 25, opacity: 0})
             .to(".buttons", {x: 0, opacity: 1}, "-=.55");
+        // END Cover text animation
+
     }, []);
 
 
