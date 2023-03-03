@@ -4,13 +4,15 @@ import { alphabet } from "../../data/data";
 
 export const useAlphabetClock = () => {
 
+    // MAKE COMPONENT NOT RETURN ANYTHING AFTER ONCOMPLETE
+
     useEffect(() => {
 
         var columns = gsap.utils.toArray('.alphabet');
         var letters = gsap.utils.toArray('.letter');
 
         let alphabetTl = gsap.timeline();
-        const words = ["MARKETER", "DESIGNER", " ACTOR", "  MODEL", "SPRINTER", "    LDS", "HUSBAND", " FATHER", "   8", "7", "       6", "     5", "  4", "      3", "    2", " 1", "00000000"]
+        const words = ["MARKETER", "DESIGNER", " ACTOR", "  MODEL", "SPRINTER", "    LDS", "HUSBAND", " FATHER", "  LET US", "F CKING", "   GO"];
         let num = 0;
         const clockGap = .75;
         const fontSize = 16;
