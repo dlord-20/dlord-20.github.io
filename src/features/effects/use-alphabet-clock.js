@@ -4,7 +4,7 @@ import { alphabet } from "../../data/data";
 
 export const useAlphabetClock = () => {
 
-    // MAKE COMPONENT NOT RETURN ANYTHING AFTER ONCOMPLETE
+    // MAKE COMPONENT NOT RETURN ANYTHING AFTER ONCOMPLETE AND ADD SOME OTHER STUFF TO FORMATTING
 
     useEffect(() => {
 
