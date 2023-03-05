@@ -35,6 +35,10 @@ export default function AlphabetClock() {
     }
 
     return (
-        getAlphabetColumns(8)
+        <div className="word-container">
+            <div className="alphabet-clock">
+                {getAlphabetColumns(8)}
+            </div>
+        </div>
     )
 }

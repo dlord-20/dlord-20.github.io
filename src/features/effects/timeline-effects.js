@@ -13,7 +13,7 @@ export const useTimelineEffect = () => {
                         trigger: section,
                         start: "top 85%",
                         end: "bottom 80%",
-                        markers: true,
+                        // markers: true,
                         scrub: 1
                     }
                 })

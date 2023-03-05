@@ -10,9 +10,17 @@ export const useAlphabetClock = () => {
 
         var columns = gsap.utils.toArray('.alphabet');
         var letters = gsap.utils.toArray('.letter');
+        const container = gsap.utils.toArray('.word-container');
+        const bodyContainer = document.querySelectorAll('.body-container');
 
-        let alphabetTl = gsap.timeline();
-        const words = ["MARKETER", "DESIGNER", " ACTOR", "  MODEL", "SPRINTER", "    LDS", "HUSBAND", " FATHER", "  LET US", "F CKING", "   GO"];
+        let alphabetTl = gsap.timeline({
+            onComplete: () => {
+                console.log('here')
+                bodyContainer[0].style.display = 'block';
+            }
+        });
+        // const words = ["MARKETER", "DESIGNER", " ACTOR", "  MODEL", "SPRINTER", "    LDS", "HUSBAND", " FATHER", "  LET US", "F CKING", "   GO"];
+        const words = [ "TEST" ];
         let num = 0;
         const clockGap = .75;
         const fontSize = 16;
@@ -50,6 +58,7 @@ export const useAlphabetClock = () => {
             }
             num += clockGap;
         }
-
+        // Completely hides (removes) the element when completed
+        alphabetTl.to(container[0], { opacity: 0, duration: 1, display: "none"});
     }, [])
 }

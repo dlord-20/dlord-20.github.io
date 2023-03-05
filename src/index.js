@@ -18,15 +18,16 @@ import Background from './components/background';
 import Test from './pages/test';
 import TimeLineTest from './pages/timelineTest';
 import ScrollToTop from './components/scrollToTop';
+import AlphabetClock from './components/alphabetClock';
 
 export default function App() {
 
   return (
     <BrowserRouter>
-            <ScrollToTop/>
-
+      <ScrollToTop/>
       <Provider store={store}>
           <Background/>
+          <AlphabetClock/>
           <TopNav/>
           <MobileMenuBg/>
           <Routes>

@@ -12,7 +12,6 @@ import { useRightToLeftFadeIn } from "../features/effects/fadeIn/right-to-left-f
 import { useTimelineEffect } from "../features/effects/timeline-effects";
 import { useDownToUpFadeIn } from "../features/effects/fadeIn/down-to-up-fade-in-on-scroll";
 import { useLeftToRightFadeIn } from "../features/effects/fadeIn/left-to-right-fade-in-on-scroll";
-import AlphabetClock from "../components/alphabetClock";
 
 
 
@@ -56,11 +55,11 @@ export default function Home() {
 
 
     return (
-        <div>
+        <div className="body-container">
             <Helmet>
                 <title>Home Title</title>
             </Helmet>
-            <div className="bg-color-blue" id="cover">
+            <div className="bg-color-blue is-loading" id="cover">
                 <div className="container">
                     <div className="column-two-left-third">
                         <div>
@@ -95,9 +94,6 @@ export default function Home() {
             <div className="primary-color" id="alphabet">
                 <div className="container">
                     <div className="column-one secondary-color">
-                        <div className="word-container">
-                            <AlphabetClock/>
-                        </div>
                         <br/>
                         <Button text="Testing"/>
                     </div>
