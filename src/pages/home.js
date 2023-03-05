@@ -12,15 +12,12 @@ import { useRightToLeftFadeIn } from "../features/effects/fadeIn/right-to-left-f
 import { useTimelineEffect } from "../features/effects/timeline-effects";
 import { useDownToUpFadeIn } from "../features/effects/fadeIn/down-to-up-fade-in-on-scroll";
 import { useLeftToRightFadeIn } from "../features/effects/fadeIn/left-to-right-fade-in-on-scroll";
-import { useSelector } from "react-redux";
-import { selectAnimationStatus } from "../features/effects/timelineEffectReducer";
 
 
 
 
 export default function Home() {
     const header = React.createRef();
-    const isLoadingAnimation = useSelector(selectAnimationStatus);
 
     // useEffect(() => {
     //     gsap.to(header.current, {color: "#8c0", duration: 6})
@@ -55,17 +52,17 @@ export default function Home() {
     }, []);
 
 
-    if(isLoadingAnimation) {
-        return null
-    }
+    // if(!isLoadingAnimation) {
+    //     return null
+    // }
 
 
     return (
-        <div className="body-container">
+        <div className="body-container" id="top">
             <Helmet>
                 <title>Home Title</title>
             </Helmet>
-            <div className="bg-color-blue is-loading" id="cover">
+            <div className="bg-color-blue" id="cover">
                 <div className="container">
                     <div className="column-two-left-third">
                         <div>

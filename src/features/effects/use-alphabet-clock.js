@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import { gsap } from 'gsap';
 import { alphabet } from "../../data/data";
 
-export const useAlphabetClock = () => {
 
+export const useAlphabetClock = () => {
     // MAKE COMPONENT NOT RETURN ANYTHING AFTER ONCOMPLETE AND ADD SOME OTHER STUFF TO FORMATTING
 
     useEffect(() => {
@@ -11,14 +11,9 @@ export const useAlphabetClock = () => {
         var columns = gsap.utils.toArray('.alphabet');
         var letters = gsap.utils.toArray('.letter');
         const container = gsap.utils.toArray('.word-container');
-        const bodyContainer = document.querySelectorAll('.body-container');
+        const bodyContainer = gsap.utils.toArray('.body-container');
 
-        let alphabetTl = gsap.timeline({
-            onComplete: () => {
-                console.log('here')
-                bodyContainer[0].style.display = 'block';
-            }
-        });
+        let alphabetTl = gsap.timeline({});
         // const words = ["MARKETER", "DESIGNER", " ACTOR", "  MODEL", "SPRINTER", "    LDS", "HUSBAND", " FATHER", "  LET US", "F CKING", "   GO"];
         const words = [ "TEST", "HERE" ];
         let num = 0;
@@ -59,8 +54,9 @@ export const useAlphabetClock = () => {
             num += clockGap;
         }
         //Make this function run at the same time as the last to
-        alphabetTl.add(function() {console.log("run function")});
+
         // Completely hides (removes) the element when completed
         alphabetTl.to(container[0], { opacity: 0, duration: 1, display: "none"});
+        alphabetTl.to(bodyContainer[0], {position: "inherit"}, "-=1")
     }, [])
 }
