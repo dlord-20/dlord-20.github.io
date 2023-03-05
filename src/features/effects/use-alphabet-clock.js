@@ -5,6 +5,7 @@ import { alphabet } from "../../data/data";
 
 export const useAlphabetClock = () => {
     // MAKE COMPONENT NOT RETURN ANYTHING AFTER ONCOMPLETE AND ADD SOME OTHER STUFF TO FORMATTING
+    
 
     useEffect(() => {
 
@@ -14,11 +15,11 @@ export const useAlphabetClock = () => {
         const bodyContainer = gsap.utils.toArray('.body-container');
 
         let alphabetTl = gsap.timeline({});
-        // const words = ["MARKETER", "DESIGNER", " ACTOR", "  MODEL", "SPRINTER", "    LDS", "HUSBAND", " FATHER", "  LET US", "F CKING", "   GO"];
-        const words = [ "TEST", "HERE" ];
+        const words = ["MARKETER", "DESIGNER", " ACTOR", "  MODEL", "SPRINTER", "    LDS", "HUSBAND", " FATHER", "  LET US", "F CKING", "   GO"];
+        // const words = [ "TEST", "HERE" ];
         let num = 0;
-        const clockGap = .75;
-        const fontSize = 16;
+        const clockGap = .95;
+        const fontSize = 16 * 3;
 
         alphabetTl.to(bodyContainer[0], {position: "fixed"})
         for(let k = 0; k < words.length; k++) {
@@ -37,7 +38,9 @@ export const useAlphabetClock = () => {
                         
 
                         // Move the column to the correct letter position to make the word
-                        alphabetTl.to(columns[i], { y: (j - 3) * - fontSize + fontSize/2, opacity: 1}, num)
+                        // alphabetTl.to(columns[i], { y: (j - 3) * - fontSize + fontSize/2, opacity: 1}, num)
+                        alphabetTl.to(columns[i], { y: (j - 3) * - fontSize + fontSize*7, opacity: 1}, num)
+
                         // Makes it possible to affect the letter below
                         isLetterBelow = true;
                     } else if (isLetterBelow) {
@@ -54,10 +57,10 @@ export const useAlphabetClock = () => {
             }
             num += clockGap;
         }
-        //Make this function run at the same time as the last to
 
         // Completely hides (removes) the element when completed
         alphabetTl.to(container[0], { opacity: 0, duration: 1, display: "none"});
+        //Makes main content load right before this is about to disappear
         alphabetTl.to(bodyContainer[0], {position: "inherit"}, "-=1")
     }, [])
 }

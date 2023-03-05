@@ -1,9 +1,22 @@
+import { useEffect, useRef } from "react";
 import { alphabet } from "../data/data";
 import { useAlphabetClock } from "../features/effects/use-alphabet-clock";
 
 export default function AlphabetClock() {
 
+    const inputRef = useRef();
+  
+    useEffect(() => {
+      const size = window
+        .getComputedStyle(inputRef.current, null)
+        .getPropertyValue("font-size");
+  
+      console.log(size);
+    }, []);
+
+
     useAlphabetClock();
+
 
     // Formats each character to JSX in the alphabet array
     const column = [];
@@ -36,7 +49,7 @@ export default function AlphabetClock() {
 
     return (
         <div className="word-container">
-            <div className="alphabet-clock">
+            <div className="alphabet-clock" ref={inputRef}>
                 {getAlphabetColumns(8)}
             </div>
         </div>

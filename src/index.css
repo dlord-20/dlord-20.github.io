@@ -947,19 +947,23 @@ a {
 
 .alphabet {
   z-index: 10;
-  height: 50px;
 }
 
 .alphabet-clock {
   display: flex;
   /* border: 1px solid pink; */
   overflow: hidden;
-  height: 128px;
+  height: 100%;
+}
 
+.alphabet-clock .letter-container * {
+  font-size: 3rem !important;
 }
 
 .letter-container {
   text-align: center;
+  /* border: 1px solid green;
+  padding: 1rem 2rem; */
 }
 
 .test {
