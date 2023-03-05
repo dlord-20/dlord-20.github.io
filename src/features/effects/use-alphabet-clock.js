@@ -20,6 +20,7 @@ export const useAlphabetClock = () => {
         const clockGap = .75;
         const fontSize = 16;
 
+        alphabetTl.to(bodyContainer[0], {position: "fixed"})
         for(let k = 0; k < words.length; k++) {
             for(let i = 0; i < columns.length; i++) {
                 //Get the letter in the current word

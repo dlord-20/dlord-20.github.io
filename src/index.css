@@ -982,5 +982,5 @@ a {
 
 .body-container {
   /* display: none; */
-  position: fixed;
+  position: inherit;
 }
