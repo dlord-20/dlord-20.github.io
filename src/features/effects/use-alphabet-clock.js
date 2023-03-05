@@ -20,7 +20,7 @@ export const useAlphabetClock = () => {
             }
         });
         // const words = ["MARKETER", "DESIGNER", " ACTOR", "  MODEL", "SPRINTER", "    LDS", "HUSBAND", " FATHER", "  LET US", "F CKING", "   GO"];
-        const words = [ "TEST" ];
+        const words = [ "TEST", "HERE" ];
         let num = 0;
         const clockGap = .75;
         const fontSize = 16;
@@ -58,6 +58,8 @@ export const useAlphabetClock = () => {
             }
             num += clockGap;
         }
+        //Make this function run at the same time as the last to
+        alphabetTl.add(function() {console.log("run function")});
         // Completely hides (removes) the element when completed
         alphabetTl.to(container[0], { opacity: 0, duration: 1, display: "none"});
     }, [])
