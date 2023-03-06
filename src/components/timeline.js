@@ -69,7 +69,7 @@ export default function TimeLine() {
                     <div className="timeline-element">
                         <h3 className="vertical-timeline-element-title">Student</h3>
                         <h4 className="vertical-timeline-element-subtitle">Brigham Young University</h4>
-                        <p>Business Management</p>
+                        <p>Business Management | <span className="highlight-word">Academic & Athletic Scholarship Recipient</span> | </p>
                     </div>  
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
@@ -82,7 +82,7 @@ export default function TimeLine() {
                     <div className="timeline-element">
                         <h3 className="vertical-timeline-element-title">Collegiate Athlete</h3>
                         <h4 className="vertical-timeline-element-subtitle">Track and Field</h4>
-                        <p>Sprinter | 100, 200, 4x1 | <span className="highlight-word">Team Captain</span></p>
+                        <p>Sprinter | 100, 200, 4x1 | <span className="highlight-word">Sprint Team Captain</span></p>
                     </div>
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
@@ -95,7 +95,7 @@ export default function TimeLine() {
                     <div className="timeline-element">
                         <h3 className="vertical-timeline-element-title">Church Mission</h3>
                         <h4 className="vertical-timeline-element-subtitle">Fresno, California</h4>
-                        <p>Need | something | here</p>
+                        <p>Lead 20+ volunteers in problem solving, planning, and various responsibilites</p>
                     </div>
                 </VerticalTimelineElement>
             </VerticalTimeline>
