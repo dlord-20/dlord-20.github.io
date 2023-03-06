@@ -982,9 +982,16 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  flex-direction: column;
 }
 
 .body-container {
   /* display: none; */
   position: inherit;
+}
+
+.continue {
+  opacity: .2;
+  padding: 1rem;
 }

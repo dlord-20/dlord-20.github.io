@@ -60,6 +60,7 @@ export const useAlphabetClock = () => {
 
         // Completely hides (removes) the element when completed
         alphabetTl.to(container[0], { opacity: 0, duration: 1, display: "none"});
+
         //Makes main content load right before this is about to disappear
         alphabetTl.to(bodyContainer[0], {position: "inherit"}, "-=1")
     }, [])

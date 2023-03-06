@@ -1,18 +1,10 @@
-import { useEffect, useRef } from "react";
+
 import { alphabet } from "../data/data";
 import { useAlphabetClock } from "../features/effects/use-alphabet-clock";
+import { gsap } from 'gsap';
+
 
 export default function AlphabetClock() {
-
-    const inputRef = useRef();
-  
-    useEffect(() => {
-      const size = window
-        .getComputedStyle(inputRef.current, null)
-        .getPropertyValue("font-size");
-  
-      console.log(size);
-    }, []);
 
 
     useAlphabetClock();
@@ -47,11 +39,23 @@ export default function AlphabetClock() {
         return columns;
     }
 
+    const handleClick = () => {
+        const container = gsap.utils.toArray('.word-container');
+        const bodyContainer = gsap.utils.toArray('.body-container');
+
+        // Kills the start animation
+        const alphabetTl = gsap.timeline({});
+        alphabetTl.to(bodyContainer[0], {position: "fixed"})
+        alphabetTl.to(container[0], { opacity: 0, duration: 1, display: "none"});
+        alphabetTl.to(bodyContainer[0], {position: "inherit"}, "-=1")
+    }
+
     return (
-        <div className="word-container">
-            <div className="alphabet-clock" ref={inputRef}>
+        <div className="word-container" onClick={() => handleClick()}>
+            <div className="alphabet-clock">
                 {getAlphabetColumns(8)}
             </div>
+            <p className="continue">Click to continue to site</p>
         </div>
     )
 }

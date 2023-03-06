@@ -52,11 +52,6 @@ export default function Home() {
     }, []);
 
 
-    // if(!isLoadingAnimation) {
-    //     return null
-    // }
-
-
     return (
         <div className="body-container" id="top">
             <Helmet>
