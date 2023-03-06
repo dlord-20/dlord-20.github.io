@@ -78,6 +78,20 @@ export const useTimelineEffect = () => {
             }
         });
 
+        var timelineIcons = gsap.utils.toArray('.vertical-timeline-element-icon');
+
+        for(let i = 0; i < sections.length; i ++) {
+            let tl = timeline(timelineIcons[i]);
+            gsap.set(timelineIcons[i], {
+                transformOrigin: "center center",
+                scaleY: 0,
+                scaleX: .01
+            })
+            tl.to(timelineIcons[i], {
+                    scaleY: 1,
+                    scaleX: 1
+                })
+        }
 
     }, [])
 };

@@ -8,6 +8,7 @@ import {
     faPersonRunning,
     faPlaceOfWorship
 } from '@fortawesome/free-solid-svg-icons'
+import { useTimelineEffect } from '../features/effects/timeline-effects';
 
 const contentStyle = {
     background: '#f9fbf9', 
@@ -20,6 +21,8 @@ const contentArrowStyle = {
 
 
 export default function TimeLine() {
+    useTimelineEffect();
+
 
     return (
         <div className="timeline-container">

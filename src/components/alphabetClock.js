@@ -45,9 +45,9 @@ export default function AlphabetClock() {
 
         // Kills the start animation
         const alphabetTl = gsap.timeline({});
-        alphabetTl.to(bodyContainer[0], {position: "fixed"})
+        alphabetTl.to(bodyContainer[0], {position: "fixed"});
         alphabetTl.to(container[0], { opacity: 0, duration: 1, display: "none"});
-        alphabetTl.to(bodyContainer[0], {position: "inherit"}, "-=1")
+        alphabetTl.to(bodyContainer[0], {position: "inherit"}, "-=1");
     }
 
     return (
@@ -55,7 +55,7 @@ export default function AlphabetClock() {
             <div className="alphabet-clock">
                 {getAlphabetColumns(8)}
             </div>
-            <p className="continue">Click to continue to site</p>
+            <p className="continue">Click anywhere to continue to site</p>
         </div>
     )
 }

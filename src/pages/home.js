@@ -9,7 +9,6 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useEffect} from "react";
 import { useRightToLeftFadeIn } from "../features/effects/fadeIn/right-to-left-fade-in-on-scroll";
-import { useTimelineEffect } from "../features/effects/timeline-effects";
 import { useDownToUpFadeIn } from "../features/effects/fadeIn/down-to-up-fade-in-on-scroll";
 import { useLeftToRightFadeIn } from "../features/effects/fadeIn/left-to-right-fade-in-on-scroll";
 
@@ -29,7 +28,6 @@ export default function Home() {
     //Effect for fading in section by section
     useRightToLeftFadeIn();
     useLeftToRightFadeIn();
-    useTimelineEffect();
     useDownToUpFadeIn();
     
 
