@@ -255,6 +255,10 @@ a {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.column-one > div:first-child {
+  padding: 1.5rem 0;
+}
+
 
 .column-two-even > div:first-child, 
 .column-two-left-third > div:first-child,
@@ -270,6 +274,7 @@ a {
   justify-self: center;
   text-align: center;
   min-width: 100%;
+  padding: 1.5rem 0;
 }
 
 .column-two-even > div:last-child, 
@@ -285,6 +290,8 @@ a {
   justify-self: center;
   text-align: center;
     /* border: 1px solid purple; */
+  padding: 1.5rem 0;
+
 }
 
 .column-two-left-third {

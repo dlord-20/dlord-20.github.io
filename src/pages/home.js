@@ -87,13 +87,38 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            <div className="primary-color" id="experience">
+                <div className="container">
+                    <div className="column-two-even secondary-color down-to-up-incoming">
+                        <div>
+                            <h2>Years of Experience</h2>
+                        </div>
+                        <div>
+                            <RenderSimpleBarChart data={experienceData}/>
+                        </div>
+                        <div>
+                            <h4>Skills</h4>
+                            <p>Auto generated short description of my skills</p>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
             <div className="primary-color" id="skills">
                 <div className="container">
-                    <div className="column-one secondary-color">
+                    <div className="column-two-even secondary-color down-to-up-incoming">
                         <div>
-                            <h1>Radar Chart</h1>
+                            <h2>Programming Experience</h2>
+                            <p></p>
+                        </div>
+                        <div>
+                            <h4>Skills</h4>
+                            <p>Auto generated short description of my skills</p>
+                        </div>
+                        <div>
                             <RenderRadarChart data={programmingData}/>
                         </div>
+                        <div></div>
                     </div>
                 </div>
             </div>
@@ -106,31 +131,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="primary-color" id="experience">
-                <div className="container">
-                    <div className="column-two-even secondary-color down-to-up-incoming">
 
-                        <div>
-                            <h1>Two Even</h1>
-                            <h2>Two Even</h2>
-                            <h3>Two Even</h3>
-                            <h4>Two Even</h4>
-                            <h5>Two Even</h5>
-                            <h6>Two Even</h6>
-                        </div>
-                        <div>
-                            <RenderSimpleBarChart data={experienceData}/>
-                        </div>
-                        <div>
-                            <h4>Skills</h4>
-                            <p>Auto generated short description of my skills</p>
-                        </div>
-                        <div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div className="primary-color" id="timeline">
                 <div className="container">
                     <div className="column-one">
