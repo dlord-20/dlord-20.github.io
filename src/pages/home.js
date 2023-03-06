@@ -87,14 +87,6 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="primary-color" id="alphabet">
-                <div className="container">
-                    <div className="column-one secondary-color">
-                        <br/>
-                        <Button text="Testing"/>
-                    </div>
-                </div>
-            </div>
             <div className="primary-color" id="skills">
                 <div className="container">
                     <div className="column-one secondary-color">
