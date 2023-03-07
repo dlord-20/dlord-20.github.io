@@ -117,7 +117,7 @@ code {
 }
 
 .primary-color-2 {
-  background-color: var(--dark-main);
+  background-color: var(--dark-dark);
 }
 
 .secondary-color * {
@@ -290,7 +290,7 @@ a {
   justify-self: center;
   text-align: center;
     /* border: 1px solid purple; */
-  padding: 1.5rem 0;
+  padding-bottom: 1.5rem;
 
 }
 

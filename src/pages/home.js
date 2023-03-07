@@ -113,7 +113,7 @@ export default function Home() {
                         </div>
                         <div>
                             <h4>Skills</h4>
-                            <p>Auto generated short description of my skills</p>
+                            <p>Over the years I've found myself drawn to programming. Either though I have no formal training I have taken lots of online courses and honed my skills over the years with personal projects and client requests.</p>
                         </div>
                         <div>
                             <RenderRadarChart data={programmingData}/>
@@ -122,21 +122,13 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="primary-color-2" id="bar-chart">
-                <div className="container">
-                    <div className="column-one secondary-color right-to-left-incoming">
-                        <div>
-                            <h1>Bar Chart</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div className="primary-color" id="timeline">
                 <div className="container">
                     <div className="column-one">
                         <div>
-                            <h2>Timeline</h2>
+                            {/* Sick wife */}
+                            <h2>Thru the years</h2>
                         </div>
                         <div>
                             <TimeLine/>
