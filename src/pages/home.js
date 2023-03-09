@@ -127,7 +127,7 @@ export default function Home() {
                 <div className="container">
                     <div className="column-one">
                         <div>
-                            {/* Sick wife day 2 */}
+                            {/* Sick wife day 2  shrek*/}
                             <h2>Thru the years</h2>
                         </div>
                         <div>
