@@ -127,7 +127,7 @@ export default function Home() {
                 <div className="container">
                     <div className="column-one">
                         <div>
-                            {/* Sick wife day 2 stake conference*/}
+                            {/* Sick wife day 2 busy*/}
                             <h2>Thru the years</h2>
                         </div>
                         <div>
