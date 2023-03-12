@@ -45,7 +45,16 @@ export default function Home() {
             .to(".description", {x: 0, opacity: 1}, "-=.55")
             .from(".buttons", {x: 25, opacity: 0})
             .to(".buttons", {x: 0, opacity: 1}, "-=.55");
-        // END Cover text animation
+
+            // Starting to mess around with my new intro section
+            var columns = gsap.utils.toArray('.alphabet');
+            var letters = gsap.utils.toArray('.letter');
+
+            let alphabetTl = gsap.timeline({repeat: 3});
+            const words = ["MARKETER", "DESIGNER", " ACTOR", "  MODEL", "SPRINTER", "    LDS", "HUSBAND", " FATHER"]
+            const word = "MARKETER";
+            const word2 = "DESIGNER";
+            let num = 1;
 
     }, []);
 
