@@ -1051,7 +1051,9 @@ a {
 
 .blog-box-container {
   border: 1px solid green;
+  margin: 1rem;
   padding: 1rem;
+  min-height: 250px;
 }
 
 .blog-item {

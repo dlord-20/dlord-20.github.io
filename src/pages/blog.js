@@ -50,10 +50,10 @@ export default function Blog() {
                         <div className="blog-item">
                             <BlogBox/>
                         </div>
-                        <div className="blog-item-1">
+                        <div className="blog-item">
                             <BlogBox/>
                         </div>
-                        <div className="blog-item-1">
+                        <div className="blog-item">
                             <BlogBox/>
                         </div>
                         <div className="blog-item">
