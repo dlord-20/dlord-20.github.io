@@ -258,7 +258,7 @@ a {
   /* border: 1px solid green; */
   padding: 3rem 0;
   width: 100%;
-  grid-gap: 1rem;
+  grid-gap: 2rem 1rem;
 }
 
 .column-two-even {
@@ -266,7 +266,7 @@ a {
 }
 
 .column-one > div:first-child {
-  padding: 1.5rem 0;
+  /* padding: 1.5rem 0; */
 }
 
 
@@ -281,7 +281,8 @@ a {
   justify-self: center;
   text-align: left;
   min-width: 100%;
-  padding: 1.5rem 0;
+  grid-row-gap: 0;
+  margin-bottom: -1.5rem;
 }
 
 .column-two-even > div:first-child, 
@@ -322,7 +323,7 @@ a {
 {
   justify-self: center;
   text-align: center;
-  padding-bottom: 1.5rem;
+  /* padding-bottom: 1.5rem; */
 }
 
 .column-two-left-third {

@@ -109,7 +109,6 @@ export default function Home() {
                     <div className="column-two-even secondary-color down-to-up-incoming">
                         <div>
                             <h2>Programming Experience</h2>
-                            <p></p>
                         </div>
                         <div>
                             <h4>Skills</h4>
