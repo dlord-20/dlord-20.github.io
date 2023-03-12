@@ -52,8 +52,8 @@ export default function Home() {
 
             let alphabetTl = gsap.timeline({repeat: 3});
             const words = ["MARKETER", "DESIGNER", " ACTOR", "  MODEL", "SPRINTER", "    LDS", "HUSBAND", " FATHER"]
-            const word = "MARKETER";
-            const word2 = "DESIGNER";
+            // const word = "MARKETER";
+            // const word2 = "DESIGNER";
             let num = 1;
 
             for(let k = 0; k < words.length; k++) {
