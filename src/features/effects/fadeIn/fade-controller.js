@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { gsap } from 'gsap';
 
 export const fadeController = (sectionsArray, xStart, yStart) => {
@@ -10,9 +9,9 @@ export const fadeController = (sectionsArray, xStart, yStart) => {
                     scrollTrigger: {
                         trigger: section,
                         start: `${yStart * -1} 85%`,
-                        end: "+=150",
+                        end: "+=175",
                         // markers: true,
-                        scrub: 1                
+                        scrub: 1,
                     }
                 });
             } else {
@@ -20,9 +19,9 @@ export const fadeController = (sectionsArray, xStart, yStart) => {
                     scrollTrigger: {
                         trigger: section,
                         start: "top 85%",
-                        end: "+=150",
+                        end: "+=175",
                         // markers: true,
-                        scrub: 1                
+                        scrub: 1
                     }
                 });
             }
@@ -37,7 +36,8 @@ export const fadeController = (sectionsArray, xStart, yStart) => {
                 .to(section, {
                     x: 0,
                     y: 0, 
-                    opacity: 1
+                    ease: "power4",
+                    opacity: 1              
                 });
         })
     )

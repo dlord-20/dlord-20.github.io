@@ -12,7 +12,7 @@ export const useTimelineEffect = () => {
                     scrollTrigger: {
                         trigger: section,
                         start: "top 85%",
-                        end: "bottom bottom",
+                        end: "bottom 80%",
                         // markers: true,
                         scrub: 1
                     }
@@ -74,10 +74,24 @@ export const useTimelineEffect = () => {
         mm.add("(max-width: 1169px", () => {
             for(let i = 0; i < sections.length; i ++) {
                 let tl = timeline(timelineDates[i]);
-                effect(tl, timelineDates[i], 100);
+                effect(tl, timelineDates[i], 0);
             }
         });
 
+        var timelineIcons = gsap.utils.toArray('.vertical-timeline-element-icon');
+
+        for(let i = 0; i < sections.length; i ++) {
+            let tl = timeline(timelineIcons[i]);
+            gsap.set(timelineIcons[i], {
+                transformOrigin: "center center",
+                scaleY: 0,
+                scaleX: .01
+            })
+            tl.to(timelineIcons[i], {
+                    scaleY: 1,
+                    scaleX: 1
+                })
+        }
 
     }, [])
 };

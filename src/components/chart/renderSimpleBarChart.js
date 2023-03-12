@@ -55,7 +55,7 @@ import CustomToolTip from "./customToolTip";
                     />
                     <Legend 
                         payload={
-                            [{value: 'Years of Experience', type: 'square', color: "#59b7e3"}]
+                            [{value: 'Years of Experience', type: 'square', color: "#f03a39"}]
                         }
                         formatter={(value, entry, index) => <span style={{color: "#fbfefc"}}>{value}</span>}
                     />

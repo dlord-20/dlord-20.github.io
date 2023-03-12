@@ -7,15 +7,14 @@ import TimeLine from "../components/timeline";
 import Image from "../components/image";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import React, { useEffect} from "react";
+import React from "react";
 import { useRightToLeftFadeIn } from "../features/effects/fadeIn/right-to-left-fade-in-on-scroll";
+import { useTimelineEffect } from "../features/effects/timeline-effects";
 import { useDownToUpFadeIn } from "../features/effects/fadeIn/down-to-up-fade-in-on-scroll";
 import { useLeftToRightFadeIn } from "../features/effects/fadeIn/left-to-right-fade-in-on-scroll";
 
 
-
-
-export default function Home() {
+export default function Contact() {
     const header = React.createRef();
 
     // useEffect(() => {
@@ -23,44 +22,17 @@ export default function Home() {
     // }, [header]);
 
     gsap.registerPlugin(ScrollTrigger);
-    gsap.defaults({ ease: "back"});
+    gsap.defaults({ ease: "power2.in"});
 
     //Effect for fading in section by section
     useRightToLeftFadeIn();
     useLeftToRightFadeIn();
+    useTimelineEffect();
     useDownToUpFadeIn();
-    
-
-
-
-    useEffect(() => {
-        // START Cover text animation
-        let tl = gsap.timeline();
-
-        tl.from(".header", {x: 25, opacity: 0})
-            .to(".header", {x: 0, opacity: 1,}, "-=.5")
-            .from(".highlight-container", {x: 25, opacity: 0})
-            .to(".highlight-container", {x: 0, opacity: 1}, "-=.55")
-            .from(".description", {x: 25, opacity: 0})
-            .to(".description", {x: 0, opacity: 1}, "-=.55")
-            .from(".buttons", {x: 25, opacity: 0})
-            .to(".buttons", {x: 0, opacity: 1}, "-=.55");
-
-            // Starting to mess around with my new intro section
-            var columns = gsap.utils.toArray('.alphabet');
-            var letters = gsap.utils.toArray('.letter');
-
-            let alphabetTl = gsap.timeline({repeat: 3});
-            const words = ["MARKETER", "DESIGNER", " ACTOR", "  MODEL", "SPRINTER", "    LDS", "HUSBAND", " FATHER"]
-            const word = "MARKETER";
-            const word2 = "DESIGNER";
-            let num = 1;
-
-    }, []);
 
 
     return (
-        <div className="body-container" id="top">
+        <div>
             <Helmet>
                 <title>Home Title</title>
             </Helmet>
@@ -72,13 +44,13 @@ export default function Home() {
                         <div className="section-container cover-container">
                             <div className="cover">
                                 <div className="center-left">
-                                    <h1 className="header" ref={header}>
-                                        Hi, I'm<br/><div className="highlight-container">Derek <span className="highlight">Lord</span></div>
+                                    <h1 ref={header}>
+                                        Contact
                                     </h1>
-                                    <p className="description">I'm an eager digital marketer who is on a mission to decrease customer turnover while attracting new cliential.</p>
+                                    <p>I'm an eager digital marketer who is on a mission to decrease customer turnover while attracting new cliential.</p>
                                     <div className="buttons">
                                         <Button text="Let's Talk" link="works"/>
-                                        <Button text="See More" link="services" type="b" />
+                                        <Button text="Check out my work" link="services" type="b" />
                                     </div>
                                 </div>
                             </div>
@@ -96,50 +68,67 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            <div className="primary-color" id="test">
+                <div className="container">
+                    <div className="column-one secondary-color">
+                        <div>
+                            <h1>Derek Lord</h1>
+                            <p>Auto generated text for description</p>
+                            <br/>
+                            <Button text="Testing"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="primary-color" id="skills">
+                <div className="container">
+                    <div className="column-one secondary-color">
+                        <div>
+                            <h1>Radar Chart</h1>
+                            <RenderRadarChart data={programmingData}/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="primary-color-2" id="bar-chart">
+                <div className="container">
+                    <div className="column-one secondary-color right-to-left-incoming">
+                        <div>
+                            <h1>Bar Chart</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div className="primary-color" id="experience">
                 <div className="container">
                     <div className="column-two-even secondary-color down-to-up-incoming">
+
                         <div>
-                            <h2>Years of Experience</h2>
+                            <h1>Two Even</h1>
+                            <h2>Two Even</h2>
+                            <h3>Two Even</h3>
+                            <h4>Two Even</h4>
+                            <h5>Two Even</h5>
+                            <h6>Two Even</h6>
                         </div>
                         <div>
                             <RenderSimpleBarChart data={experienceData}/>
                         </div>
                         <div>
                             <h4>Skills</h4>
-                            <p>I've had many roles over the years, but I've often found myself in the position that wears many different hats. I've had to quickly adapt to new tasks and roles in order to help the team achieve our goals.</p>
-                            <p>While I've aquired a plethera of skills over the years, this graph represents the skills I'm most confident in. I continue to work on these skills whether I am actually using one of these skills with my current clients or not. If you don't see what you're looking for just send me a message and I'll let you know what I do to help you out.</p>
-                        </div>
-                        <div></div>
-                    </div>
-                </div>
-            </div>
-            <div className="primary-color" id="skills">
-                <div className="container">
-                    <div className="column-two-even secondary-color down-to-up-incoming">
-                        <div>
-                            <h2>Programming Experience</h2>
-                            <p></p>
+                            <p>Auto generated short description of my skills</p>
                         </div>
                         <div>
-                            <h4>Skills</h4>
-                            <p>Over the years I've found myself drawn to programming. Either though I have no formal training I have taken lots of online courses and honed my skills over the years with personal projects and client requests.</p>
-                            <p>This site was created with React and uses various libraries to speed the website building process while allowing me to have complete control over how my website looks, feels, and preforms.</p>
-                            <p>Knowing how to code allows me to create custom components on websites, create personalized emails, create custom landing pages, and much more!</p>
-                        </div>
-                        <div>
-                            <RenderRadarChart data={programmingData}/>
-                        </div>
-                        <div></div>
-                    </div>
-                </div>
-            </div>
 
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div className="primary-color" id="timeline">
                 <div className="container">
                     <div className="column-one">
                         <div>
-                            <h2>Thru the years</h2>
+                            <h2>Timeline</h2>
                         </div>
                         <div>
                             <TimeLine/>

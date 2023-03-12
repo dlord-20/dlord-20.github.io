@@ -18,20 +18,33 @@ import Background from './components/background';
 import Test from './pages/test';
 import TimeLineTest from './pages/timelineTest';
 import ScrollToTop from './components/scrollToTop';
+import AlphabetClock from './components/alphabetClock';
+import Blog from './pages/blog';
+import Contact from './pages/contact';
+import About from './pages/about';
+import Services from './pages/services';
+import Works from './pages/works';
 
 export default function App() {
 
   return (
     <BrowserRouter>
-            <ScrollToTop/>
-
+      <ScrollToTop/>
       <Provider store={store}>
           <Background/>
+          <AlphabetClock/>
           <TopNav/>
           <MobileMenuBg/>
           <Routes>
             <Route path="/" element={<Home/>}></Route>
             <Route path="/test" element={<Test/>}></Route>
+            <Route path="/works" element={<Works/>}></Route>
+            <Route path="/services" element={<Services/>}></Route>
+            <Route path="/about" element={<About/>}></Route>
+            <Route path="/blog" element={<Blog/>}></Route>
+            <Route path="/contact" element={<Contact/>}></Route>
+
+
             <Route path="/timeline-test" element={<TimeLineTest/>}></Route>
           </Routes>
           <BottomNav/>
