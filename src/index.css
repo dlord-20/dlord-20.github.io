@@ -178,8 +178,8 @@ h4 {
 }
 
 h5 {
-  font-size: 1.2rem;
-  padding-bottom: .25rem;
+  font-size: .9rem;
+  padding-bottom: .3rem;
 }
 
 h6 {
@@ -271,35 +271,56 @@ a {
 .column-two-even > div:first-child, 
 .column-two-left-third > div:first-child,
 .column-two-left-forth > div:first-child,
-.column-three-even > div:first-child,
 .column-two-right-third > div:first-child,
 .column-two-right-forth > div:first-child,
+.column-three-even > div:first-child,
 .column-four-even > div:first-child
 {
-  grid-column-start: 1;
-  grid-column-end: 6;
-  /* border: 1px solid purple; */
   justify-self: center;
   text-align: left;
   min-width: 100%;
   padding: 1.5rem 0;
 }
 
+.column-two-even > div:first-child, 
+.column-two-left-third > div:first-child,
+.column-two-left-forth > div:first-child,
+.column-two-right-third > div:first-child,
+.column-two-right-forth > div:first-child,
 .column-two-even > div:last-child, 
 .column-two-left-third > div:last-child,
 .column-two-left-forth > div:last-child,
-.column-three-even > div:last-child,
 .column-two-right-third > div:last-child,
-.column-two-right-forth > div:last-child,
+.column-two-right-forth > div:last-child
+{
+  grid-column-start: span 2;
+}
+
+.column-three-even > div:first-child,
+.column-three-even > div:last-child
+{
+  grid-column-start: span 3;
+}
+
+.column-four-even > div:first-child,
 .column-four-even > div:last-child 
 {
-  grid-column-start: 1;
-  grid-column-end: 6;
+  grid-column-start: span 4;
+}
+
+
+
+.column-two-even > div:last-child, 
+.column-two-left-third > div:last-child,
+.column-two-left-forth > div:last-child,
+.column-two-right-third > div:last-child,
+.column-two-right-forth > div:last-child,
+.column-three-even > div:last-child,
+.column-four-even > div:last-child 
+{
   justify-self: center;
   text-align: center;
-    /* border: 1px solid purple; */
   padding-bottom: 1.5rem;
-
 }
 
 .column-two-left-third {
@@ -1024,4 +1045,15 @@ a {
 .continue {
   opacity: .2;
   padding: 1rem;
+}
+
+/* Blogbox */
+
+.blog-box-container {
+  border: 1px solid green;
+  padding: 1rem;
+}
+
+.blog-item {
+  grid-column-start: span 1;
 }

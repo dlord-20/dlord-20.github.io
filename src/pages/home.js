@@ -34,7 +34,6 @@ export default function Home() {
 
 
     useEffect(() => {
-        // START Cover text animation
         let tl = gsap.timeline();
 
         tl.from(".header", {x: 25, opacity: 0})
@@ -46,15 +45,6 @@ export default function Home() {
             .from(".buttons", {x: 25, opacity: 0})
             .to(".buttons", {x: 0, opacity: 1}, "-=.55");
 
-            // Starting to mess around with my new intro section
-            var columns = gsap.utils.toArray('.alphabet');
-            var letters = gsap.utils.toArray('.letter');
-
-            let alphabetTl = gsap.timeline({repeat: 3});
-            const words = ["MARKETER", "DESIGNER", " ACTOR", "  MODEL", "SPRINTER", "    LDS", "HUSBAND", " FATHER"]
-            const word = "MARKETER";
-            const word2 = "DESIGNER";
-            let num = 1;
 
     }, []);
 
