@@ -99,7 +99,7 @@ export default function Home() {
                         <div>
                             <h4>Skills</h4>
                             <p>I've had many roles over the years, but I've often found myself in the position that wears many different hats. I've had to quickly adapt to new tasks and roles in order to help the team achieve our goals.</p>
-                            <p>While I've aquired a plethera of skills over the years, this graph represents the skills I'm most confident in. I continue to work on these skills whether I am actually using one of these skills with my current clients or not. If you don't see what you're looking for just send me a message and I'll let you know what I do to help you out.</p>
+                            <p>While I've aquired a plethera of skills over the years, this graph represents the skills I'm most confident in. I continue to work on these skills whether I am actually using one of these skills with my current clients or not. If you don't see what you're looking for just send me a message and I'll let you know what I can do to help you out.</p>
                         </div>
                         <div></div>
                     </div>
