@@ -98,7 +98,8 @@ export default function Home() {
                         </div>
                         <div>
                             <h4>Skills</h4>
-                            <p>Auto generated short description of my skills</p>
+                            <p>I've had many roles over the years, but I've often found myself in the position that wears many different hats. I've had to quickly adapt to new tasks and roles in order to help the team achieve our goals.</p>
+                            <p>While I've aquired a plethera of skills over the years, this graph represents the skills I'm most confident in. I continue to work on these skills whether I am actually using one of these skills with my current clients or not. If you don't see what you're looking for just send me a message and I'll let you know what I do to help you out.</p>
                         </div>
                         <div></div>
                     </div>
@@ -114,6 +115,8 @@ export default function Home() {
                         <div>
                             <h4>Skills</h4>
                             <p>Over the years I've found myself drawn to programming. Either though I have no formal training I have taken lots of online courses and honed my skills over the years with personal projects and client requests.</p>
+                            <p>This site was created with React and uses various libraries to speed the website building process while allowing me to have complete control over how my website looks, feels, and preforms.</p>
+                            <p>Knowing how to code allows me to create custom components on websites, create personalized emails, create custom landing pages, and much more!</p>
                         </div>
                         <div>
                             <RenderRadarChart data={programmingData}/>
@@ -127,7 +130,6 @@ export default function Home() {
                 <div className="container">
                     <div className="column-one">
                         <div>
-                            {/* Sick wife day 2 busy*/}
                             <h2>Thru the years</h2>
                         </div>
                         <div>
