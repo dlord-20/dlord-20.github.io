@@ -38,6 +38,7 @@ export default function Blog() {
             <div className="" id="6">
                 <div className="container">
                     <div className="column-three-even right-to-left-incoming">
+                        {/* Top spread aross all columns */}
                         <div>
                             <h3>Three</h3>
                         </div>
@@ -59,6 +60,10 @@ export default function Blog() {
                         <div className="blog-item">
                             <BlogBox/>
                         </div>
+                        <div className="blog-item">
+                            <BlogBox/>
+                        </div>
+                        {/* Bottom spread aross all columns */}
                         <div>
                         </div>
                     </div>

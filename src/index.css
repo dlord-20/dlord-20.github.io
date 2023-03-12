@@ -138,6 +138,7 @@ code {
 h1, h2, h3, h4, h5, h6 {
   font-family: "source-sans-pro", sans-serif;
   text-transform: uppercase;
+  padding-bottom: .3rem;
     /* 
   FOR HEADERS
   italic and normal
@@ -159,32 +160,32 @@ h5, h6 {
 
 h1 {
   font-size: 3rem;
-  padding-bottom: .5rem;
+  /* padding-bottom: .5rem; */
 }
 
 h2 {
   font-size: 2rem;
-  padding-bottom: .4rem;
+  /* padding-bottom: .4rem; */
 }
 
 h3 {
   font-size: 1.5rem;
-  padding-bottom: .3rem;
+  /* padding-bottom: .3rem; */
 }
 
 h4 {
   font-size: 1.4rem;
-  padding-bottom: .25rem;
+  /* padding-bottom: .25rem; */
 }
 
 h5 {
   font-size: .9rem;
-  padding-bottom: .3rem;
+  /* padding-bottom: .3rem; */
 }
 
 h6 {
   font-size: 1rem;
-  padding-bottom: .2rem;
+  /* padding-bottom: .2rem; */
 }
 
 p {
@@ -257,6 +258,7 @@ a {
   /* border: 1px solid green; */
   padding: 3rem 0;
   width: 100%;
+  grid-gap: 1rem;
 }
 
 .column-two-even {
@@ -341,6 +343,7 @@ a {
 
 .column-three-even {
   grid-template-columns: repeat(3, 1fr);
+
 }
 
 .column-four-even {
@@ -1051,11 +1054,35 @@ a {
 
 .blog-box-container {
   border: 1px solid green;
-  margin: 1rem;
-  padding: 1rem;
   min-height: 250px;
+}
+
+.blog-box-image {
+  max-height: 250px;
+  overflow: hidden;
+}
+
+.blog-box-info {
+  padding: 1rem;
+}
+
+.blog-box-text {
+  padding: 1rem 0;
 }
 
 .blog-item {
   grid-column-start: span 1;
+}
+
+.blog-box-categories {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.blog-box-categories p {
+  border: 1px solid var(--red-main);
+  padding: .4rem .8rem;
+  border-radius: 25px;
 }
