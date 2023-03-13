@@ -20,13 +20,15 @@ export default function BlogBox(props) {
                 }}/>
             </div>
             <div className='blog-box-info'>
-                <div className='blog-box-categories'>
-                    <BlogCategories categories={categories}/>
-                </div>
-                <div className='blog-box-text'>
-                    <h5>{subtitle}</h5>
-                    <h3>{title}</h3>
-                    <p><i>"{previewText}"</i></p>
+                <div className='blog-box-categories-text-container'>
+                    <div className='blog-box-categories'>
+                        <BlogCategories categories={categories}/>
+                    </div>
+                    <div className='blog-box-text'>
+                        <h5>{subtitle}</h5>
+                        <h3>{title}</h3>
+                        <p><i>"{previewText}"</i></p>
+                    </div>
                 </div>
                 <div className='blog-box-button'>
                     {/* CREATE THIRD BUTTON TYPE -> c */}
