@@ -14,8 +14,8 @@ export default function BlogBox(props) {
             <div className='blog-box-image'>
                 <Image img={{
                     alt: "test",
-                    height: "100%",
-                    width: "100%",
+                    // height: "100%",
+                    // width: "100%",
                     src: "Derek-Lord-Smiling-Small.jpg",
                 }}/>
             </div>

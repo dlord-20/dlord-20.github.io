@@ -1059,8 +1059,12 @@ a {
 /* Blogbox */
 
 .blog-box-container {
-  /* border: 1px solid green; */
-  min-height: 250px;
+  border: 1px solid green;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
 }
 
 .blog-box-image {
@@ -1085,4 +1089,20 @@ a {
   justify-content: flex-start;
   gap: 10px;
   flex-wrap: wrap;
+}
+
+.blog-box-image img{
+  height: auto;
+  width: 100%;
+  font-size: 18px;
+  /* How you can choose what to show */
+  transform: translateY(-50px)
+}
+
+.blog-box-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid green;
+  flex-grow: 2;
 }

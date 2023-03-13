@@ -44,29 +44,45 @@ export default function Blog() {
                         </div>
                         <div className="blog-item">
                             <BlogBox 
+                            subtitle="sub"
+                            title="title"
+                            previewText="Preview text"
                             categories={{
                                 categories: ["AI", "Life", "Finance"]
                                 }}
                             />
                         </div>
-                        {/* <div className="blog-item">
-                            <BlogBox/>
+                        <div className="blog-item">
+                            <BlogBox 
+                            subtitle="wow"
+                            title="title"
+                            previewText="I want to see what happens when this is too long"
+                            categories={{
+                                categories: ["Computers", "Life", "Finance"]
+                                }}
+                            />
                         </div>
                         <div className="blog-item">
-                            <BlogBox/>
+                            <BlogBox 
+                            subtitle="sub"
+                            title="title"
+                            previewText="Preview text"
+                            categories={{
+                                categories: ["MolEvo", "Life", "Finance"]
+                                }}
+                            />
                         </div>
                         <div className="blog-item">
-                            <BlogBox/>
+                            <BlogBox 
+                            subtitle="sub"
+                            title="title"
+                            previewText="Preview text"
+                            categories={{
+                                categories: ["Start-ups", "Life", "Finance"]
+                                }}
+                            />
                         </div>
-                        <div className="blog-item">
-                            <BlogBox/>
-                        </div>
-                        <div className="blog-item">
-                            <BlogBox/>
-                        </div>
-                        <div className="blog-item">
-                            <BlogBox/>
-                        </div> */}
+
                         {/* Bottom spread aross all columns */}
                         <div>
                         </div>
