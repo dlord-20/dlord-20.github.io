@@ -18,9 +18,9 @@ export default function BlogBox() {
             <div className='blog-box-info'>
                 {/* Make this it's own component */}
                 <div className='blog-box-categories'>
-                    <p>Coding</p>
-                    <p>Life</p>
-                    <p>AI</p>
+                    <Button text="Coding" type="b" link="link"/>
+                    <Button text="Finance" type="b" link="link"/>
+                    <Button text="AI" type="b" link="link"/>
                 </div>
                 <div className='blog-box-text'>
                     <h5>Subtitle here</h5>

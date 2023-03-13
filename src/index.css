@@ -633,6 +633,11 @@ a {
   margin-right: 1rem;
 }
 
+.blog-box-categories .button-b {
+  padding: .4rem .8rem;
+  border-radius: 25px;
+}
+
 /* ----------------- Alignment ----------------- */
 .section-container {
   display: flex;
@@ -1080,10 +1085,4 @@ a {
   justify-content: flex-start;
   gap: 10px;
   flex-wrap: wrap;
-}
-
-.blog-box-categories p {
-  border: 1px solid var(--red-main);
-  padding: .4rem .8rem;
-  border-radius: 25px;
 }
