@@ -40,9 +40,16 @@ export default function Blog() {
                     <div className="column-three-even right-to-left-incoming">
                         {/* Top spread aross all columns */}
                         <div>
-                            <h3>Three</h3>
+                            <h3>Recent Blog Posts</h3>
                         </div>
                         <div className="blog-item">
+                            <BlogBox 
+                            categories={{
+                                categories: ["AI", "Life", "Finance"]
+                                }}
+                            />
+                        </div>
+                        {/* <div className="blog-item">
                             <BlogBox/>
                         </div>
                         <div className="blog-item">
@@ -59,10 +66,7 @@ export default function Blog() {
                         </div>
                         <div className="blog-item">
                             <BlogBox/>
-                        </div>
-                        <div className="blog-item">
-                            <BlogBox/>
-                        </div>
+                        </div> */}
                         {/* Bottom spread aross all columns */}
                         <div>
                         </div>

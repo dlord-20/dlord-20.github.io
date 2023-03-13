@@ -1,8 +1,12 @@
+import BlogCategories from './blogCategories';
 import Button from './button';
 import Image from './image';
 
-export default function BlogBox() {
-
+export default function BlogBox(props) {
+    const subtitle = props.subtitle;
+    const title = props.title;
+    const previewText = props.previewText;
+    const categories = props.categories.categories;
 
     return (
         <div className='blog-box-container'>
@@ -18,17 +22,16 @@ export default function BlogBox() {
             <div className='blog-box-info'>
                 {/* Make this it's own component */}
                 <div className='blog-box-categories'>
-                    <Button text="Coding" type="b" link="link"/>
-                    <Button text="Finance" type="b" link="link"/>
-                    <Button text="AI" type="b" link="link"/>
+                    <BlogCategories categories={categories}/>
                 </div>
                 <div className='blog-box-text'>
-                    <h5>Subtitle here</h5>
-                    <h3>Blog title</h3>
-                    <p><i>"Preview Text..."</i></p>
+                    <h5>{subtitle}</h5>
+                    <h3>{title}</h3>
+                    <p><i>"{previewText}"</i></p>
                 </div>
                 <div className='blog-box-button'>
-                    <Button text="button" type="b" link="link"/>
+                    {/* CREATE THIRD BUTTON TYPE -> c */}
+                    <Button text="Keep Reading" type="b" link="link"/>
                 </div>
             </div>
         </div>

@@ -1059,7 +1059,7 @@ a {
 /* Blogbox */
 
 .blog-box-container {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   min-height: 250px;
 }
 

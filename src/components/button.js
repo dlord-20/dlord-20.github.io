@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 export default function Button(props) {
     const text = props.text;
     const type = props.type;
-    const link = props.link
+    const link = props.link;
     let buttonType;
 
     switch(type) {
