@@ -265,11 +265,6 @@ a {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.column-one > div:first-child {
-  /* padding: 1.5rem 0; */
-}
-
-
 .column-two-even > div:first-child, 
 .column-two-left-third > div:first-child,
 .column-two-left-forth > div:first-child,
