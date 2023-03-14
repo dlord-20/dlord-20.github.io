@@ -15,10 +15,10 @@ export default function BlogBox(props) {
         <div className='blog-box-container'>
             <div className='blog-box-image'>
                 <Image img={{
-                    alt: "test",
+                    alt: coverImage.src,
                     height: "100%",
                     width: "100%",
-                    src: coverImage,
+                    src: coverImage.src,
                 }}/>
             </div>
             <div className='blog-box-info'>

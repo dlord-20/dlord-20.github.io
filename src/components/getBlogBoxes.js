@@ -30,7 +30,6 @@ export default function GetBlogBoxes(props) {
                 </div>
             )
         };
-        console.log(blogArray[0])
 
         return blogArray;
     }

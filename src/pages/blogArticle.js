@@ -38,10 +38,10 @@ export default function BlogArticle() {
                     <div className="column-one">
                         <div>
                             <Image img={{
-                                alt: "test",
+                                alt: article.coverImage.alt,
                                 height: "100%",
                                 width: "100%",
-                                src: article.coverImage
+                                src: article.coverImage.src
                             }}/>
                         </div>
                         <div>
