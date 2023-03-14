@@ -40,5 +40,165 @@ export const blogData = [
             "Testing"
         ],
         date: new Date("2001-03-14")
+    },
+    {
+        title: "Here's another blog post",
+        subtitle: "BOOM BOOM",
+        previewText: "This looks like a nice place to put some text highlighting the blog post...",
+        coverImage: "Derek-Lord-Smiling-Small.jpg",
+        paragraphs: [
+            <p>this is a paragraph</p>,
+            <p>this is another paragraph</p>,
+            <p>this is the third paragraph</p>
+        ],
+        imagesOrCharts: [
+            "Derek-Lord-Smiling-Small.jpg"
+        ],
+        categories: [
+            "Category",
+            "Blogs",
+            "Testing"
+        ],
+        date: new Date("2001-03-14")
+    },
+    {
+        title: "Here's another blog post",
+        subtitle: "BOOM BOOM",
+        previewText: "This looks like a nice place to put some text highlighting the blog post...",
+        coverImage: "Derek-Lord-Smiling-Small.jpg",
+        paragraphs: [
+            <p>this is a paragraph</p>,
+            <p>this is another paragraph</p>,
+            <p>this is the third paragraph</p>
+        ],
+        imagesOrCharts: [
+            "Derek-Lord-Smiling-Small.jpg"
+        ],
+        categories: [
+            "Category",
+            "Blogs",
+            "Testing"
+        ],
+        date: new Date("2001-03-14")
+    },
+    {
+        title: "Here's another blog post",
+        subtitle: "BOOM BOOM",
+        previewText: "This looks like a nice place to put some text highlighting the blog post...",
+        coverImage: "Derek-Lord-Smiling-Small.jpg",
+        paragraphs: [
+            <p>this is a paragraph</p>,
+            <p>this is another paragraph</p>,
+            <p>this is the third paragraph</p>
+        ],
+        imagesOrCharts: [
+            "Derek-Lord-Smiling-Small.jpg"
+        ],
+        categories: [
+            "Category",
+            "Blogs",
+            "Testing"
+        ],
+        date: new Date("2001-03-14")
+    },
+    {
+        title: "Here's another blog post",
+        subtitle: "BOOM BOOM",
+        previewText: "This looks like a nice place to put some text highlighting the blog post...",
+        coverImage: "Derek-Lord-Smiling-Small.jpg",
+        paragraphs: [
+            <p>this is a paragraph</p>,
+            <p>this is another paragraph</p>,
+            <p>this is the third paragraph</p>
+        ],
+        imagesOrCharts: [
+            "Derek-Lord-Smiling-Small.jpg"
+        ],
+        categories: [
+            "Category",
+            "Blogs",
+            "Testing"
+        ],
+        date: new Date("2001-03-14")
+    },
+    {
+        title: "Here's another blog post",
+        subtitle: "BOOM BOOM",
+        previewText: "This looks like a nice place to put some text highlighting the blog post...",
+        coverImage: "Derek-Lord-Smiling-Small.jpg",
+        paragraphs: [
+            <p>this is a paragraph</p>,
+            <p>this is another paragraph</p>,
+            <p>this is the third paragraph</p>
+        ],
+        imagesOrCharts: [
+            "Derek-Lord-Smiling-Small.jpg"
+        ],
+        categories: [
+            "Category",
+            "Blogs",
+            "Testing"
+        ],
+        date: new Date("2001-03-14")
+    },
+    {
+        title: "Here's another blog post",
+        subtitle: "BOOM BOOM",
+        previewText: "This looks like a nice place to put some text highlighting the blog post...",
+        coverImage: "Derek-Lord-Smiling-Small.jpg",
+        paragraphs: [
+            <p>this is a paragraph</p>,
+            <p>this is another paragraph</p>,
+            <p>this is the third paragraph</p>
+        ],
+        imagesOrCharts: [
+            "Derek-Lord-Smiling-Small.jpg"
+        ],
+        categories: [
+            "Category",
+            "Blogs",
+            "Testing"
+        ],
+        date: new Date("2001-03-14")
+    },
+    {
+        title: "Here's another blog post",
+        subtitle: "BOOM BOOM",
+        previewText: "This looks like a nice place to put some text highlighting the blog post...",
+        coverImage: "Derek-Lord-Smiling-Small.jpg",
+        paragraphs: [
+            <p>this is a paragraph</p>,
+            <p>this is another paragraph</p>,
+            <p>this is the third paragraph</p>
+        ],
+        imagesOrCharts: [
+            "Derek-Lord-Smiling-Small.jpg"
+        ],
+        categories: [
+            "Category",
+            "Blogs",
+            "Testing"
+        ],
+        date: new Date("2001-03-14")
+    },
+    {
+        title: "Here's another blog post",
+        subtitle: "BOOM BOOM",
+        previewText: "This looks like a nice place to put some text highlighting the blog post...",
+        coverImage: "Derek-Lord-Smiling-Small.jpg",
+        paragraphs: [
+            <p>this is a paragraph</p>,
+            <p>this is another paragraph</p>,
+            <p>this is the third paragraph</p>
+        ],
+        imagesOrCharts: [
+            "Derek-Lord-Smiling-Small.jpg"
+        ],
+        categories: [
+            "Category",
+            "Blogs",
+            "Testing"
+        ],
+        date: new Date("2001-03-14")
     }
 ]

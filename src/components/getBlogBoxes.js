@@ -4,6 +4,7 @@ import BlogBox from "./blogBox";
 export default function GetBlogBoxes(props) {
     const numberToShow = props.numberToShow;
     const indexStart = props.indexStart;
+    const indexStop = (+numberToShow) + (+indexStart);
     const blogs = blogData;
 
     //Sorts to have the most recently updated blog first
@@ -14,10 +15,10 @@ export default function GetBlogBoxes(props) {
     const blogArray = [];
 
     if(blogs !== undefined) {
-        for(let i = indexStart; i < (numberToShow + indexStart) && i < blogs.length; i++) {
+        for(let i = indexStart; i < indexStop && i < blogs.length; i++) {
             const blog = blogs[i];
             blogArray.push(
-                <div className="blog-item">
+                <div className="blog-item" key={blog.title + i}>
                     <BlogBox
                         subtitle={blog.subtitle}
                         title={blog.title}
