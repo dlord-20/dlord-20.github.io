@@ -3,6 +3,12 @@ import BlogBox from "./blogBox";
 
 export default function GetBlogBox() {
     const blogs = blogData;
+
+    //Sorts to have the most recently updated blog first
+    blogs.sort((a,b) => {
+        return b.date.getTime() - a.date.getTime()
+    })
+
     const blogArray = [];
 
     if(blogs !== undefined) {
@@ -20,6 +26,7 @@ export default function GetBlogBox() {
                 </div>
             )
         });
+
         return blogArray;
     }
 

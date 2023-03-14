@@ -1119,7 +1119,7 @@ a {
 }
 
 .date i {
-  color: var(--light-gray);
+  color: var(--dark-lighter);
   font-size: .85rem;
   text-align: right;
   font-style: italic;

@@ -1,4 +1,4 @@
-var date1 = new Date("2022-03-25");
+
 
 export const blogData = [
     {
@@ -19,7 +19,7 @@ export const blogData = [
             "Blogging",
             "Productivity"
         ],
-        date: `${date1.getDay()}/${date1.getMonth()}/${date1.getFullYear()}`
+        date: new Date("2022-03-25")
     },
     {
         title: "Here's another blog post",
@@ -39,6 +39,6 @@ export const blogData = [
             "Blogs",
             "Testing"
         ],
-        date: Date("2023-03-14")
+        date: new Date("2001-03-14")
     }
 ]
