@@ -66,6 +66,7 @@ export default function BlogArticle() {
                         <GetBlogBoxes
                             numberToShow="3"
                             indexStart="0"
+                            currentBlogTitle={article.title}
                         />
 
                         {/* Bottom spread across all columns */}
