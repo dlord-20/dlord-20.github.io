@@ -6,8 +6,7 @@ import { useRightToLeftFadeIn } from "../features/effects/fadeIn/right-to-left-f
 import { useTimelineEffect } from "../features/effects/timeline-effects";
 import { useDownToUpFadeIn } from "../features/effects/fadeIn/down-to-up-fade-in-on-scroll";
 import { useLeftToRightFadeIn } from "../features/effects/fadeIn/left-to-right-fade-in-on-scroll";
-import BlogBox from "../components/blogBox";
-import GetBlogBox from "../components/getBlogBoxes";
+import GetBlogBoxes from "../components/getBlogBoxes";
 
 
 export default function Blog() {
@@ -43,7 +42,10 @@ export default function Blog() {
                         <div>
                             <h3>Recent Blog Posts</h3>
                         </div>
-                        <GetBlogBox/>
+                        <GetBlogBoxes
+                            numberToShow="9"
+                            indexStart="0"
+                        />
 
                         {/* Bottom spread across all columns */}
                         <div>
