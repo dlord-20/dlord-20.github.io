@@ -24,6 +24,7 @@ import Contact from './pages/contact';
 import About from './pages/about';
 import Services from './pages/services';
 import Works from './pages/works';
+import BlogArticle from './pages/blogArticle';
 
 export default function App() {
 
@@ -42,9 +43,8 @@ export default function App() {
             <Route path="/services" element={<Services/>}></Route>
             <Route path="/about" element={<About/>}></Route>
             <Route path="/blog" element={<Blog/>}></Route>
+            <Route path="/blog/:id" element={<BlogArticle/>}/>
             <Route path="/contact" element={<Contact/>}></Route>
-
-
             <Route path="/timeline-test" element={<TimeLineTest/>}></Route>
           </Routes>
           <BottomNav/>

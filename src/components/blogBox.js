@@ -9,7 +9,7 @@ export default function BlogBox(props) {
     const categories = props.categories;
     const coverImage = props.image;
     const date = props.date;
-    const displayDate = `${date.getDay()}/${date.getMonth()}/${date.getFullYear()}`
+    const displayDate = `${date.getDay()}/${date.getMonth()}/${date.getFullYear()}`;
 
     return (
         <div className='blog-box-container'>
@@ -34,7 +34,7 @@ export default function BlogBox(props) {
                 </div>
                 <div className='blog-box-button'>
                     {/* CREATE THIRD BUTTON TYPE -> c */}
-                    <Button text="Keep Reading" type="b" link="link"/>
+                    <Button text="Keep Reading" type="b" link={'blog/' + title}/>
                     <p><span className='date'><i>Last Updated:<br/>{displayDate}</i></span></p>
                 </div>
             </div>
