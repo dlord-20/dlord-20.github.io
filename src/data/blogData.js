@@ -1,3 +1,5 @@
+var date1 = new Date("2022-03-25");
+
 export const blogData = [
     {
         title: "Using ChatCPT for blogs",
@@ -17,7 +19,7 @@ export const blogData = [
             "Blogging",
             "Productivity"
         ],
-        date: "123456"
+        date: `${date1.getDay()}/${date1.getMonth()}/${date1.getFullYear()}`
     },
     {
         title: "Here's another blog post",
@@ -37,6 +39,6 @@ export const blogData = [
             "Blogs",
             "Testing"
         ],
-        date: "654321"
+        date: Date("2023-03-14")
     }
 ]
