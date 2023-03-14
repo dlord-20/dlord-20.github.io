@@ -11,9 +11,9 @@ export const blogData = [
             alt: "Derek smiling all happy like"
         },
         paragraphs: [
-            <p>this is a paragraph</p>,
-            <p>this is another paragraph</p>,
-            <p>this is the third paragraph</p>
+            <p key="0">this is a paragraph</p>,
+            <p key="1">this is another paragraph</p>,
+            <p key="2">this is the third paragraph</p>
         ],
         imagesOrCharts: [
             {
