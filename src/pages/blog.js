@@ -7,6 +7,7 @@ import { useTimelineEffect } from "../features/effects/timeline-effects";
 import { useDownToUpFadeIn } from "../features/effects/fadeIn/down-to-up-fade-in-on-scroll";
 import { useLeftToRightFadeIn } from "../features/effects/fadeIn/left-to-right-fade-in-on-scroll";
 import BlogBox from "../components/blogBox";
+import GetBlogBox from "../components/getBlogBoxes";
 
 
 export default function Blog() {
@@ -38,52 +39,13 @@ export default function Blog() {
             <div className="" id="6">
                 <div className="container">
                     <div className="column-three-even right-to-left-incoming">
-                        {/* Top spread aross all columns */}
+                        {/* Top spread across all columns */}
                         <div>
                             <h3>Recent Blog Posts</h3>
                         </div>
-                        <div className="blog-item">
-                            <BlogBox 
-                            subtitle="sub"
-                            title="title"
-                            previewText="Preview text"
-                            categories={{
-                                categories: ["AI", "Life", "Finance"]
-                                }}
-                            />
-                        </div>
-                        <div className="blog-item">
-                            <BlogBox 
-                            subtitle="wow"
-                            title="title"
-                            previewText="I want to see what happens when this is too long"
-                            categories={{
-                                categories: ["Computers", "Life", "Finance"]
-                                }}
-                            />
-                        </div>
-                        <div className="blog-item">
-                            <BlogBox 
-                            subtitle="sub"
-                            title="title"
-                            previewText="Preview text"
-                            categories={{
-                                categories: ["MolEvo", "Life", "Finance"]
-                                }}
-                            />
-                        </div>
-                        <div className="blog-item">
-                            <BlogBox 
-                            subtitle="sub"
-                            title="title"
-                            previewText="Preview text"
-                            categories={{
-                                categories: ["Start-ups", "Life", "Finance"]
-                                }}
-                            />
-                        </div>
+                        <GetBlogBox/>
 
-                        {/* Bottom spread aross all columns */}
+                        {/* Bottom spread across all columns */}
                         <div>
                         </div>
                     </div>

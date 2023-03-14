@@ -6,17 +6,18 @@ export default function BlogBox(props) {
     const subtitle = props.subtitle;
     const title = props.title;
     const previewText = props.previewText;
-    const categories = props.categories.categories;
+    const categories = props.categories;
+    const coverImage = props.image;
+    const date = props.date;
 
     return (
         <div className='blog-box-container'>
-            
             <div className='blog-box-image'>
                 <Image img={{
                     alt: "test",
                     height: "100%",
                     width: "100%",
-                    src: "Derek-Lord-Smiling-Small.jpg",
+                    src: coverImage,
                 }}/>
             </div>
             <div className='blog-box-info'>
@@ -33,6 +34,7 @@ export default function BlogBox(props) {
                 <div className='blog-box-button'>
                     {/* CREATE THIRD BUTTON TYPE -> c */}
                     <Button text="Keep Reading" type="b" link="link"/>
+                    <p><span className='date'><i>Last Updated:<br/>{date}</i></span></p>
                 </div>
             </div>
         </div>
