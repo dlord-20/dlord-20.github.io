@@ -9,7 +9,7 @@ export default function BlogBox(props) {
     const categories = props.categories;
     const coverImage = props.image;
     const date = props.date;
-    const displayDate = `${date.getDay()}/${date.getMonth()}/${date.getFullYear()}`;
+    const displayDate = `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`;
 
     return (
         <div className='blog-box-container'>

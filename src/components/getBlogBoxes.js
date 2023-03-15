@@ -18,7 +18,6 @@ export default function GetBlogBoxes(props) {
     if(currentBlogTitle !== undefined) {
         var count = +indexStart;
         var index = 0;
-        console.log('startindex: ' + index);
         do {
             const blog = blogs[index];
             if(blog === undefined) {
