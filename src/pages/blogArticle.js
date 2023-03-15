@@ -3,7 +3,6 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React from "react";
 import { useRightToLeftFadeIn } from "../features/effects/fadeIn/right-to-left-fade-in-on-scroll";
-import { useTimelineEffect } from "../features/effects/timeline-effects";
 import { useDownToUpFadeIn } from "../features/effects/fadeIn/down-to-up-fade-in-on-scroll";
 import { useLeftToRightFadeIn } from "../features/effects/fadeIn/left-to-right-fade-in-on-scroll";
 import { useParams } from "react-router";
@@ -24,14 +23,14 @@ export default function BlogArticle() {
     //Effect for fading in section by section
     useRightToLeftFadeIn();
     useLeftToRightFadeIn();
-    useTimelineEffect();
+
     useDownToUpFadeIn();
 
 
     return (
         <div>
             <Helmet>
-                <title>Reference Blog Data</title>
+                <title>{article.title}</title>
             </Helmet>
             <div className="bg-color-blue" id="cover">
                 <div className="container">

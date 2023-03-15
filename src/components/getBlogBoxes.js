@@ -15,6 +15,7 @@ export default function GetBlogBoxes(props) {
 
     const blogArray = [];
 
+    // Makes sure the blog boxes are not the same as the current blog being shown
     if(currentBlogTitle !== undefined) {
         var count = +indexStart;
         var index = 0;
@@ -25,6 +26,7 @@ export default function GetBlogBoxes(props) {
                 break;
             }
             if(currentBlogTitle !== blog.title && blog !== undefined) {
+                // Change this to a function or something -> duplicate code right now
                 blogArray.push(
                     <div className="blog-item" key={blog.title + index}>
                         <BlogBox
@@ -47,6 +49,8 @@ export default function GetBlogBoxes(props) {
         return blogArray;
     }
 
+
+    // Returns the blogs you ask for
     if(blogs !== undefined) {
         for(let i = indexStart; i < indexStop && i < blogs.length; i++) {
             const blog = blogs[i];

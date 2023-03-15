@@ -24,7 +24,7 @@ export default function Blog() {
     return (
         <div>
             <Helmet>
-                <title>Blogs</title>
+                <title>Thee Blog</title>
             </Helmet>
             <div className="bg-color-blue" id="cover">
                 <div className="container">
