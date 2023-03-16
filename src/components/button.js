@@ -25,7 +25,8 @@ export default function Button(props) {
     const searchTerm = categoryParams.get('Category') || '';
 
     const handleCategorySelect = (event) => {
-        const category = event.target.value;
+        const query = event.target.value;
+        const category = query.toLowerCase();
 
         if (category) {
             setCategoryParams({category})
@@ -42,7 +43,6 @@ export default function Button(props) {
                 <Link to={`/${link}`} >
                     <div className={`button ${buttonType}`}>
                         {text}
-                        {/* {searchTerm} */}
                     </div>
                 </Link>
             </div>

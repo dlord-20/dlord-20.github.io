@@ -1,4 +1,4 @@
-import { useSearchParams } from 'react-router-dom';
+// import { useSearchParams } from 'react-router-dom';
 import Button from './button';
 
 export default function BlogCategories(props) {
@@ -11,13 +11,15 @@ export default function BlogCategories(props) {
     //     // const category = event.target.value;
     //     console.log("here");
 
-    //     // if (category) {
-    //     //     setCategoryParams(category)
-    //     // } else {
-    //     //     setCategoryParams({});
-    //     // }
+    //     if (category) {
+    //         setCategoryParams(category)
+    //     } else {
+    //         setCategoryParams({});
+    //     }
 
     // }
+
+ 
 
     const categoryButtons = [];
     if(categories !== undefined) {
