@@ -7,6 +7,7 @@ import { useTimelineEffect } from "../features/effects/timeline-effects";
 import { useDownToUpFadeIn } from "../features/effects/fadeIn/down-to-up-fade-in-on-scroll";
 import { useLeftToRightFadeIn } from "../features/effects/fadeIn/left-to-right-fade-in-on-scroll";
 import GetBlogBoxes from "../components/getBlogBoxes";
+import { useSearchParams } from "react-router-dom";
 
 
 export default function Blog() {
@@ -19,6 +20,7 @@ export default function Blog() {
     useLeftToRightFadeIn();
     useTimelineEffect();
     useDownToUpFadeIn();
+
 
 
     return (

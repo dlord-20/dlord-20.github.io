@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 
 export default function Button(props) {
     const text = props.text;
@@ -20,13 +20,32 @@ export default function Button(props) {
             buttonType = "button-a";
     }
 
+    const [categoryParams, setCategoryParams] = useSearchParams();
+
+    const searchTerm = categoryParams.get('Category') || '';
+
+    const handleCategorySelect = (event) => {
+        const category = event.target.value;
+
+        if (category) {
+            setCategoryParams({category})
+        } else {
+            setCategoryParams({});
+        }
+
+    }
+
     return (
-        <div className='button-container'>
-            <Link to={`/${link}`} >
-                <div className={`button ${buttonType}`}>
-                    {text}
-                </div>
-            </Link>
+        <div>
+        <input type="button" value={text} onClick={handleCategorySelect}/>
+            <div className='button-container'>
+                <Link to={`/${link}`} >
+                    <div className={`button ${buttonType}`}>
+                        {text}
+                        {/* {searchTerm} */}
+                    </div>
+                </Link>
+            </div>
         </div>
     );
 }
