@@ -20,6 +20,7 @@ export default function Button(props) {
             buttonType = "button-a";
     }
 
+    // Let's figure this baby out
     const [categoryParams, setCategoryParams] = useSearchParams();
 
     const searchTerm = categoryParams.get('Category') || '';
