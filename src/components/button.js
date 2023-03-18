@@ -20,10 +20,10 @@ export default function Button(props) {
             buttonType = "button-a";
     }
 
-    // Let's figure this baby out
+    // Let's figure this baby out --> also needs to change page to the blog page
     const [categoryParams, setCategoryParams] = useSearchParams();
 
-    const searchTerm = categoryParams.get('Category') || '';
+    // const searchTerm = categoryParams.get('Category') || '';
 
     const handleCategorySelect = (event) => {
         const query = event.target.value;
