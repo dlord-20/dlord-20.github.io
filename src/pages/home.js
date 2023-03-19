@@ -34,16 +34,16 @@ export default function Home() {
 
 
     useEffect(() => {
-        let tl = gsap.timeline();
+        // let tl = gsap.timeline();
 
-        tl.from(".header", {x: 25, opacity: 0})
-            .to(".header", {x: 0, opacity: 1,}, "-=.5")
-            .from(".highlight-container", {x: 25, opacity: 0})
-            .to(".highlight-container", {x: 0, opacity: 1}, "-=.55")
-            .from(".description", {x: 25, opacity: 0})
-            .to(".description", {x: 0, opacity: 1}, "-=.55")
-            .from(".buttons", {x: 25, opacity: 0})
-            .to(".buttons", {x: 0, opacity: 1}, "-=.55");
+        // tl.from(".header", {x: 25, opacity: 0})
+        //     .to(".header", {x: 0, opacity: 1,}, "-=.5")
+        //     .from(".highlight-container", {x: 25, opacity: 0})
+        //     .to(".highlight-container", {x: 0, opacity: 1}, "-=.55")
+        //     .from(".description", {x: 25, opacity: 0})
+        //     .to(".description", {x: 0, opacity: 1}, "-=.55")
+        //     .from(".buttons", {x: 25, opacity: 0})
+        //     .to(".buttons", {x: 0, opacity: 1}, "-=.55");
 
 
     }, []);

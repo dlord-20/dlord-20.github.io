@@ -48,15 +48,30 @@ export default function Button(props) {
         }
     }
 
-    return (
-        <div>
-        {/* <input type="button" value={text} onClick={handleCategorySelect}/> */}
-            <div className='button-container' onClick={() => handleCategorySelect(link, text)}>
+    const getLink = () => {
+        if(!filter) {
+            return (
                 <Link to={`/${link}`} >
                     <div className={`button ${buttonType}`}>
                         {text}
                     </div>
                 </Link>
+            )
+        } else {
+            return (
+                <Link to={`/blog?${text}`} >
+                    <div className={`button ${buttonType}`}>
+                        {text}
+                    </div>
+                </Link>
+            )
+        }
+    }
+
+    return (
+        <div>
+            <div className='button-container'>
+                {getLink()}
             </div>
         </div>
     );
