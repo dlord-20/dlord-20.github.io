@@ -49,6 +49,7 @@ export default function Button(props) {
     }
 
     const getLink = () => {
+
         if(!filter) {
             return (
                 <Link to={`/${link}`} >

@@ -10,6 +10,7 @@ export default function BlogBox(props) {
     const coverImage = props.image;
     const date = props.date;
     const displayDate = `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`;
+    const link = title.replace(/ /g,'-');
 
     return (
         <div className='blog-box-container'>
@@ -37,7 +38,7 @@ export default function BlogBox(props) {
                     <Button 
                         text="Keep Reading" 
                         type="b" 
-                        link={'blog/' + title.toLowerCase()}
+                        link={'blog/' + link.toLowerCase()}
                     />
                     <p><span className='date'><i>Last Updated:<br/>{displayDate}</i></span></p>
                 </div>
