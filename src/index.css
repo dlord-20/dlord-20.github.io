@@ -620,6 +620,21 @@ a {
   background-color: var(--red-main);
 }
 
+.button-d {
+  background-color: var(--red-main);
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem .15rem .55rem 1rem;
+  border-radius: 25px;
+}
+.button-d:hover {
+  background-color: var(--red-dark);
+}
+
+.button-exit {
+  padding: 0 .5rem .15rem 1rem;
+}
+
 .buttons {
   display: flex;
 }
@@ -632,6 +647,20 @@ a {
   padding: .4rem .8rem;
   border-radius: 25px;
 }
+
+/* ----------------- Filter ----------------- */
+
+.filter-container {
+  width: 50%;
+  margin-bottom: 1rem;
+}
+
+.filter {
+  border-bottom: 1px solid var(--light-gray);
+  margin: 1rem 0;
+  width: 100%;
+}
+
 
 /* ----------------- Alignment ----------------- */
 .section-container {

@@ -9,6 +9,7 @@ import { useLeftToRightFadeIn } from "../features/effects/fadeIn/left-to-right-f
 import GetBlogBoxes from "../components/getBlogBoxes";
 import { useQuery } from "../features/customHooks/useQuery";
 import BlogCategories from "../components/blogCategories";
+import ActiveBlogCategories from "../components/activeBlogCategory";
 
 
 export default function Blog() {
@@ -51,7 +52,7 @@ export default function Blog() {
                         <div>
                             <h3>Recent Blog Posts</h3>
                             <div className='blog-box-categories'>
-                                <BlogCategories categories={categories}
+                                <ActiveBlogCategories categories={categories}
                             />
                     </div>
                         </div>

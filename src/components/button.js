@@ -17,6 +17,9 @@ export default function Button(props) {
         case 'c':
             buttonType = 'button-c';
             break;
+        case 'd':
+            buttonType = 'button-d';
+            break;
         default:
             buttonType = "button-a";
     }
@@ -28,6 +31,27 @@ export default function Button(props) {
         } else {
             return `/${link}?${term}=${text.toLowerCase()}`;
         }
+    }
+    if(type === 'd') {
+        return (
+            <div className='filter-container'>
+                <div className='filter'>
+                    <h6>Filter</h6>
+                </div>
+                <div className='button-container'>
+                    <Link to={getLink()} >
+                        <div className={`button ${buttonType}`}>
+                            <div>
+                                {text}
+                            </div>
+                            <div className='button-exit'>
+                                {'x'}
+                            </div>
+                        </div>
+                    </Link>
+                </div>
+            </div>
+        )
     }
 
     return (
