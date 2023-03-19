@@ -3,12 +3,7 @@ import Button from './button';
 import Image from './image';
 
 export default function BlogBox(props) {
-    const subtitle = props.subtitle;
-    const title = props.title;
-    const previewText = props.previewText;
-    const categories = props.categories;
-    const coverImage = props.image;
-    const date = props.date;
+    const {subtitle, title, previewText, categories, coverImage, date} = props;
     const displayDate = `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`;
     const link = title.replace(/ /g,'-');
 

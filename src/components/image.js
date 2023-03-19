@@ -3,7 +3,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 export default function Image(props) {
-    const image = props.img;
+    const {image} = props;
 
 
     return (

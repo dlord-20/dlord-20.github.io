@@ -2,9 +2,7 @@ import { blogData } from "../data/blogData";
 import BlogBox from "./blogBox";
 
 export default function GetBlogBoxes(props) {
-    const numberToShow = props.numberToShow;
-    const indexStart = props.indexStart;
-    const currentBlogTitle = props.currentBlogTitle;
+    const {numberToShow, indexStart, currentBlogTitle} = props;
     const indexStop = (+numberToShow) + (+indexStart);
     const blogs = blogData;
 

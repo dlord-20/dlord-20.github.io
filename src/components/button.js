@@ -1,16 +1,10 @@
 import { 
-    Link, 
-    useNavigate, 
-    useSearchParams 
+    Link
 } from 'react-router-dom';
 
 export default function Button(props) {
-    const text = props.text;
-    const type = props.type;
-    const link = props.link;
-    const filter = props.filter;
+    const {text, type, link, filter} = props;
     let buttonType;
-    const navigate = useNavigate();
 
 
     switch(type) {
@@ -27,52 +21,23 @@ export default function Button(props) {
             buttonType = "button-a";
     }
 
-    // Let's figure this baby out --> also needs to change page to the blog page
-    const [categoryParams, setCategoryParams] = useSearchParams();
-
-
-   
-    // Need a way to make this dynamic for only blog filters
-    const handleCategorySelect = (path, text) => {
-
-        if(filter) {
-            const pathName = `/${path.toLowerCase()}`;
-
-            const query = text;
-            const category = `?${query.toLowerCase()}`;
-            
-            navigate({
-                pathname: pathName,
-                search: category,
-            });
-        }
-    }
-
     const getLink = () => {
 
         if(!filter) {
-            return (
-                <Link to={`/${link}`} >
-                    <div className={`button ${buttonType}`}>
-                        {text}
-                    </div>
-                </Link>
-            )
+            return `/${link}`;
         } else {
-            return (
-                <Link to={`/${link}?${text.toLowerCase()}`} >
-                    <div className={`button ${buttonType}`}>
-                        {text}
-                    </div>
-                </Link>
-            )
+            return `/${link}?${text.toLowerCase()}`;
         }
     }
 
     return (
         <div>
             <div className='button-container'>
-                {getLink()}
+                <Link to={getLink()} >
+                    <div className={`button ${buttonType}`}>
+                        {text}
+                    </div>
+                </Link>
             </div>
         </div>
     );

@@ -2,24 +2,8 @@
 import Button from './button';
 
 export default function BlogCategories(props) {
-    const categories = props.categories;
+    const {categories} = props;
 
-    
-    // const [categoryParams, setCategoryParams] = useSearchParams();
-
-    // const handleCategorySelect = (event) => {
-    //     // const category = event.target.value;
-    //     console.log("here");
-
-    //     if (category) {
-    //         setCategoryParams(category)
-    //     } else {
-    //         setCategoryParams({});
-    //     }
-
-    // }
-
- 
 
     const categoryButtons = [];
     if(categories !== undefined) {
