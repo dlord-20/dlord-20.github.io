@@ -1,4 +1,3 @@
-import { useLocation, useParams } from "react-router";
 import { blogData } from "../data/blogData";
 import BlogBox from "./blogBox";
 import React from "react";
@@ -8,17 +7,46 @@ export default function GetBlogBoxes(props) {
     const {numberToShow, indexStart, currentBlogTitle} = props;
     const indexStop = (+numberToShow) + (+indexStart);
     const blogs = blogData;
+    const query = useQuery().get("category");
 
-    const categoryFilter = useParams().category;
-  
-    console.log(useQuery().get("category"));
 
     //Sorts to have the most recently updated blog first
     blogs.sort((a,b) => {
-        return b.date.getTime() - a.date.getTime()
+        return b.date.getTime() - a.date.getTime();
     })
 
     const blogArray = [];
+
+    // FILTER BLOGS BASED ON FILTER
+    if(query !== null) {
+        console.log('inside: ' + query);
+        for(let i = 0; i < blogs.length; i++) {
+            const blog = blogs[i];
+            var categoryIncluded = false;
+            for(let j = 0; j < blog.categories.length; j++) {
+                const blogCategory = blog.categories[j];
+                if(blogCategory.toLowerCase() === query) {
+                    categoryIncluded = true;
+                    console.log('here');
+                }
+            }
+            if(categoryIncluded) {
+                blogArray.push(
+                    <div className="blog-item" key={blog.title + i}>
+                        <BlogBox
+                            subtitle={blog.subtitle}
+                            title={blog.title}
+                            previewText={blog.previewText}
+                            categories={blog.categories}
+                            image={blog.coverImage}
+                            date={blog.date}
+                        />
+                    </div>
+            )}
+        }
+
+        return blogArray;
+    }
 
     // Makes sure the blog boxes are not the same as the current blog being shown
     if(currentBlogTitle !== undefined) {
@@ -53,8 +81,6 @@ export default function GetBlogBoxes(props) {
         }
         return blogArray;
     }
-
-    // FILTER BLOGS BASED ON FILTER
 
 
     // Returns the blogs you ask for

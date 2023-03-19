@@ -48,7 +48,7 @@ export const blogData = [
             }
         ],
         categories: [
-            "AI",
+            "Test",
             "Blogging",
             "Productivity"
         ],
