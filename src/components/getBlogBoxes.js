@@ -1,3 +1,4 @@
+import { useParams } from "react-router";
 import { blogData } from "../data/blogData";
 import BlogBox from "./blogBox";
 
@@ -5,6 +6,9 @@ export default function GetBlogBoxes(props) {
     const {numberToShow, indexStart, currentBlogTitle} = props;
     const indexStop = (+numberToShow) + (+indexStart);
     const blogs = blogData;
+
+    const categoryFilter = useParams().category;
+    console.log(categoryFilter);
 
     //Sorts to have the most recently updated blog first
     blogs.sort((a,b) => {
@@ -46,6 +50,8 @@ export default function GetBlogBoxes(props) {
         }
         return blogArray;
     }
+
+    // FILTER BLOGS BASED ON FILTER
 
 
     // Returns the blogs you ask for

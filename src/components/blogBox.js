@@ -3,7 +3,8 @@ import Button from './button';
 import Image from './image';
 
 export default function BlogBox(props) {
-    const {subtitle, title, previewText, categories, coverImage, date} = props;
+    const {subtitle, title, previewText, categories, date} = props;
+    const coverImage = props.image;
     const displayDate = `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`;
     const link = title.replace(/ /g,'-');
 
@@ -11,7 +12,7 @@ export default function BlogBox(props) {
         <div className='blog-box-container'>
             <div className='blog-box-image'>
                 <Image img={{
-                    alt: coverImage.src,
+                    alt: coverImage.alt,
                     height: "100%",
                     width: "100%",
                     src: coverImage.src,

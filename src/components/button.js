@@ -3,7 +3,7 @@ import {
 } from 'react-router-dom';
 
 export default function Button(props) {
-    const {text, type, link, filter} = props;
+    const {text, type, link, filter, term} = props;
     let buttonType;
 
 
@@ -26,7 +26,7 @@ export default function Button(props) {
         if(!filter) {
             return `/${link}`;
         } else {
-            return `/${link}?${text.toLowerCase()}`;
+            return `/${link}?${term}=${text.toLowerCase()}`;
         }
     }
 
