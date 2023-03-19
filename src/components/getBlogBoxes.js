@@ -7,7 +7,6 @@ export default function GetBlogBoxes(props) {
     const {numberToShow, indexStart, currentBlogTitle} = props;
     const indexStop = (+numberToShow) + (+indexStart);
     const blogs = blogData;
-    const query = useQuery().get("category");
 
 
     //Sorts to have the most recently updated blog first
@@ -16,18 +15,17 @@ export default function GetBlogBoxes(props) {
     })
 
     const blogArray = [];
+    const query = useQuery().get("category");
 
-    // FILTER BLOGS BASED ON FILTER
+    // FILTER BLOGS BASED ON QUERY AND RETURNS AN ARRAY OF THE FILTERED BLOGS
     if(query !== null) {
-        console.log('inside: ' + query);
-        for(let i = 0; i < blogs.length; i++) {
+        for(let i = indexStart; i < indexStop && i < blogs.length; i++) {
             const blog = blogs[i];
             var categoryIncluded = false;
             for(let j = 0; j < blog.categories.length; j++) {
                 const blogCategory = blog.categories[j];
                 if(blogCategory.toLowerCase() === query) {
                     categoryIncluded = true;
-                    console.log('here');
                 }
             }
             if(categoryIncluded) {

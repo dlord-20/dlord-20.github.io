@@ -7,9 +7,17 @@ import { useTimelineEffect } from "../features/effects/timeline-effects";
 import { useDownToUpFadeIn } from "../features/effects/fadeIn/down-to-up-fade-in-on-scroll";
 import { useLeftToRightFadeIn } from "../features/effects/fadeIn/left-to-right-fade-in-on-scroll";
 import GetBlogBoxes from "../components/getBlogBoxes";
+import { useQuery } from "../features/customHooks/useQuery";
+import BlogCategories from "../components/blogCategories";
 
 
 export default function Blog() {
+    const query = useQuery().get("category");
+    var categories;
+    if(query) {
+        categories = [query.charAt(0).toUpperCase() + query.slice(1)];
+    }
+
 
     gsap.registerPlugin(ScrollTrigger);
     gsap.defaults({ ease: "power2.in"});
@@ -42,6 +50,10 @@ export default function Blog() {
                         {/* Top spread across all columns */}
                         <div>
                             <h3>Recent Blog Posts</h3>
+                            <div className='blog-box-categories'>
+                                <BlogCategories categories={categories}
+                            />
+                    </div>
                         </div>
                         <GetBlogBoxes
                             numberToShow="9"
