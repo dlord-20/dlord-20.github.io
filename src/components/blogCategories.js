@@ -25,7 +25,7 @@ export default function BlogCategories(props) {
     if(categories !== undefined) {
         for(let i = 0; i < categories.length; i++) {
             categoryButtons.push(
-                <Button text={categories[i]} type="b" link={`blog`} key={categories[i] + '1'}/>
+                <Button text={categories[i]} type="b" link={`blog`} key={categories[i] + '1'} filter={true}/>
             )
         }
         return categoryButtons
