@@ -59,7 +59,7 @@ export default function Button(props) {
             )
         } else {
             return (
-                <Link to={`/blog?${text}`} >
+                <Link to={`/${link}?${text.toLowerCase()}`} >
                     <div className={`button ${buttonType}`}>
                         {text}
                     </div>

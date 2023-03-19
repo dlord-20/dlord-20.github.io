@@ -15,7 +15,7 @@ import GetBlogBoxes from "../components/getBlogBoxes";
 export default function BlogArticle() {
     const blogId = useParams().id;
 
-    const article = blogData.find(blog => blog.title === blogId);
+    const article = blogData.find(blog => blog.title.toLowerCase() === blogId);
 
     gsap.registerPlugin(ScrollTrigger);
     gsap.defaults({ ease: "power2.in"});

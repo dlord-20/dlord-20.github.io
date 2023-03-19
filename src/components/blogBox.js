@@ -34,7 +34,11 @@ export default function BlogBox(props) {
                 </div>
                 <div className='blog-box-button'>
                     {/* CREATE THIRD BUTTON TYPE -> c */}
-                    <Button text="Keep Reading" type="b" link={'blog/' + title}/>
+                    <Button 
+                        text="Keep Reading" 
+                        type="b" 
+                        link={'blog/' + title.toLowerCase()}
+                    />
                     <p><span className='date'><i>Last Updated:<br/>{displayDate}</i></span></p>
                 </div>
             </div>

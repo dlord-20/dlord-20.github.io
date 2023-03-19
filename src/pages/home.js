@@ -67,8 +67,13 @@ export default function Home() {
                                     </h1>
                                     <p className="description">I'm an eager digital marketer who is on a mission to decrease customer turnover while attracting new cliential.</p>
                                     <div className="buttons">
-                                        <Button text="Let's Talk" link="works"/>
-                                        <Button text="See More" link="services" type="b" />
+                                        <Button 
+                                            text="Let's Talk" link="works"
+                                        />
+                                        <Button 
+                                            text="See More" link="services" 
+                                            type="b" 
+                                        />
                                     </div>
                                 </div>
                             </div>
