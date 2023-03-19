@@ -1,6 +1,8 @@
-import { useParams } from "react-router";
+import { useLocation, useParams } from "react-router";
 import { blogData } from "../data/blogData";
 import BlogBox from "./blogBox";
+import React from "react";
+import { useQuery } from "../features/customHooks/useQuery";
 
 export default function GetBlogBoxes(props) {
     const {numberToShow, indexStart, currentBlogTitle} = props;
@@ -8,7 +10,8 @@ export default function GetBlogBoxes(props) {
     const blogs = blogData;
 
     const categoryFilter = useParams().category;
-    console.log(categoryFilter);
+  
+    console.log(useQuery().get("category"));
 
     //Sorts to have the most recently updated blog first
     blogs.sort((a,b) => {
