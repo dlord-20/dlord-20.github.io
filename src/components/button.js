@@ -33,7 +33,7 @@ export default function Button(props) {
         if(query !== null) {
             const queries = query.split(" ");
             console.log(queries);
-            let newLink;
+            let newLink = "";
             queries.forEach((name, i) => {
                 if(name === text.toLowerCase()) {
                     let search = location.search;
@@ -42,20 +42,25 @@ export default function Button(props) {
                         console.log(`/${link}`);
                         newLink = `/${link}`;
                     } else if (i === queries.length -1) {
+                        console.log('2nd');
+                        console.log(text);
                         console.log(`/${link}` + search.replace("+" + text.toLowerCase(), ""));
-                        newLink = `/${link}?` + search.replace("+" + text.toLowerCase(), "");
+                        newLink = `/${link}` + search.replace("+" + text.toLowerCase(), "");
                     } else {
+                        console.log('3rd');
+                        console.log(text);
                         console.log(`/${link}` + search.replace(text.toLowerCase() + "+", ""));
                         newLink = `/${link}` + search.replace(text.toLowerCase() + "+", "");
                     }
                 }
                 
-                return newLink;
             })
+            console.log(newLink);
+            return newLink;
 
         }
 
-        if(!filter && query !== null) {
+        if(!filter && query === null) {
             console.log('here');
             return `/${link}`;
         } else {
