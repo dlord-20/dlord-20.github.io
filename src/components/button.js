@@ -36,9 +36,6 @@ export default function Button(props) {
     if(type === 'd') {
         return (
             <div className='filter-container'>
-                <div className='filter'>
-                    <h5>Filter</h5>
-                </div>
                 <div className='button-container'>
                     <Link to={getLink()} >
                         <div className={`button ${buttonType}`}>

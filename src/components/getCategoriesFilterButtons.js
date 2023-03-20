@@ -2,6 +2,7 @@ import { act } from 'react-dom/test-utils';
 import { blogData } from '../data/blogData';
 import { useQuery } from '../features/customHooks/useQuery';
 import Button from './button';
+import ActiveBlogCategories from './activeBlogCategory';
 
 export default function GetCategoryFilterButtons() {
     const blogs = blogData;
@@ -20,27 +21,26 @@ export default function GetCategoryFilterButtons() {
             activeFilters.push(category.charAt(0).toUpperCase() + category.slice(1));
         });
 
-
-
-
-
         // Create an array of the active buttons
-        if(activeFilters !== undefined) {
-            for(let i = 0; i < activeFilters.length; i++) {
-                activeCategoryButtons.push(
-                    <Button 
-                        text={activeFilters[i]} 
-                        type="c" 
-                        link={`blog`} 
-                        key={activeFilters[i] + '1'} 
-                        filter={false} 
-                        term="category"
-                    />
-                )
-            }
-        }
+        // if(activeFilters !== undefined) {
+        //     for(let i = 0; i < activeFilters.length; i++) {
+        //         activeCategoryButtons.push(
+        //             <Button 
+        //                 text={activeFilters[i]} 
+        //                 type="c" 
+        //                 link={`blog`} 
+        //                 key={activeFilters[i] + '1'} 
+        //                 filter={false} 
+        //                 term="category"
+        //             />
+        //         )
+        //     }
+        // }
+        activeCategoryButtons.push(<ActiveBlogCategories categories={activeFilters} key={"category"}/>);
+
     }
-    
+
+
     // GET ALL CATEGORIES FROM BLOG DATA THAT ARE NOT ACTIVE
     for(let i = 0; i < blogs.length; i++) {
         const blog = blogs[i];

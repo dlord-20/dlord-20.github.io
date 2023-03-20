@@ -64,11 +64,8 @@ export default function Blog() {
                         {/* Top spread across all columns */}
                         <div>
                             <h3>Recent Blog Posts</h3>
-                            <div className='blog-box-categories'>
-                                <ActiveBlogCategories categories={categories}
-                            />
-                    </div>
                         </div>
+
                         <GetBlogBoxes
                             numberToShow="9"
                             indexStart="0"
