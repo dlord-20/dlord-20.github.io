@@ -10,6 +10,7 @@ import GetBlogBoxes from "../components/getBlogBoxes";
 import { useQuery } from "../features/customHooks/useQuery";
 import BlogCategories from "../components/blogCategories";
 import ActiveBlogCategories from "../components/activeBlogCategory";
+import GetCategoryFilterButtons from "../components/getCategoriesFilterButtons";
 
 
 export default function Blog() {
@@ -24,10 +25,10 @@ export default function Blog() {
     gsap.defaults({ ease: "power2.in"});
 
     //Effect for fading in section by section
-    useRightToLeftFadeIn();
-    useLeftToRightFadeIn();
-    useTimelineEffect();
-    useDownToUpFadeIn();
+    // useRightToLeftFadeIn();
+    // useLeftToRightFadeIn();
+    // useTimelineEffect();
+    // useDownToUpFadeIn();
 
 
 
@@ -41,6 +42,18 @@ export default function Blog() {
                     <div className="column-one">
                         <div>
                             <h1>Thee Blog</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="bg-color-blue" id="cover">
+                <div className="container">
+                    <div className="column-one">
+                        <div className='filter-container'>
+                            <div className='filter'>
+                                <h5>Filter</h5>
+                            </div>
+                            <GetCategoryFilterButtons/>
                         </div>
                     </div>
                 </div>

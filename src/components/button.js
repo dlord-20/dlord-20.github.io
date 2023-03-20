@@ -32,11 +32,12 @@ export default function Button(props) {
             return `/${link}?${term}=${text.toLowerCase()}`;
         }
     }
+    // THIS NEEDS TO BE DIFFERENT -> Seperate component
     if(type === 'd') {
         return (
             <div className='filter-container'>
                 <div className='filter'>
-                    <h6>Filter</h6>
+                    <h5>Filter</h5>
                 </div>
                 <div className='button-container'>
                     <Link to={getLink()} >

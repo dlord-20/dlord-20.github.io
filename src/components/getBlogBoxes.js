@@ -17,7 +17,7 @@ export default function GetBlogBoxes(props) {
     const blogArray = [];
     const query = useQuery().get("category");
 
-    // FILTER BLOGS BASED ON QUERY AND RETURNS AN ARRAY OF THE FILTERED BLOGS
+    // FILTER BLOGS BASED ON QUERY AND RETURNS AN ARRAY OF THE FILTERED BLOGS -> use uselocation to add filter's to the categories
     if(query !== null) {
         for(let i = indexStart; i < indexStop && i < blogs.length; i++) {
             const blog = blogs[i];
