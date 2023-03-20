@@ -37,17 +37,22 @@ export default function Button(props) {
                 if(name === text.toLowerCase()) {
                     let search = location.search;
                     if(i === 0 && i === queries.length - 1) {
+                        console.log('link:')
+                        console.log(`/${link}`);
                         return `/${link}`;
                     } else if (i === queries.length -1) {
+                        console.log(`/${link}` + search.replace("+" + text.toLowerCase(), ""));
                         return `/${link}?` + search.replace("+" + text.toLowerCase(), "");
                     } else {
-                        return `/${link}?` + search.replace(text.toLowerCase() + "+", "");
+                        console.log(`/${link}` + search.replace(text.toLowerCase() + "+", ""));
+                        return `/${link}` + search.replace(text.toLowerCase() + "+", "");
                     }
                 }
             })
 
         }
-        if(!filter) {
+        if(!filter && query !== null) {
+            console.log('here')
             return `/${link}`;
         } else {
             return `/${link}?${term}=${text.toLowerCase()}`;
@@ -59,6 +64,7 @@ export default function Button(props) {
             <div className='filter-container'>
                 <div className='button-container'>
                     <Link to={getLink()} >
+                        {console.log(getLink())}
                         <div className={`button ${buttonType}`}>
                             <div>
                                 {text}

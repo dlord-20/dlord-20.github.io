@@ -9,7 +9,7 @@ export default function ActiveBlogCategories(props) {
     if(categories !== undefined) {
         for(let i = 0; i < categories.length; i++) {
             categoryButtons.push(
-                <Button text={categories[i]} type="d" link={`blog`} key={categories[i] + '1'} filter={false} term="category"/>
+                <Button text={categories[i]} type="d" link={`blog`} key={categories[i] + '1'} filter={true} term="category"/>
             )
         }
         return categoryButtons;
