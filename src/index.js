@@ -33,7 +33,7 @@ export default function App() {
       <ScrollToTop/>
       <Provider store={store}>
           <Background/>
-          <AlphabetClock/>
+          {/* <AlphabetClock/> */}
           <TopNav/>
           <MobileMenuBg/>
           <Routes>
