@@ -7,6 +7,8 @@ export default function GetBlogBoxes(props) {
     const {numberToShow, indexStart, currentBlogTitle} = props;
     const indexStop = (+numberToShow) + (+indexStart);
     const blogs = blogData;
+    const query = useQuery().get("category");
+
 
 
     //Sorts to have the most recently updated blog first
@@ -14,8 +16,8 @@ export default function GetBlogBoxes(props) {
         return b.date.getTime() - a.date.getTime();
     })
 
-    const blogArray = [];
-    const query = useQuery().get("category");
+    // Get current blog filtered list (use this instead of blogArray when their is a query)
+    const fullBlogBoxArray = [];
     if(query !== null) {
         const queries = query.split(" ");
         // console.log(queries);
@@ -27,11 +29,54 @@ export default function GetBlogBoxes(props) {
 
         // CURRENT WORKING FILTER TO CHECK CATEGORIES OF EACH BLOG TO MATCH THE CURRENT CATEGORY QUERIES. WILL ONLY SHOW IF THE BLOG FITS THE BILL FOR EACH CATEGORY -> WILL NEED TO ADD A DISAPPOINTED COMPONENT WHEN I DON'T HAVE ANY BLOGS THAT FIT THE BILL
         if(queries !== null) {
-            console.log(blogs[0].categories);
-            console.log(capitalQueries);
+            // console.log(blogs[0].categories);
+            // console.log(capitalQueries);
+            var count = 0;
+            for(let i = indexStart; i < blogs.length; i++) {
+                // console.log(i);
+                const blog = blogs[i];
+                var success = capitalQueries.every(function(val) {
+                    return blog.categories.indexOf(val) !== -1;
+                });
+                if(success) {
+                    fullBlogBoxArray.push(
+                        <div className="blog-item" key={blog.title + i}>
+                            <BlogBox
+                                subtitle={blog.subtitle}
+                                title={blog.title}
+                                previewText={blog.previewText}
+                                categories={blog.categories}
+                                image={blog.coverImage}
+                                date={blog.date}
+                            />
+                        </div>
+                )
+                count++;
+                }
+            }
+            if(fullBlogBoxArray.length !== 0) {
+                console.log(fullBlogBoxArray);
+            }
+        }
+    }
+
+    const blogArray = [];
+    if(query !== null) {
+        const queries = query.split(" ");
+        // console.log(queries);
+        const capitalQueries = [];
+        queries.forEach(category => {
+            capitalQueries.push(category.charAt(0).toUpperCase() + category.slice(1));
+        });
+        
+
+        // CURRENT WORKING FILTER TO CHECK CATEGORIES OF EACH BLOG TO MATCH THE CURRENT CATEGORY QUERIES. WILL ONLY SHOW IF THE BLOG FITS THE BILL FOR EACH CATEGORY -> WILL NEED TO ADD A DISAPPOINTED COMPONENT WHEN I DON'T HAVE ANY BLOGS THAT FIT THE BILL
+        if(queries !== null) {
+            // console.log(blogs[0].categories);
+            // console.log(capitalQueries);
             var count = 0;
             for(let i = indexStart; count < indexStop && i < blogs.length; i++) {
-                console.log(i);
+                // console.log(i);
                 const blog = blogs[i];
                 var success = capitalQueries.every(function(val) {
                     return blog.categories.indexOf(val) !== -1;
