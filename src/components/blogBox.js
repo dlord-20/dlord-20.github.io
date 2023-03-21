@@ -35,6 +35,7 @@ export default function BlogBox(props) {
                         text="Keep Reading" 
                         type="b" 
                         link={'blog/' + link.toLowerCase()}
+                        filter={false}
                     />
                     <p><span className='date'><i>Last Updated:<br/>{displayDate}</i></span></p>
                 </div>

@@ -4,7 +4,7 @@ import {
 import { useQuery } from '../features/customHooks/useQuery';
 
 export default function Button(props) {
-    const {text, type, link, filter, term} = props;
+    const {text, type, link, filter, term, blogBox} = props;
     let buttonType;
 
 
@@ -28,8 +28,9 @@ export default function Button(props) {
     const location = useLocation();
 
     const getLink = () => {
+        console.log(filter)
 
-        if(query !== null) {
+        if(query !== null && !blogBox) {
             const queries = query.split(" ");
             // console.log(queries);
             let newLink = "";
@@ -65,7 +66,7 @@ export default function Button(props) {
             return newLink;
         }
 
-        if(!filter && query === null) {
+        if(!filter) {
             return `/${link}`;
         } else {
             // console.log('else');
