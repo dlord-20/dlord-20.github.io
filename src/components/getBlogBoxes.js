@@ -17,10 +17,18 @@ export default function GetBlogBoxes(props) {
     }
 
     const displaySeeMoreButton = () => {
-        console.log(blogs.length);
-        console.log(indexStop);
-        if(blogs.length > indexStop) {
-            return <p onClick={handleSeeMoreClick}>hello</p>
+        // console.log(fullBlogBoxArray);
+        // console.log(blogArray);
+        // console.log(blogs);
+        // console.log(indexStop);
+        if(fullBlogBoxArray.length !== 0) {
+            if(fullBlogBoxArray.length > indexStop) {
+                return <p onClick={handleSeeMoreClick}>hello</p>
+            }
+        } else {
+            if(blogs.length > indexStop) {
+                return <p onClick={handleSeeMoreClick}>hello</p>
+            }
         }
         return null;
     }
@@ -116,7 +124,7 @@ export default function GetBlogBoxes(props) {
             }
             if(blogArray.length !== 0) {
                 console.log('query');
-                return [blogArray, displaySeeMoreButton()];
+                return [blogArray, displaySeeMoreButton(blogArray)];
             }
             return <p>I'm sorry. I haven't written a blog that fits these filters...</p>
         }
@@ -154,7 +162,7 @@ export default function GetBlogBoxes(props) {
             return null
         }
         console.log('not the same');
-        return [blogArray, displaySeeMoreButton()];
+        return [blogArray, displaySeeMoreButton(blogArray)];
     }
 
 
@@ -177,7 +185,7 @@ export default function GetBlogBoxes(props) {
         };
 
         console.log('all blogs');
-        return [blogArray, displaySeeMoreButton()];
+        return [blogArray, displaySeeMoreButton(blogArray)];
     }
 
     return null;
