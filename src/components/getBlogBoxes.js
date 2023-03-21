@@ -5,9 +5,26 @@ import { useQuery } from "../features/customHooks/useQuery";
 
 export default function GetBlogBoxes(props) {
     const {numberToShow, indexStart, currentBlogTitle} = props;
-    const indexStop = (+numberToShow) + (+indexStart);
+    var indexStop = (+numberToShow) + (+indexStart);
     const blogs = blogData;
     const query = useQuery().get("category");
+
+    // Current issue is no render -> might need to change most of these to functions that are all called from the bottom instead of if...if...
+    const handleSeeMoreClick = () => {
+        console.log('here');
+        indexStop += 3;
+        console.log(indexStop);
+    }
+
+    const displaySeeMoreButton = () => {
+        console.log(blogs.length);
+        console.log(indexStop);
+        if(blogs.length > indexStop) {
+            return <p onClick={handleSeeMoreClick}>hello</p>
+        }
+        return null;
+    }
+
 
 
 
@@ -98,7 +115,8 @@ export default function GetBlogBoxes(props) {
                 }
             }
             if(blogArray.length !== 0) {
-                return blogArray;
+                console.log('query');
+                return [blogArray, displaySeeMoreButton()];
             }
             return <p>I'm sorry. I haven't written a blog that fits these filters...</p>
         }
@@ -135,7 +153,8 @@ export default function GetBlogBoxes(props) {
         if(blogArray === undefined) {
             return null
         }
-        return blogArray;
+        console.log('not the same');
+        return [blogArray, displaySeeMoreButton()];
     }
 
 
@@ -157,7 +176,8 @@ export default function GetBlogBoxes(props) {
             )
         };
 
-        return blogArray;
+        console.log('all blogs');
+        return [blogArray, displaySeeMoreButton()];
     }
 
     return null;
