@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router';
-import Button from './button';
-import { blogData } from '../data/blogData';
+import Button from '../button';
+import { blogData } from '../../data/blogData';
 
 export default function InactiveBlogCategories(props) {
     const activeFilters = props.activeFilters;

@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router';
-import Button from './button';
-import { useQuery } from '../features/customHooks/useQuery';
+import Button from '../button';
+import { useQuery } from '../../features/customHooks/useQuery';
 
 export default function ActiveBlogCategories(props) {
     const categories = props.categories;
@@ -8,10 +8,12 @@ export default function ActiveBlogCategories(props) {
     const query = useQuery().get("category");
     const location = useLocation();
 
+    
     const getActiveLink = (text) => {
         if(query !== null) {
             const queries = query.split(" ");
             let newLink = "";
+            // Determines how to delete query from url based on current url
             queries.forEach((name, i) => {
                 if(name === text.toLowerCase()) {
                     let search = location.search;
@@ -41,8 +43,6 @@ export default function ActiveBlogCategories(props) {
                 />
             )
         }
-        return categoryButtons;
     }
-    return null;
-
+    return categoryButtons;
 }

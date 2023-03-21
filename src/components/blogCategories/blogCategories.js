@@ -1,5 +1,5 @@
 // import { useSearchParams } from 'react-router-dom';
-import Button from './button';
+import Button from '../button';
 
 export default function BlogCategories(props) {
     const categories = props.categories;

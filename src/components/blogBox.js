@@ -1,4 +1,4 @@
-import BlogCategories from './blogCategories';
+import BlogCategories from './blogCategories/blogCategories';
 import Button from './button';
 import Image from './image';
 

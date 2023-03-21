@@ -8,9 +8,9 @@ import { useDownToUpFadeIn } from "../features/effects/fadeIn/down-to-up-fade-in
 import { useLeftToRightFadeIn } from "../features/effects/fadeIn/left-to-right-fade-in-on-scroll";
 import GetBlogBoxes from "../components/getBlogBoxes";
 import { useQuery } from "../features/customHooks/useQuery";
-import BlogCategories from "../components/blogCategories";
-import ActiveBlogCategories from "../components/activeBlogCategory";
-import GetCategoryFilterButtons from "../components/getCategoriesFilterButtons";
+import BlogCategories from "../components/blogCategories/blogCategories";
+import ActiveBlogCategories from "../components/blogCategories/activeBlogCategory";
+import GetCategoryFilterButtons from "../components/blogCategories/getCategoriesFilterButtons";
 
 
 export default function Blog() {

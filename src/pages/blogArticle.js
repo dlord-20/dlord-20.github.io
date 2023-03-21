@@ -8,7 +8,7 @@ import { useLeftToRightFadeIn } from "../features/effects/fadeIn/left-to-right-f
 import { useParams } from "react-router";
 import { blogData } from "../data/blogData";
 import Image from "../components/image";
-import BlogCategories from "../components/blogCategories";
+import BlogCategories from "../components/blogCategories/blogCategories";
 import GetBlogBoxes from "../components/getBlogBoxes";
 
 
