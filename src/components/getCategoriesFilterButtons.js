@@ -3,6 +3,8 @@ import { blogData } from '../data/blogData';
 import { useQuery } from '../features/customHooks/useQuery';
 import Button from './button';
 import ActiveBlogCategories from './activeBlogCategory';
+import { useLocation } from 'react-router';
+import { text } from '@fortawesome/fontawesome-svg-core';
 
 export default function GetCategoryFilterButtons() {
     const blogs = blogData;
@@ -11,6 +13,7 @@ export default function GetCategoryFilterButtons() {
     const activeFilters = [];
     const inactiveFilters = [];
     const activeCategoryButtons =[];
+    const location = useLocation();
 
     if(active !== null) {
         const serperatedActiveCategories = active.split(" ");
@@ -21,21 +24,6 @@ export default function GetCategoryFilterButtons() {
             activeFilters.push(category.charAt(0).toUpperCase() + category.slice(1));
         });
 
-        // Create an array of the active buttons
-        // if(activeFilters !== undefined) {
-        //     for(let i = 0; i < activeFilters.length; i++) {
-        //         activeCategoryButtons.push(
-        //             <Button 
-        //                 text={activeFilters[i]} 
-        //                 type="c" 
-        //                 link={`blog`} 
-        //                 key={activeFilters[i] + '1'} 
-        //                 filter={false} 
-        //                 term="category"
-        //             />
-        //         )
-        //     }
-        // }
         activeCategoryButtons.push(<ActiveBlogCategories categories={activeFilters} key={"category"}/>);
 
     }
@@ -53,6 +41,14 @@ export default function GetCategoryFilterButtons() {
             }
         }
     }
+
+    const getInactiveLink = (text) => {
+        if(!location.search) {
+            return `blog?category=${text.toLowerCase()}`;
+        } else {
+            return `blog${location.search}+${text.toLowerCase()}`;
+        }
+    }
     
 
     // Create an array of the inactive buttons
@@ -63,10 +59,9 @@ export default function GetCategoryFilterButtons() {
                 <Button 
                     text={inactiveFilters[i]} 
                     type="c" 
-                    link={`blog`} 
+                    link={getInactiveLink(inactiveFilters[i].toLowerCase())} 
                     key={inactiveFilters[i] + '1'} 
-                    filter={true} 
-                    term="category"
+
                 />
             )
         }

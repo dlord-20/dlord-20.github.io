@@ -1,10 +1,9 @@
 import { 
-    Link, useLocation
+    Link
 } from 'react-router-dom';
-import { useQuery } from '../features/customHooks/useQuery';
 
 export default function Button(props) {
-    const {text, type, link, filter, term, blogBox} = props;
+    const {text, type, link} = props;
     let buttonType;
 
 
@@ -24,60 +23,12 @@ export default function Button(props) {
         default:
             buttonType = "button-a";
     }
-    const query = useQuery().get(term);
-    const location = useLocation();
 
-    const getLink = () => {
-        console.log(filter)
-
-        if(query !== null && !blogBox) {
-            const queries = query.split(" ");
-            // console.log(queries);
-            let newLink = "";
-            queries.forEach((name, i) => {
-                if(name === text.toLowerCase()) {
-                    let search = location.search;
-                    if(i === 0 && i === queries.length - 1) {
-                        // console.log('link:')
-                        // console.log(`/${link}`);
-                        newLink = `/${link}`;
-                    } else if (i === queries.length -1) {
-                        // console.log('2nd');
-                        // console.log(text);
-                        // console.log(`/${link}` + search.replace("+" + text.toLowerCase(), ""));
-                        newLink = `/${link}` + search.replace("+" + text.toLowerCase(), "");
-                    } else {
-                        // console.log('3rd');
-                        // console.log(text);
-                        // console.log(`/${link}` + search.replace(text.toLowerCase() + "+", ""));
-                        newLink = `/${link}` + search.replace(text.toLowerCase() + "+", "");
-                    }
-                }
-                
-            })
-            if(!newLink) {
-                if(!location.search) {
-                    newLink = `/${link}?${term}=${text.toLowerCase()}`;
-                } else {
-                    newLink = `${location.search}+${text.toLowerCase()}`;
-                }
-            }
-            // console.log(newLink);
-            return newLink;
-        }
-
-        if(!filter) {
-            return `/${link}`;
-        } else {
-            // console.log('else');
-            return `/${link}?${term}=${text.toLowerCase()}`;
-        }
-    }
-    // THIS NEEDS TO BE DIFFERENT -> Seperate component
+    // THIS NEEDS TO BE DIFFERENT -> Seperate component OR CHANGE CSS TO AN A EXTRA ELEMENT FOR THE 'x'
     if(type === 'd') {
         return (
             <div className='button-container'>
-                <Link to={getLink()} >
+                <Link to={`/${link}`} >
                     <div className={`button ${buttonType}`}>
                         <div>
                             {text}
@@ -94,7 +45,7 @@ export default function Button(props) {
     return (
         <div>
             <div className='button-container'>
-                <Link to={getLink()} >
+                <Link to={`/${link}`} >
                     <div className={`button ${buttonType}`}>
                         {text}
                     </div>

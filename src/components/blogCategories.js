@@ -12,11 +12,9 @@ export default function BlogCategories(props) {
                 <Button 
                     text={categories[i]} 
                     type="b" 
-                    link={`blog`} 
+                    link={`blog?category=${categories[i].toLowerCase()}`} 
                     key={categories[i] + '1'} 
-                    filter={true} 
-                    term="category"
-                    blogBox={true}
+
                 />
             )
         }
