@@ -651,7 +651,7 @@ a {
 /* ----------------- Filter ----------------- */
 
 .filter-container {
-  width: 50%;
+  width: 65%;
   margin-bottom: 1rem;
   display: flex;
   justify-content: flex-start;
@@ -661,7 +661,7 @@ a {
 .filter {
   border-bottom: 1px solid var(--light-gray);
   margin: 1rem 0;
-  width: 50%;
+  width: 65%;
 }
 
 
@@ -696,6 +696,12 @@ a {
 
 
 @media only screen and (max-width: 700px) {
+  /* ----------------- Filter ----------------- */
+
+  .filter-container, 
+  .filter {
+    width: 100%;
+  }
 
   /* ----------------- Mobile Size - Overall Website Structure ----------------- */
   .vertical-timeline--animate {
