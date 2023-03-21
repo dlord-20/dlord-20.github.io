@@ -49,10 +49,10 @@ export default function Blog() {
             <div className="bg-color-blue" id="cover">
                 <div className="container">
                     <div className="column-one">
+                        <div className='filter'>
+                            <h5>Filter</h5>
+                        </div>
                         <div className='filter-container'>
-                            <div className='filter'>
-                                <h5>Filter</h5>
-                            </div>
                             <GetCategoryFilterButtons/>
                         </div>
                     </div>
