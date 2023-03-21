@@ -7,15 +7,12 @@ import { useState } from "react";
 export default function GetBlogBoxes(props) {
     const {numberToShow, indexStart, currentBlogTitle} = props;
     var [indexStop, setIndexStop] = useState((+numberToShow) + (+indexStart));
-    // var indexStop = (+numberToShow) + (+indexStart);
     const blogs = blogData;
     const query = useQuery().get("category");
 
-    // Current issue is no render -> might need to change most of these to functions that are all called from the bottom instead of if...if...
     const handleSeeMoreClick = () => {
         console.log('here');
         setIndexStop(a => a + 3);
-        // indexStop += 3;
         console.log(indexStop);
     }
 
