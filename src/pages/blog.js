@@ -46,24 +46,18 @@ export default function Blog() {
                     </div>
                 </div>
             </div>
-            <div className="bg-color-blue" id="cover">
-                <div className="container">
-                    <div className="column-one">
-                        <div className='filter'>
-                            <h5>Filter</h5>
-                        </div>
-                        <div className='filter-container'>
-                            <GetCategoryFilterButtons/>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div className="" id="6">
                 <div className="container">
                     <div className="column-three-even right-to-left-incoming">
                         {/* Top spread across all columns */}
                         <div>
                             <h3>Recent Blog Posts</h3>
+                            <div className='filter'>
+                                <h5>Filter</h5>
+                            </div>
+                            <div className='filter-container'>
+                                <GetCategoryFilterButtons/>
+                            </div>
                         </div>
 
                         <GetBlogBoxes

@@ -26,7 +26,6 @@ export default function Button(props) {
     }
     const query = useQuery().get(term);
     const location = useLocation();
-    console.log(location.search);
 
     const getLink = () => {
 
@@ -56,7 +55,6 @@ export default function Button(props) {
                 
             })
             if(!newLink) {
-                console.log("one");
                 if(!location.search) {
                     newLink = `/${link}?${term}=${text.toLowerCase()}`;
                 } else {

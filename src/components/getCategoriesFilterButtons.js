@@ -65,7 +65,7 @@ export default function GetCategoryFilterButtons() {
                     type="c" 
                     link={`blog`} 
                     key={inactiveFilters[i] + '1'} 
-                    filter={false} 
+                    filter={true} 
                     term="category"
                 />
             )
