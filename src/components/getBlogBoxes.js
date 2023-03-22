@@ -10,17 +10,13 @@ export default function GetBlogBoxes(props) {
     const blogs = blogData;
     const query = useQuery().get("category");
 
+    // Shows up to 6 more blog posts upon clicking
     const handleSeeMoreClick = () => {
-        console.log('here');
-        setIndexStop(a => a + 3);
-        console.log(indexStop);
+        setIndexStop(a => a + 6);
     }
 
+    // Displays the see more button if there is more blogs that fit the filter
     const displaySeeMoreButton = () => {
-        // console.log(fullBlogBoxArray);
-        // console.log(blogArray);
-        // console.log(blogs);
-        // console.log(indexStop);
         if(fullBlogBoxArray.length !== 0) {
             if(fullBlogBoxArray.length > indexStop) {
                 return <p onClick={handleSeeMoreClick}>hello</p>

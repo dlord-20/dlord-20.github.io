@@ -53,7 +53,7 @@ export default function Blog() {
                         <div>
                             <h3>Recent Blog Posts</h3>
                             <div className='filter'>
-                                <h5>Filter</h5>
+                                <h5>Filter by category</h5>
                             </div>
                             <div className='filter-container'>
                                 <GetCategoryFilterButtons/>
