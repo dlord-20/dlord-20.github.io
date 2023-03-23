@@ -453,6 +453,21 @@ a {
 
 /* ----------------- Images ----------------- */
 
+.wrapper-img {
+  position: relative;
+  height: 0;
+  /* Formula is: (height / width * 100%) */
+  padding-top: calc(360 / 360 * 100%);
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  height: auto; 
+}
+
 .potrait {
   position: relative;
   margin: 24px;
@@ -681,6 +696,10 @@ a {
   max-width: 450px;
   padding: .5rem;
   /* NEED TO DO PADDING FOR TEXT AT TOP LEVEL */
+}
+
+.placeholder {
+
 }
 
 
