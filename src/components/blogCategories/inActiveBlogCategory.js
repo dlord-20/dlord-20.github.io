@@ -49,3 +49,4 @@ export default function InactiveBlogCategories(props) {
         return inactiveCategoryButtons;
 
 }
+

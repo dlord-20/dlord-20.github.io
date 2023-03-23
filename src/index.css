@@ -625,25 +625,38 @@ a {
   background-color: var(--red-dark);
 }
 
-.button-b {
+.button-b,
+.button-c,
+.button-d
+{
   box-shadow: inset 0 0 0 1px var(--red-main);
   -webkit-box-shadow: inset 0 0 0 1px var(--red-main);
   -moz-box-shadow: inset 0 0 0 1px var(--red-main);
 }
 
-.button-b:hover {
+.button-b:hover,
+.button-c:hover
+{
   background-color: var(--red-main);
+}
+
+.button-c,
+.button-d {
+  display: flex;
+  justify-content: space-between;
+  padding: .35rem .15rem .35rem 1rem;
+  border-radius: 25px;
 }
 
 .button-d {
   background-color: var(--red-main);
-  display: flex;
-  justify-content: space-between;
-  padding: .5rem .15rem .55rem 1rem;
-  border-radius: 25px;
 }
+
 .button-d:hover {
   background-color: var(--red-dark);
+  box-shadow: inset 0 0 0 1px var(--red-dark);
+  -webkit-box-shadow: inset 0 0 0 1px var(--red-dark);
+  -moz-box-shadow: inset 0 0 0 1px var(--red-dark);
 }
 
 .button-exit {
@@ -671,6 +684,7 @@ a {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .filter {

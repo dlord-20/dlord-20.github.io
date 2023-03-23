@@ -42,15 +42,30 @@ export default function Button(props) {
         )
     }
 
-    return (
-        <div>
+    if(type === 'c') {
+        return (
             <div className='button-container'>
                 <Link to={`/${link}`} >
                     <div className={`button ${buttonType}`}>
-                        {text}
+                        <div>
+                            {text}
+                        </div>
+                        <div className='button-exit'>
+                            {'+'}
+                        </div>
                     </div>
                 </Link>
             </div>
+        )
+    }
+
+    return (
+        <div className='button-container'>
+            <Link to={`/${link}`} >
+                <div className={`button ${buttonType}`}>
+                    {text}
+                </div>
+            </Link>
         </div>
     );
 }
