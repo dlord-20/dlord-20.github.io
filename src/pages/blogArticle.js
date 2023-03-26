@@ -18,7 +18,7 @@ import {
     faPersonRunning,
     faPlaceOfWorship
 } from '@fortawesome/free-solid-svg-icons'
-import SocialMediaItem from "../components/socialMediaItem";
+import SocialMediaItem from "../components/socialMedia/socialMediaItem";
 
 
 export default function BlogArticle() {
@@ -63,7 +63,7 @@ export default function BlogArticle() {
                                 <BlogCategories categories={article.categories}/>
                             </div>
                             <div>
-                                <SocialMediaItem 
+                                <SocialMediaItem
                                     socialMedia="Facebook"
                                     article={article}
                                     link={location.pathname}
