@@ -5,7 +5,7 @@ import { useQuery } from "../features/customHooks/useQuery";
 import { useState } from "react";
 
 export default function GetBlogBoxes(props) {
-    const {numberToShow, indexStart, currentBlogTitle} = props;
+    const {numberToShow, indexStart, currentBlogTitle, dontShowMoreBoxes} = props;
     var [indexStop, setIndexStop] = useState((+numberToShow) + (+indexStart));
     const blogs = blogData;
     const query = useQuery().get("category");
@@ -17,6 +17,9 @@ export default function GetBlogBoxes(props) {
 
     // Displays the see more button if there is more blogs that fit the filter
     const displaySeeMoreButton = () => {
+        if(dontShowMoreBoxes) {
+            return null;
+        }
         if(fullBlogBoxArray.length !== 0) {
             if(fullBlogBoxArray.length > indexStop) {
                 return <p onClick={handleSeeMoreClick}>hello</p>

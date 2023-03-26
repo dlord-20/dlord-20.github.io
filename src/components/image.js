@@ -7,17 +7,15 @@ export default function Image(props) {
 
 
     return (
-        <div className="wrapper-img">
-            <div className="image">
-                <LazyLoadImage 
-                    alt={image.alt}
-                    height={image.height}
-                    width={image.width}
-                    src={require(`../images/${image.src}`)}
-                    effect="blur"
-                    visibleByDefault={image.src === `/${image.src}`}
-            />
-            </div>
+        <div className="image">
+            <LazyLoadImage 
+                alt={image.alt}
+                height={image.height}
+                width={image.width}
+                src={require(`../images/${image.src}`)}
+                effect="blur"
+                visibleByDefault={image.src === `/${image.src}`}
+        />
         </div>
     );
 }
