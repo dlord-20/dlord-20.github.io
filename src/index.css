@@ -503,6 +503,7 @@ a {
 .article-date i {
   color: var(--dark-lighter);
   font-style: italic;
+  font-size: .9rem;
 }
 
 .article-copy {
