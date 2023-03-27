@@ -462,7 +462,7 @@ a {
 .social-icon {
   padding: .5rem;
   border-radius: 25px;
-  border: 1px solid var(--red-main);
+  /* border: 1px solid var(--red-main); */
   transition: background-color 200ms ease-in-out;
   width: 2rem;
   height: 2rem;
