@@ -20,6 +20,9 @@ export default function BlogArticle() {
     const blogTitle = blogId.replace(/-/g, ' ');
 
     const article = blogData.find(blog => blog.title.toLowerCase() === blogTitle);
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    const displayDate = `${months[article.date.getMonth()]} ${article.date.getDate()}, ${article.date.getFullYear()}`;
 
     gsap.registerPlugin(ScrollTrigger);
     gsap.defaults({ ease: "power2.in"});
@@ -39,7 +42,7 @@ export default function BlogArticle() {
             <div className="bg-color-blue" id="cover">
                 <div className="container">
                     <div className="column-one">
-                        <div>
+                        <div className="article-cover">
                             <Image img={{
                                 alt: article.coverImage.alt,
                                 height: "100%",
@@ -47,18 +50,18 @@ export default function BlogArticle() {
                                 src: article.coverImage.src
                             }}/>
                         </div>
-                        <div>
+                        <div className="article-copy">
                             <h1>{article.title} test</h1>
                             <h3>{article.subtitle}</h3>
                             <div className='blog-box-categories'>
                                 <BlogCategories categories={article.categories}/>
                             </div>
-                            <div>
+                            <div className="social-date">
                                 <GetSocialMediaIcons 
                                     article={article}
                                 />
-                                <div>
-                                    {article.date.getFullYear()}
+                                <div className="article-date">
+                                    <p><i>Last Updated: {displayDate}</i></p>
                                 </div>
                             </div>
                             {article.paragraphs}
