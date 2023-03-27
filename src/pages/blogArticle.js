@@ -10,8 +10,6 @@ import { blogData } from "../data/blogData";
 import Image from "../components/image";
 import BlogCategories from "../components/blogCategories/blogCategories";
 import GetBlogBoxes from "../components/getBlogBoxes";
-
-import SocialMediaItem from "../components/socialMedia/socialMediaItem";
 import GetSocialMediaIcons from "../components/socialMedia/getSocialMediaIcons";
 
 
@@ -59,6 +57,9 @@ export default function BlogArticle() {
                                 <GetSocialMediaIcons 
                                     article={article}
                                 />
+                                <div>
+                                    {article.date.getFullYear()}
+                                </div>
                             </div>
                             {article.paragraphs}
                         </div>

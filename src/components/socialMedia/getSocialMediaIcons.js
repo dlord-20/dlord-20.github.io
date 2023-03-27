@@ -6,10 +6,11 @@ export default function GetSocialMediaIcons(props) {
     const medias = ['facebook', 'twitter', 'linkedin'];
     const icons = [];
 
-    medias.forEach(media => {
+    medias.forEach((media, i) => {
         icons.push(<SocialMediaItem
             socialMedia={media}
             article={article}
+            key={i}
         />)
     });
 

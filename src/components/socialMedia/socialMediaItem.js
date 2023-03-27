@@ -12,7 +12,6 @@ export default function SocialMediaItem(props) {
     const {socialMedia, article} = props;
     const {title} = article
     var customIcon;
-    console.log(window.location.href);
 
     const getLink = () => {
         var customLink = "";
