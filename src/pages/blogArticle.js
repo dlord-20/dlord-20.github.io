@@ -50,7 +50,7 @@ export default function BlogArticle() {
                                 src: article.coverImage.src
                             }}/>
                         </div>
-                        <div className="article-copy">
+                        <div className="article-title-card">
                             <h1>{article.title} test</h1>
                             <h3>{article.subtitle}</h3>
                             <div className='blog-box-categories'>
@@ -64,6 +64,8 @@ export default function BlogArticle() {
                                     <p><i>Last Updated: {displayDate}</i></p>
                                 </div>
                             </div>
+                        </div>
+                        <div className="article-copy">
                             {article.paragraphs}
                         </div>
                     </div>
@@ -76,7 +78,6 @@ export default function BlogArticle() {
                         <div>
                             <h3>You might be interested in</h3>
                         </div>
-                        {/* NEED A WAY TO NOT SHOW THE CURRENT BLOG POST */}
                         <GetBlogBoxes
                             numberToShow="3"
                             indexStart="0"

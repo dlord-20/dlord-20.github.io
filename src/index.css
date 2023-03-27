@@ -490,21 +490,26 @@ a {
   min-width: 100%;
 }
 
-.article-copy {
-
+.article-title-card {
+  width: fit-content;
 }
 
 .social-date {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 50%;
 }
 
 .article-date i {
   color: var(--dark-lighter);
   font-style: italic;
 }
+
+.article-copy {
+  border: 1px solid green;
+}
+
+
 
 
 /* ----------------- Images ----------------- */
