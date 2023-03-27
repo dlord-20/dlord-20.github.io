@@ -79,7 +79,7 @@ export default function GetBlogBoxes(props) {
                 }
             }
             if(fullBlogBoxArray.length !== 0) {
-                console.log(fullBlogBoxArray);
+                // console.log(fullBlogBoxArray);
             }
         }
     }
@@ -122,7 +122,7 @@ export default function GetBlogBoxes(props) {
                 }
             }
             if(blogArray.length !== 0) {
-                console.log('query');
+                // console.log('query');
                 return [blogArray, displaySeeMoreButton(blogArray)];
             }
             return <p>I'm sorry. I haven't written a blog that fits these filters...</p>
@@ -160,7 +160,7 @@ export default function GetBlogBoxes(props) {
         if(blogArray === undefined) {
             return null
         }
-        console.log('not the same');
+        // console.log('not the same');
         return [blogArray, displaySeeMoreButton(blogArray)];
     }
 
@@ -183,7 +183,7 @@ export default function GetBlogBoxes(props) {
             )
         };
 
-        console.log('all blogs');
+        // console.log('all blogs');
         return [blogArray, displaySeeMoreButton(blogArray)];
     }
 

@@ -451,6 +451,31 @@ a {
   justify-self: center;
 }
 
+/* ----------------- Social Media ----------------- */
+
+.social-media-container {
+  display: flex;
+  gap: .5rem;
+  margin: .5rem 0;
+}
+
+.social-icon {
+  padding: .5rem;
+  border-radius: 25px;
+  border: 1px solid var(--red-main);
+  transition: background-color 200ms ease-in-out;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icon:hover{
+  background-color: var(--red-main);
+}
+
+
 /* ----------------- Images ----------------- */
 
 

@@ -5,20 +5,14 @@ import React from "react";
 import { useRightToLeftFadeIn } from "../features/effects/fadeIn/right-to-left-fade-in-on-scroll";
 import { useDownToUpFadeIn } from "../features/effects/fadeIn/down-to-up-fade-in-on-scroll";
 import { useLeftToRightFadeIn } from "../features/effects/fadeIn/left-to-right-fade-in-on-scroll";
-import { useLocation, useParams } from "react-router";
+import { useParams } from "react-router";
 import { blogData } from "../data/blogData";
 import Image from "../components/image";
 import BlogCategories from "../components/blogCategories/blogCategories";
 import GetBlogBoxes from "../components/getBlogBoxes";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { 
-    faLaptop,
-    faCircleNodes,
-    faBuildingColumns,
-    faPersonRunning,
-    faPlaceOfWorship
-} from '@fortawesome/free-solid-svg-icons'
+
 import SocialMediaItem from "../components/socialMedia/socialMediaItem";
+import GetSocialMediaIcons from "../components/socialMedia/getSocialMediaIcons";
 
 
 export default function BlogArticle() {
@@ -26,7 +20,6 @@ export default function BlogArticle() {
     // Probaby change make this more of a universal check in another file and import it
     const blogId = useParams().id;
     const blogTitle = blogId.replace(/-/g, ' ');
-    const location = useLocation();
 
     const article = blogData.find(blog => blog.title.toLowerCase() === blogTitle);
 
@@ -63,13 +56,9 @@ export default function BlogArticle() {
                                 <BlogCategories categories={article.categories}/>
                             </div>
                             <div>
-                                <SocialMediaItem
-                                    socialMedia="Facebook"
+                                <GetSocialMediaIcons 
                                     article={article}
-                                    link={location.pathname}
-                                    icon={<FontAwesomeIcon icon={faCircleNodes}/>}
                                 />
-                                
                             </div>
                             {article.paragraphs}
                         </div>
