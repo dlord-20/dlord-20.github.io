@@ -492,6 +492,7 @@ a {
 
 .article-title-card {
   width: fit-content;
+  min-width: 50%;
 }
 
 .social-date {
