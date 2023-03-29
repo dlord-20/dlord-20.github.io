@@ -51,7 +51,7 @@ export default function BlogArticle() {
                             }}/>
                         </div>
                         <div className="article-title-card">
-                            <h1>{article.title} test</h1>
+                            <h1>{article.title}</h1>
                             <h3>{article.subtitle}</h3>
                             <div className='blog-box-categories'>
                                 <BlogCategories categories={article.categories}/>
