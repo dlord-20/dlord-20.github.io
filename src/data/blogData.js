@@ -25,7 +25,6 @@ export const blogData = [
             "Blogging",
             "Productivity"
         ],
-        // Month is 0-11
         date: new Date(1994, 11, 3)
     },
     {
@@ -52,7 +51,6 @@ export const blogData = [
             "Blogging",
             "Productivity"
         ],
-        // Month is 0-11
         date: new Date(2022, 3, 15)
     },
     {
@@ -79,7 +77,6 @@ export const blogData = [
             "Blogging",
             "Productivity"
         ],
-        // Month is 0-11
         date: new Date(1994, 11, 3)
     },
     {
@@ -106,7 +103,6 @@ export const blogData = [
             "Blogging",
             "Productivity"
         ],
-        // Month is 0-11
         date: new Date(2022, 3, 15)
     },
     {
@@ -133,7 +129,6 @@ export const blogData = [
             "Blogging",
             "Productivity"
         ],
-        // Month is 0-11
         date: new Date(1994, 11, 3)
     },
     {
@@ -160,7 +155,6 @@ export const blogData = [
             "Blogging",
             "Productivity"
         ],
-        // Month is 0-11
         date: new Date(2022, 3, 15)
     },
     {
@@ -187,7 +181,6 @@ export const blogData = [
             "Blogging",
             "Productivity"
         ],
-        // Month is 0-11
         date: new Date(1994, 11, 3)
     },
     {
@@ -214,7 +207,6 @@ export const blogData = [
             "Blogging",
             "Productivity"
         ],
-        // Month is 0-11
         date: new Date(2022, 3, 15)
     },
     {
@@ -241,7 +233,6 @@ export const blogData = [
             "Blogging",
             "Productivity"
         ],
-        // Month is 0-11
         date: new Date(1994, 11, 3)
     },
     {
@@ -268,7 +259,6 @@ export const blogData = [
             "Blogging",
             "Productivity"
         ],
-        // Month is 0-11
         date: new Date(2022, 3, 15)
     },
     {
@@ -295,7 +285,6 @@ export const blogData = [
             "Blogging",
             "Productivity"
         ],
-        // Month is 0-11
         date: new Date(1994, 11, 3)
     },
     {
@@ -322,7 +311,6 @@ export const blogData = [
             "Blogging",
             "Productivity"
         ],
-        // Month is 0-11
         date: new Date(1994, 11, 3)
     },
     {
@@ -349,7 +337,6 @@ export const blogData = [
             "Blogging",
             "Productivity"
         ],
-        // Month is 0-11
         date: new Date(1994, 11, 3)
     },
     {
@@ -376,7 +363,6 @@ export const blogData = [
             "Blogging",
             "Productivity"
         ],
-        // Month is 0-11
         date: new Date(1994, 11, 3)
     },
     {
@@ -403,7 +389,6 @@ export const blogData = [
             "Blogging",
             "Productivity"
         ],
-        // Month is 0-11
         date: new Date(1994, 11, 3)
     },
 ]
