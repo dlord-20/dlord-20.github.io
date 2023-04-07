@@ -27,7 +27,7 @@ export default function BlogArticle() {
     gsap.registerPlugin(ScrollTrigger);
     gsap.defaults({ ease: "power2.in"});
 
-    //Effect for fading in section by section yay woah man missed a day :( few days left yep - cruise
+    //Effect for fading in section by section yay woah man missed a day :( few days left yep - cruise - parents
     useRightToLeftFadeIn();
     useLeftToRightFadeIn();
 
