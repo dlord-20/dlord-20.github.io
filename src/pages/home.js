@@ -52,7 +52,7 @@ export default function Home() {
     return (
         <div className="body-container" id="top">
             <Helmet>
-                <title>Home Title</title>
+                <title>Derek Lord | Portfolio</title>
             </Helmet>
             <div className="bg-color-blue" id="cover">
                 <div className="container">
