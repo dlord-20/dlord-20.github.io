@@ -9,7 +9,6 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* 12-column grid container */
 .container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -21,7 +20,7 @@ body {
 }
 
 .nav {
-   grid-area: 1 / 4 / 2 / 13;
+   grid-area: 1 / 4 / 3 / 13;
 }
 
 .nav ul {
@@ -35,7 +34,6 @@ body {
   list-style: none;
   display: inline-block;
   margin: 1rem;
-  margin-right: -2px;
   margin-left: 0;
   justify-self: end;
 }
@@ -44,11 +42,51 @@ body {
    padding: 1rem;
 }
 
+.contact-card {
+   grid-area: 2 / 1 / 7 / 5;
+   /* background: #f0f0f0;
+   border-radius: 20px; */
+   display: grid;
+   grid-template-columns: repeat(7, auto);
+}
 
-/* Demo styling */
-.box {
-  background: #e5e5e5;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
+.profile-pic {
+   grid-area: 1 / 2 / 3 / 7;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   background-color: aqua;
+   border-radius: 25px;
+   max-height: fit-content;
+}
+
+.profile-pic img {
+   width: 100%;
+   height: auto;
+   border-radius: 25px;
+}
+
+.profile-body {
+   grid-area: 2 / 1 / 6 / 8;
+   /* display: flex; */
+   align-items: center;
+   justify-content: center;
+   border-radius: 25px;
+   padding: .5rem 1rem;
+}
+
+.main {
+   grid-area: 3 / 5 / 7 / 13;
+   align-items: center;
+   justify-content: center;
+   padding: .5rem 1rem;
+}
+
+.footer {
+   grid-area: 10 / 1 / 11 / 13;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: .5rem 1rem;
 }
