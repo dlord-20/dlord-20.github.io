@@ -51,29 +51,34 @@ body {
 }
 
 .profile-pic {
-   grid-area: 1 / 3 / 3 / 6;
-   display: flex;
+   grid-area: 1 / 3 / 4 / 6;
    align-items: center;
    justify-content: center;
    width: 100%;
-   background-color: aqua;
+   max-width: 300px;
+   height: auto;
    border-radius: 15px;
-   max-height: fit-content;
+   z-index: 2;
+   object-fit: cover;
+   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+   border: none;
 }
 
 .profile-pic img {
    width: 100%;
    height: auto;
    border-radius: 15px;
+   border: none;
+   display: block;
 }
 
 .profile-body {
-   grid-area: 2 / 1 / 6 / 8;
+   grid-area: 3 / 1 / 6 / 8;
    /* display: flex; */
    align-items: center;
    justify-content: center;
    border-radius: 15px;
-   padding: .5rem 1rem;
+   padding: 6rem 1rem .5rem 1rem;
 }
 
 .main {
