@@ -1,22 +1,23 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  border: 1px solid black
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   border: 1px solid black;
 }
 
 body {
-  font-family: Arial, sans-serif;
+   font-family: Arial, sans-serif;
+   background-color: rgb(249, 249, 249);
 }
 
 .container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 5px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 5px;
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   gap: 5px;
+   width: 100%;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 5px;
 }
 
 .nav {
@@ -31,11 +32,11 @@ body {
 }
 
 .nav li {
-  list-style: none;
-  display: inline-block;
-  margin: 1rem;
-  margin-left: 0;
-  justify-self: end;
+   list-style: none;
+   display: inline-block;
+   margin: 1rem;
+   margin-left: 0;
+   justify-self: end;
 }
 
 .nav a {
@@ -75,7 +76,7 @@ body {
 
 .card-heading {
    grid-area: 3 / 1 / 4 / 8;
-   background-color: #f0f0f0;
+   background-color: white;
    min-height: 25px;
    border-top-left-radius: 15px;
    border-top-right-radius: 15px;
@@ -87,20 +88,50 @@ body {
 .profile-body {
    grid-area: 4 / 1 / 6 / 8;
    display: grid;
+   grid-template-columns: repeat(5, auto);
    align-items: center;
    justify-content: center;
+   text-align: center;
    border-bottom-left-radius: 15px;
    border-bottom-right-radius: 15px;
    padding: 1.5rem 1rem;
    border: none;
-   background-color: #f0f0f0;
+   background-color: white;
    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
    z-index: 2;
 }
 
-/* .profile-body > * {
+.profile-body * {
+   padding: .25rem;
+   border: none;
+}
 
-}  */
+h2 {
+   font-weight: 100;
+   grid-area: 1 / 1 / 2 / 6;
+}
+
+.profile-body h3 {
+   border-radius: 25px;
+   border: 1px solid rgb(156, 147, 147);
+   background-color: rgb(233, 231, 231);
+   color: rgb(74, 64, 64);
+   font-weight: 100;
+   font-style: italic;
+   font-size: .85rem;
+   grid-area: 2 / 2 / 3/ 5;
+   margin-bottom: 1rem;
+}
+
+.bold {
+   font-weight: 900;
+}
+
+.profile-body ul {
+   text-align: left;
+   grid-area: 3 / 1 / 4 / 6;
+   list-style-type: none;
+}
 
 .main {
    grid-area: 3 / 5 / 7 / 13;
