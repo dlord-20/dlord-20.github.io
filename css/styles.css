@@ -2,7 +2,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   border: 1px solid black;
+   /* border: 1px solid black; */
 }
 
 body {
@@ -13,7 +13,7 @@ body {
 .container {
    display: grid;
    grid-template-columns: repeat(12, 1fr);
-   gap: 5px;
+   gap: 15px;
    width: 100%;
    max-width: 1200px;
    margin: 0 auto;
@@ -134,14 +134,44 @@ h2 {
 }
 
 .main {
-   grid-area: 3 / 5 / 7 / 13;
+   grid-area: 3 / 5 / 12 / 13;
    align-items: center;
    justify-content: center;
-   padding: .5rem 1rem;
+   padding: 1.5rem;
+   background-color: white;
+   border-radius: 15px;
+   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+h4 {
+   margin-bottom: .25rem;
+}
+
+h5 {
+   font-weight: 100;
+   font-style: italic;
+   text-align: right;
+   float: right;
+}
+
+h6 {
+   font-weight: 100;
+   font-size: .9rem;
+   margin-bottom: .5rem;
+}
+
+.main > div {
+   background-color: white;
+   padding: 1rem;
+   margin-bottom: 1rem;
+}
+
+.main ol, .main ul {
+   margin-left: 1rem;
 }
 
 .footer {
-   grid-area: 10 / 1 / 11 / 13;
+   grid-area: 20 / 1 / 13 / 13;
    display: flex;
    align-items: center;
    justify-content: center;
