@@ -300,3 +300,22 @@ h6 {
    justify-content: center;
    padding: .5rem 1rem;
 }
+
+.lists {
+   grid-area: 25 / 2 / 26 / 12;
+   border-radius: 15px;
+   background-color: white;
+   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+   padding: 1rem;
+   width: 100%;
+}
+
+.lists h2 {
+   place-items: center;
+   margin-bottom: .5rem;
+   justify-self: center;
+}
+
+.lists ol {
+   margin-left: 1rem;
+}
