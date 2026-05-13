@@ -7,7 +7,10 @@
 
 body {
    font-family: Arial, sans-serif;
-   background-color: rgb(249, 249, 249);
+   background-image: url(../images/f695a261-6207-4a26-b011-9b82ec046074.jpg);
+   background-size: 100vw auto;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
 }
 
 .container {
@@ -39,13 +42,13 @@ body {
    justify-self: end;
 }
 
-.nav a {
+a {
    padding: 1rem;
    text-decoration: none;
    color: black;
 }
 
-.nav a:hover {
+a:hover {
    text-decoration: underline;
 }
 
@@ -192,7 +195,7 @@ h6 {
 }
 
 .trips {
-   grid-area: 3 / 2 / 20 / 12;
+   grid-area: 3 / 2 / 8 / 12;
    display: grid;
    grid-template-columns: repeat(4, 1fr);
    gap: 15px;
@@ -228,6 +231,46 @@ h6 {
    object-fit: cover;
 }
 
+.video {
+   grid-area: 9 / 2 / 12 / 12;
+   border-radius: 15px;
+   background-color: white;
+   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+   padding: 1rem;
+   width: 100%;
+   place-items: center;
+}
+
+.video h2, .graph h2 {
+   margin-bottom: .2rem
+}
+
+.video *, .graph * {
+   margin-bottom: 1rem;
+}
+
+.video iframe {
+   width: 100%;
+   height: 315px;
+   border: none;
+   border-radius: 15px;
+}
+
+.graph {
+   grid-area: 13 / 2 / 20 / 12;
+   border-radius: 15px;
+   background-color: white;
+   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+   padding: 1rem;
+   width: 100%;
+   place-items: center;
+
+}
+.graph #viz1778696105530, .graph .tableauViz {
+    width: 100% !important;
+    min-height: 870px !important;
+}
+
 .venmo {
    grid-area: 3 / 2 / 20 / 12;
    display: grid;
@@ -251,7 +294,7 @@ h6 {
 }
 
 .footer {
-   grid-area: 20 / 1 / 13 / 13;
+   grid-area: 30 / 1 / 31 / 13;
    display: flex;
    align-items: center;
    justify-content: center;
