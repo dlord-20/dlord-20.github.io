@@ -177,11 +177,18 @@ h6 {
 .main > div {
    background-color: white;
    padding: 1rem;
-   margin-bottom: 1rem;
 }
 
 .main ol, .main ul {
    margin-left: 1rem;
+}
+
+.job {
+   margin-bottom: 1rem;
+}
+
+.job:last-child {
+   margin-bottom: 0;
 }
 
 .trips {
